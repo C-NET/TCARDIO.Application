@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns		= "http://www.w3.org/ns/widgets"
+<widget
+  xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.you.www"
-	version 	= "1.0.0">
+ 	id = "com.you.www" version = "1.0.0">
 
-	<name>Your Mind Blowing App</name>
+  <name>Novartis - Pruebas Cardiológicas</name>
 
-	<description>
-		A brilliant mobile application written by you and now available on every platform thanks to Kendo UI Mobile and PhoneGap Build.
-	</description>
+  <description>
+    Aplicación de acceso y presentación de artículos de pruebas cardiológicas.
+  </description>
 
-	<author href="build.phonegap.com"
-		email="">
-		Mr. Mobile Madness
-	</author>
+  <author href="www.c-net.com.ar" email="info@c-net.com.ar">
+    C-NET S.R.L.
+  </author>
 
-	<icon src="icon.png" gap:role="default" />
+  <icon src="icon.png" gap:role="default" />
 
-	<feature name="http://api.phonegap.com/1.0/network"/>
+  <feature name="http://api.phonegap.com/1.0/network"/>
 
-	<preference name="orientation" value="portrait" />
+  <preference name="orientation" value="portrait" />
 </widget>
