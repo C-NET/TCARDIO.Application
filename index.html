@@ -5,7 +5,7 @@
     <title></title>
 
     <!-- Kendo UI Mobile styles for all supported platforms -->
-    <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css" >
+    <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
 
     <!-- APP styles for all supported platforms -->
     <link rel="stylesheet" href="assets/css/master.css">
@@ -16,7 +16,7 @@
 
     <!-- Kendo UI Culture JavaScript -->
     <script type="text/javascript" src="assets/js/kendo.culture.es-AR.min.js"></script>
-    
+
     <!-- Phonegap JavaScript -->
     <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
 
@@ -46,14 +46,34 @@
 			 of the layout above. They are specfied as contents of the layout via the
 			 data-layout="main-layout" where "main-layout" is the data-id of the desired
 			 layout -->
+    <div data-role="view" data-layout="main-layout" id="home" data-title="B&uacute;squeda de art&iacute;culos">
+        <p>B&uacute;squeda de art&iacute;culos</p>
 
-    <div data-role="view" data-show="MYAPP.show" data-layout="main-layout" id="home" data-title="Home">
-        <p>Home</p>
+        <!-- TEXTBOX, ADS y BUTTON -->
+        <!--data-click="search" -->
+        <a data-role="button" data-icon="search" href="#index">B&uacute;scar Art&iacute;culos</a>
     </div>
 
-    <div data-role="view" data-layout="main-layout" id="settings" data-title="Settings">
-        <p>Settings</p>
+    <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&iacute;culos">
+        <ul data-role="listview"
+            data-source="_abstracts"
+            data-pull-to-refresh="false"
+            data-append-on-refresh="true"
+            data-template="item-template"
+            data-header-template="header-template">
+        </ul>
     </div>
 
+    <div data-role="view" data-layout="main-layout" id="settings" data-title="Acerca de...">
+        <p>Acerca de...</p>
+    </div>
+
+    <script type="text/x-kendo-template" id="header-template">
+        Categor&iacute;a - #: category #
+    </script>
+
+    <script type="text/x-kendo-template" id="item-template">
+        #: title # - #: category #
+    </script>
 </body>
 </html>

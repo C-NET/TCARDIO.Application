@@ -1,4 +1,4 @@
-// this global variable is where all the script goes so that
+// This global variable is where all the script goes so that
 // it doesn't polute the global namespace
 var MYAPP = MYAPP || {};
 
@@ -9,9 +9,11 @@ MYAPP.run = (function() {
 
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
-MYAPP.show = (function() {
+function showindex() {
+    _abstracts.fetch();
+
 	$(document.body).show();
-});
+}
 
 // this function runs at startup and attaches to the 'deviceready' event
 // which is fired by PhoneGap when the hardware is ready for native API
@@ -26,3 +28,26 @@ MYAPP.show = (function() {
         document.addEventListener('deviceready', MYAPP.run, false);
     }
 })();
+
+var i = 0;
+
+// datasource below is customized for demo purposes.
+var _abstracts = new kendo.data.DataSource({
+    transport: {
+        read: function (options) {
+            var max = i + 5;
+            var data = [];
+
+            for (; i < max; i++)
+            {
+                data.unshift({
+                    title: "record" + i,
+                    category: (i % 2 == 0 ? "Par": "Impar")
+                });
+            }
+
+            options.success(data);
+        }
+    },
+    group: {field:"category"}
+});
