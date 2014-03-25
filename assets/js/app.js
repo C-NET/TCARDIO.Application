@@ -2,18 +2,18 @@
 // it doesn't polute the global namespace
 var MYAPP = MYAPP || {};
 
-MYAPP.run = (function() {
+MYAPP.run = (function () {
 	// create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, { transition: "slide" }); 
 });
 
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
-function showindex() {
-    _abstracts.fetch();
+MYAPP.showindex = (function () {
+    MYAPP.abstracts.fetch();
 
-	$(document.body).show();
-}
+    $(document.body).show();
+});
 
 // this function runs at startup and attaches to the 'deviceready' event
 // which is fired by PhoneGap when the hardware is ready for native API
@@ -31,8 +31,7 @@ function showindex() {
 
 var i = 0;
 
-// datasource below is customized for demo purposes.
-var _abstracts = new kendo.data.DataSource({
+MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
             var max = i + 5;
