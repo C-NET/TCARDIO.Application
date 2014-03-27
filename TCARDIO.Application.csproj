@@ -46,6 +46,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="abstracts\test-abstract.html" />
     <Content Include="assets\css\images\back.png" />
     <Content Include="assets\css\images\wp8_icons.png" />
     <Content Include="assets\css\images\wp8_inverseicons.png" />
