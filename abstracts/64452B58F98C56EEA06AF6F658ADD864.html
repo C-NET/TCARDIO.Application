@@ -1,0 +1,23 @@
+<div data-role="view" data-layout="main-layout" id="Div1" data-title="This is what you can do...">
+    <h3>From index.html, call</h3>
+    <h4>plugin</h4>
+    <p>
+Add Share.java to \src\com.schaul.plugins.share
+that is: src\com\schaul\plugins\share\Share.java
+
+In index.html, call the following code after the phonegap.1.2.0.js and share.js files are loaded:
+
+Call the code that Petroy mentioned...
+
+var share = new Share();
+share.show({
+    subject: 'I like turtles',
+    text: 'http://www.mndaily.com'},
+    function() {}, // Success function
+    function() {alert('Share failed')} // Failure function
+
+);
+Let us know it works...
+</p>
+    <a  data-role="button" data-icon="share" onclick="MYAPP.sendMail('This is what you can do...', 'From index.html, call', 'PEgxIGNsYXNzPSJ0aXRsZSI+VGhpcyBpcyB3aGF0IHlvdSBjYW4gZG8uLi48L0gxPg0KDQpBZGQgdG8gcGx1Z2lucy54bWw6DQoNCjxIMyBjbGFzcz0iY2F0ZWdvcnkiPnBsdWdpbjwvSDM+DQpTYXZlIHNoYXJlLmpzIHRvIFxhc3NldHNcd3d3XA0KPEgyIGNsYXNzPSJzdWJ0aXRsZSI+RnJvbSBpbmRleC5odG1sLCBjYWxsPC9IMj4NCjxQPg0KQWRkIFNoYXJlLmphdmEgdG8gXHNyY1xjb20uc2NoYXVsLnBsdWdpbnMuc2hhcmUNCnRoYXQgaXM6IHNyY1xjb21cc2NoYXVsXHBsdWdpbnNcc2hhcmVcU2hhcmUuamF2YQ0KDQpJbiBpbmRleC5odG1sLCBjYWxsIHRoZSBmb2xsb3dpbmcgY29kZSBhZnRlciB0aGUgcGhvbmVnYXAuMS4yLjAuanMgYW5kIHNoYXJlLmpzIGZpbGVzIGFyZSBsb2FkZWQ6DQoNCkNhbGwgdGhlIGNvZGUgdGhhdCBQZXRyb3kgbWVudGlvbmVkLi4uDQoNCnZhciBzaGFyZSA9IG5ldyBTaGFyZSgpOw0Kc2hhcmUuc2hvdyh7DQogICAgc3ViamVjdDogJ0kgbGlrZSB0dXJ0bGVzJywNCiAgICB0ZXh0OiAnaHR0cDovL3d3dy5tbmRhaWx5LmNvbSd9LA0KICAgIGZ1bmN0aW9uKCkge30sIC8vIFN1Y2Nlc3MgZnVuY3Rpb24NCiAgICBmdW5jdGlvbigpIHthbGVydCgnU2hhcmUgZmFpbGVkJyl9IC8vIEZhaWx1cmUgZnVuY3Rpb24NCg0KKTsNCkxldCB1cyBrbm93IGl0IHdvcmtzLi4uDQo8L1A+DQo=');">Compartir</a>
+</div>

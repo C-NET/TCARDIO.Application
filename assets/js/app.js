@@ -9,11 +9,15 @@ MYAPP.run = (function () {
     //Test 
     window.localStorage.removeItem('eula-flag');
 
+    window.plugin.email.isServiceAvailable(
+        function (isAvailable) {
+            // alert('Email service is not available') unless isAvailable;
+        });
+
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
 
-    if (eula == null || !eula)
-    {
+    if (eula == null || !eula) {
         var win = $("#eula").data("kendoMobileModalView");
 
         //win.center();
@@ -37,9 +41,11 @@ MYAPP.refuseEULA = function () {
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.showindex = (function () {
-    MYAPP.abstracts.fetch();
 
-    $(document.body).show();
+    var listView = $('#index-list').data("kendoMobileListView");
+    //listView.dataSource.page(1);
+    //listView.refresh();
+    listView.dataSource.read();
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
@@ -54,23 +60,23 @@ MYAPP.showindex = (function () {
         // attach to deviceready event, which is fired when phonegap is all good to go.
         document.addEventListener('deviceready', MYAPP.run, false);
     }
-})();
 
-var i = 0;
+    MYAPP.idx = MYAPP.getIndex();
+    MYAPP.src = MYAPP.getData();
+
+})();
 
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
-            var max = 25;
+
+            // Retorna los subindices de las páginas que coinciden.
+            var match = MYAPP.find($("#search-text").val());
+
             var data = [];
 
-            for (var i = 0; i < max; i++) {
-                data.push({
-                    title: "record" + i,
-                    subtitle: "test record" + i + " subtitle",
-                    category: (i % 2 == 0 ? "Par" : "Impar"),
-                    article: "test-abstract.html"
-                });
+            for (var i = 0; i < match.length; i++) {
+                data.push(MYAPP.src[match[i]]);
             }
 
             options.success(data);
@@ -84,3 +90,24 @@ MYAPP.check = function (code) {
 
     return code.length == 6 && ((n % 7) == 0);
 };
+
+MYAPP.sendMail = function (title, subtitle, encoded64) {
+    window.plugin.email.open({
+        subject: title,
+        body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
+        attachments: [encoded64]
+    });
+}
+
+MYAPP.find = function (key) {
+    var idx = MYAPP.idx;
+
+    key = key.toLowerCase();
+
+    for (var i = 0; i < idx.length; i++) {
+        if (idx[i].key == key)
+            return (idx[i].src);
+    }
+
+    return [];
+}
