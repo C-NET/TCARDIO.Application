@@ -44,7 +44,7 @@ MYAPP.showindex = (function () {
 
     var listView = $('#index-list').data("kendoMobileListView");
     //listView.dataSource.page(1);
-    //listView.refresh();
+    listView.refresh();
     listView.dataSource.read();
 });
 
