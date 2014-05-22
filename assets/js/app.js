@@ -9,19 +9,19 @@ MYAPP.run = (function () {
     //Test 
     window.localStorage.removeItem('eula-flag');
 
-    window.plugin.email.isServiceAvailable(
-        function (isAvailable) {
-            // alert('Email service is not available') unless isAvailable;
-        });
+    if (window.plugin != null && window.plugin.email != null) {
+        window.plugin.email.isServiceAvailable(
+            function (isAvailable) {
+                // alert('Email service is not available') unless isAvailable;
+            });
+    }
 
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
 
     if (eula == null || !eula) {
-        var win = $("#eula").data("kendoMobileModalView");
 
-        //win.center();
-        win.open();
+        MYAPP.app.navigate("#eula");
     }
 });
 
@@ -30,14 +30,12 @@ MYAPP.acceptEULA = function (code) {
     if (MYAPP.check(code)) {
         window.localStorage.setItem('eula-flag', true);
 
-        $("#eula").data("kendoMobileModalView").close();
+        MYAPP.app.navigate("#home");
     }
-}
-
+};
 MYAPP.refuseEULA = function () {
     navigator.app.exitApp();
-}
-
+};
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.showindex = (function () {
@@ -55,7 +53,7 @@ MYAPP.showindex = (function () {
 (function () {
     if (navigator.userAgent.indexOf('Browzr') > -1) {
         // blackberry
-        setTimeout(MYAPP.run, 250)
+        setTimeout(MYAPP.run, 250);
     } else {
         // attach to deviceready event, which is fired when phonegap is all good to go.
         document.addEventListener('deviceready', MYAPP.run, false);
@@ -97,8 +95,7 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
         body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
         attachments: [encoded64]
     });
-}
-
+};
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
 
@@ -110,4 +107,4 @@ MYAPP.find = function (key) {
     }
 
     return [];
-}
+};

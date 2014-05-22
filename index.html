@@ -5,7 +5,9 @@
     <title>Ensayos cardilógicos</title>
 
     <!-- Kendo UI Mobile styles for all supported platforms -->
+    <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
+    <!--<link rel="stylesheet" href="assets/css/master.css">-->
 
     <!-- APP styles for all supported platforms -->
     <!--    <link rel="stylesheet" href="assets/css/master.css">-->
@@ -34,11 +36,11 @@
             <div data-role="navbar">
                 <span data-role="view-title"></span>
             </div>
-        </div>
-        <div data-role="footer">
+        </div>     
+        <div data-role="footer" id="iconFooter">
             <div data-role="tabstrip">
-                <a data-icon="search" href="#home">Principal</a>
-                <a data-icon="about" href="#about">Acerca de...</a>
+                <a data-icon="search" href="#home" class="buttonAppearance-tabstrip">Principal</a>
+                <a data-icon="about" href="#about" class="buttonAppearance-tabstrip">Acerca de...</a>
                 <!--<a data-icon="backbutton" href="#home">Back</a>-->
             </div>
         </div>
@@ -56,7 +58,10 @@
         </label>
         <!-- TEXTBOX, ADS y BUTTON -->
         <!--data-click="search" -->
-        <a data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index">B&uacute;scar Art&iacute;culos</a>
+        <a data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index">Buscar Art&iacute;culos</a>
+         <div  class="image-logo">
+            <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
+        </div>
     </div>
 
     <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&iacute;culos" >
@@ -69,10 +74,16 @@
             data-template="item-template"
             data-header-template="header-template">
         </ul>
+        <div  class="image-logo">
+            <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
+        </div>
     </div>
 
     <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">
         <p>Contenido de la página acerca de...</p>
+        <div  class="image-logo">
+            <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
+        </div>
     </div>
 
     <script type="text/x-kendo-template" id="header-template">
@@ -88,9 +99,8 @@
                 </a>
             </div>
         </div>
-    </script>
-
-    <div data-role="modalview" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final">
+    </script>    
+    <div data-role="view" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final">
         <p>Contenido EULA 1</p>
         <p>Contenido EULA 2</p>
         <p>Contenido EULA 3</p>
@@ -98,12 +108,15 @@
         <p>Contenido EULA 5</p>
         <p>Contenido EULA 6</p>
         <label>
-            Código de aceptación:<input type="text" value="Text" id="eula-accept-code" required="required" />
+            Código de aceptación:<input type="text" value="777777" id="eula-accept-code" required="required" />
         </label>
         <br />
+        <div  class="image-logo">
+            <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
+        </div>
         <div data-role="footer">
-            <a data-role="button" data-icon="ok" onclick="javascript:MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
-            <a data-role="button" data-icon="cancel" onclick="javascript:MYAPP.refuseEULA();">Cancelar</a>
+            <a data-role="button" data-icon="ok" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
+            <a data-role="button" data-icon="cancel" onclick="MYAPP.refuseEULA();">Cancelar</a>
         </div>
     </div>
 </body>

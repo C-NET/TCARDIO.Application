@@ -1,19 +1,171 @@
-body
-{
-    display: none;
-    font-family:Verdana;
-}
 
-a
-{
-    color:#E44C16
-}
+/* TEST - JERONIMO  */
 
-a:visited
-{
-    color:#E44C16;
-    text-decoration:underline;
-}
+        #header-template {
+            background-color: #E75E45;    
+        }
+
+        .km-view-title {
+            color: white !important;
+            background: #f2825b; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+
+        .km-button {
+
+             box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background-color: #e55b2b !important;
+            color: white !important;           
+            font-weight: bold!important;
+            border: 2px solid!important;
+            border-width: 1px!important;
+            border-color: black !important;
+            text-align:center;
+            vertical-align:middle;
+            
+        }
+
+        .km-widget:hover
+        .km-button:hover{  background-color: #C64311 !important;}
+
+        .km-scroll-container {
+           margin-bottom: 25pt; 
+           margin-left: 25pt; 
+           margin-right: 25pt; 
+        }
+
+                .buttonAppearance-tabstrip {
+            color: white !important;
+            background: #f2825b!important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
+            font-weight: bold!important;
+            text-decoration: none!important;
+            border: none!important;
+        }
+
+        .image-logo {
+            /*float: right;*/
+            text-align: right;
+            margin-bottom: 25pt;
+            margin-top: 15pt;
+            margin-right: 25pt;
+        }
+
+
+
+        .p
+        .s5
+        {
+            color: #231F20;
+            font-family: sans-serif;            
+            font-weight: normal;
+            font-size: 3em!important;
+        }
+        p
+        {
+            color: #231F20;
+            font-family: sans-serif;            
+            font-weight: normal;
+            font-size: 1em;
+        }
+
+        h1
+        {
+            color:#231F20;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        h2
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+
+        h3
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.5em!important;
+        }
+
+        h4
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .s1
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: normal;
+            font-size: 1.5em;
+        }
+        .s2
+        .s3
+        .s6
+        .s7
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: normal;
+            font-size: 1em;
+        }
+
+
+        .s4
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1em;
+        }
+
+        .s8
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-weight: normal;
+            font-size: 0.8em;
+        }
+                
+        .s9
+        .s10
+        {
+            color: #231F20;
+            font-family: sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+
+
+/* FIN TEST JERONIMO*/
 
 /*.km-ios #listview-home .km-content
 {
