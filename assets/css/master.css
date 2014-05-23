@@ -207,6 +207,23 @@
             color: black!important;
         }
 
+        .km-android .km-shim,
+        .km-android .km-popup,
+        .km-android .k-slider,
+        .km-android .km-badge,
+        .km-android .km-switch-on,
+        .km-android .km-current-page,
+        .km-android input:focus,
+        .km-android select:focus,
+        .km-android textarea:focus,
+        .km-android input:checked,
+        .km-android .km-touch-scrollbar,
+        .km-android .km-widget .k-state-focused,
+        .km-android .km-widget .km-state-active
+        {
+            color: black;
+        }
+
 
 /* FIN TEST JERONIMO*/
 
