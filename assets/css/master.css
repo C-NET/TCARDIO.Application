@@ -1,6 +1,3 @@
-
-/* TEST - JERONIMO  */
-
         #header-template {
             background-color: #E75E45;    
         }
@@ -174,8 +171,8 @@
         }
 
 
-        /*.km-android .km-view .km-content {
-            background-color: rgb(229, 229, 229);
+        .km-android .km-view .km-content {
+            background-color: rgb(255, 255, 255);
             color: rgb(51, 51, 51);
         }
         .km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text {
@@ -201,48 +198,15 @@
         }
         .km-android .km-view .km-content .km-list > li .km-switch .km-switch-container {
             background-color: #ffffff;
-        }*/
-
-/* FIN TEST JERONIMO*/
-
-/*.km-ios #listview-home .km-content
-{
-    background: url(../../content/shared/images/patterns/pattern2.png);
-    box-shadow: inset 0 0 30px #95764D;
-    -webkit-box-shadow: inset 0 0 30px #95764D;
-}
-
-.km-ios #listview-home .km-listview .km-list
-{
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    box-shadow: 0 1px 5px #95764D;
-    -webkit-box-shadow: 0 1px 5px #95764D;
-}
-
-    .km-ios #listview-home .km-listview .km-list > li
-    {
-        border: none;
-    }
-
-        .km-ios #listview-home .km-listview .km-list > li:last-child
-        {
-            -webkit-box-shadow: none;
-            box-shadow: none;
         }
 
-.km-ios #listview-home .km-navbar
-{
-    background: url(../../content/shared/images/patterns/pattern9.png);
-}
+        input[type="text"]{ 
+        border:1px solid #c7c7c7;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        color: black !important;
+        width:100%; 
+        padding: 10px;
 
-.km-tablet .km-ios #listview-home .km-view-title
-{
-    color: #fff;
-    text-shadow: 0 -1px rgba(0,0,0,.5);
-}
-
-.km-ios #listview-home .km-navbar .km-button
-{
-    background-color: #974d2e;
-}*/
+        }
