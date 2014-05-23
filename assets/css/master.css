@@ -31,8 +31,8 @@
             border: 2px solid!important;
             border-width: 1px!important;
             border-color: black !important;
-            text-align:center;
-            vertical-align:middle;
+            text-align:center!important;
+            vertical-align:middle!important;            
             
         }
 
@@ -60,12 +60,16 @@
             border: none!important;
         }
 
-        .image-logo {
+        .image-logo { 
             /*float: right;*/
             text-align: right;
             margin-bottom: 25pt;
             margin-top: 15pt;
             margin-right: 25pt;
+        }
+
+        #eula-footer {
+            padding-left: 15pt!important;
         }
 
 
@@ -76,7 +80,7 @@
             color: #231F20;
             font-family: sans-serif;            
             font-weight: normal;
-            font-size: 3em!important;
+            font-size: 1em!important;
         }
         p
         {
@@ -91,14 +95,14 @@
             color:#231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 2em;
+            font-size: 1.3em;
         }
         h2
         {
             color: #231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1.6em;
+            font-size: 1.2em;
         }
 
         h3
@@ -106,7 +110,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1.5em!important;
+            font-size: 1.1em!important;
         }
 
         h4
@@ -122,7 +126,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: normal;
-            font-size: 1.5em;
+            font-size: 1.1em;
         }
         .s3
         .s6
@@ -167,6 +171,36 @@
         .km-root .km-android .km-view {
             -webkit-box-direction: normal;
             -webkit-flex-direction: column;
+        }
+
+
+        .km-android .km-view .km-content {
+            background-color: rgb(229, 229, 229);
+            color: rgb(51, 51, 51);
+        }
+        .km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text {
+            color: rgb(51, 51, 51);
+        }
+        .km-android .km-view .km-tabstrip .km-button {
+            background-color: rgb(204, 204, 204);
+        }   
+        .km-android .km-view .km-navbar {
+            background-color: rgb(204, 204, 204);
+        }
+        .km-android .km-view .km-navbar .km-button .km-text {
+            color: rgb(51, 51, 51);
+        }
+        .km-android .km-listview .km-list {
+            border-top-color: rgb(153, 153, 153);
+        }
+        .km-android .km-view .km-content .km-list > li {
+            border-color: rgb(153, 153, 153);
+        }
+        .km-android .km-view .km-content .km-listgroup .km-group-title .km-text {
+            color: #333;
+        }
+        .km-android .km-view .km-content .km-list > li .km-switch .km-switch-container {
+            background-color: #b2b2b2;
         }
 
 /* FIN TEST JERONIMO*/

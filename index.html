@@ -25,6 +25,7 @@
     <!-- APP JavaScript -->
     <script type="text/javascript" src="assets/js/data.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    
 </head>
 <body>
 
@@ -114,9 +115,9 @@
         <div  class="image-logo">
             <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
         </div>
-        <div data-role="footer">
-            <a data-role="button" data-icon="ok" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
-            <a data-role="button" data-icon="cancel" onclick="MYAPP.refuseEULA();">Cancelar</a>
+        <div data-role="footer" id="eula-footer">
+            <a data-role="button" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
+            <a data-role="button" onclick="MYAPP.refuseEULA();">Cancelar</a>
         </div>
     </div>
 </body>
