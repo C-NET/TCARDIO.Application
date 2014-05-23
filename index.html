@@ -1,32 +1,32 @@
 <!doctype html>
 <html>
-<head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-    <title>Ensayos cardilógicos</title>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+        <title>Ensayos cardilógicos</title>
 
-    <!-- Kendo UI Mobile styles for all supported platforms -->
-    <link rel="stylesheet" href="assets/css/master.css">
-    <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
-    <!--<link rel="stylesheet" href="assets/css/master.css">-->
+        <!-- Kendo UI Mobile styles for all supported platforms -->
+        <link rel="stylesheet" href="assets/css/master.css">
+        <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
+        <!--<link rel="stylesheet" href="assets/css/master.css">-->
 
-    <!-- APP styles for all supported platforms -->
-    <!--    <link rel="stylesheet" href="assets/css/master.css">-->
+        <!-- APP styles for all supported platforms -->
+        <!--    <link rel="stylesheet" href="assets/css/master.css">-->
 
-    <!-- Phonegap JavaScript -->
-    <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+        <!-- Phonegap JavaScript -->
+        <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
 
-    <!-- Kendo UI JavaScript -->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/kendo.mobile.min.js"></script>
+        <!-- Kendo UI JavaScript -->
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/kendo.mobile.min.js"></script>
 
-    <!-- Kendo UI Culture JavaScript -->
-    <script type="text/javascript" src="assets/js/cultures/kendo.culture.es-AR.min.js"></script>
+        <!-- Kendo UI Culture JavaScript -->
+        <script type="text/javascript" src="assets/js/cultures/kendo.culture.es-AR.min.js"></script>
 
-    <!-- APP JavaScript -->
-    <script type="text/javascript" src="assets/js/data.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+        <!-- APP JavaScript -->
+        <script type="text/javascript" src="assets/js/data.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
     
-</head>
+    </head>
 <body>
 
     <!-- The "layout" defines the common navbar and footer. Views are then swapped
@@ -51,21 +51,21 @@
 			 of the layout above. They are specfied as contents of the layout via the
 			 data-layout="main-layout" where "main-layout" is the data-id of the desired
 			 layout -->
-    <div data-role="view" data-layout="main-layout" id="home" data-title="B&uacute;squeda de art&iacute;culos">
-        <p>Contenido de la página de busqueda de artículos</p>
+    <div data-role="view" data-layout="main-layout" id="home" data-title="B&#250;squeda de art&#237;culos">
+        <p>Contenido de la p&#225;gina de busqueda de art&#237;culos</p>
         <label>
             Palabras a buscar:
-            <input id="search-text" type="text" value="Text" />
+            <input id="search-text" type="text" value="cardio" />
         </label>
         <!-- TEXTBOX, ADS y BUTTON -->
         <!--data-click="search" -->
-        <a data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index">Buscar Art&iacute;culos</a>
+        <a data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index">Buscar Art&#237;culos</a>
          <div  class="image-logo">
             <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
         </div>
     </div>
 
-    <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&iacute;culos" >
+    <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&#237;culos" >
         <ul
             id="index-list"
             data-role="listview"
