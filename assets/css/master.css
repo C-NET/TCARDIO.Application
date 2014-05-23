@@ -70,7 +70,7 @@
 
 
 
-        .p
+         .p
         .s5
         {
             color: #231F20;
@@ -124,10 +124,8 @@
             font-weight: normal;
             font-size: 1.5em;
         }
-        .s2
         .s3
         .s6
-        .s7
         {
             color: #231F20;
             font-family: sans-serif;
@@ -155,6 +153,8 @@
                 
         .s9
         .s10
+        .s11
+        .s12
         {
             color: #231F20;
             font-family: sans-serif;
@@ -163,7 +163,11 @@
             font-size: 0.9em;
         }
 
-
+        /*Poner TABSTRIP en el footer para Android*/
+        .km-root .km-android .km-view {
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+        }
 
 /* FIN TEST JERONIMO*/
 
