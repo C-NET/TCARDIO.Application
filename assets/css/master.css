@@ -69,7 +69,7 @@
         }
 
         #eula-footer {
-            padding-left: 10pt!important;
+            padding-left: 10pt;
         }
 
 
@@ -80,14 +80,14 @@
             color: #231F20;
             font-family: sans-serif;            
             font-weight: normal;
-            font-size: 1em!important;
+            font-size: .7em!important;
         }
         p
         {
             color: #231F20;
             font-family: sans-serif;            
             font-weight: normal;
-            font-size: 1em;
+            font-size: .7em;
         }
 
         h1
@@ -95,14 +95,14 @@
             color:#231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1em;
         }
         h2
         {
             color: #231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 0.9em;
         }
 
         h3
@@ -110,7 +110,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1.1em!important;
+            font-size: 0.8em!important;
         }
 
         h4
@@ -118,7 +118,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: bold;
-            font-size: 1em;
+            font-size: 0.7em;
         }
 
         .s1
@@ -126,7 +126,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: normal;
-            font-size: 1.1em;
+            font-size: 0.8em;
         }
         .s3
         .s6
@@ -134,7 +134,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: normal;
-            font-size: 1em;
+            font-size: 0.7em;
         }
 
 
@@ -144,7 +144,7 @@
             font-family: sans-serif;
             font-style: italic;
             font-weight: normal;
-            font-size: 1em;
+            font-size: 0.7em;
         }
 
         .s8
@@ -152,7 +152,7 @@
             color: #231F20;
             font-family: sans-serif;
             font-weight: normal;
-            font-size: 0.8em;
+            font-size: 0.5em;
         }
                 
         .s9
@@ -164,7 +164,7 @@
             font-family: sans-serif;
             font-style: italic;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 0.6em;
         }
 
         /*Poner TABSTRIP en el footer para Android*/
@@ -182,48 +182,26 @@
             color: rgb(51, 51, 51);
         }
         .km-android .km-view .km-tabstrip .km-button {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
         }   
         .km-android .km-view .km-navbar {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
         }
         .km-android .km-view .km-navbar .km-button .km-text {
             color: rgb(51, 51, 51);
         }
         .km-android .km-listview .km-list {
-            border-top-color: white;
+            border-top-color: rgb(255, 255, 255);
         }
         .km-android .km-view .km-content .km-list > li {
-            border-color: white;
+            border-color: rgb(255, 255, 255);
         }
         .km-android .km-view .km-content .km-listgroup .km-group-title .km-text {
             color: #333;
         }
         .km-android .km-view .km-content .km-list > li .km-switch .km-switch-container {
-            background-color: white;
+            background-color: #ffffff;
         }
-
-        .km-andriod p {
-            color: black!important;
-        }
-
-        .km-android .km-shim,
-        .km-android .km-popup,
-        .km-android .k-slider,
-        .km-android .km-badge,
-        .km-android .km-switch-on,
-        .km-android .km-current-page,
-        .km-android input:focus,
-        .km-android select:focus,
-        .km-android textarea:focus,
-        .km-android input:checked,
-        .km-android .km-touch-scrollbar,
-        .km-android .km-widget .k-state-focused,
-        .km-android .km-widget .km-state-active
-        {
-            color: black;
-        }
-
 
 /* FIN TEST JERONIMO*/
 
