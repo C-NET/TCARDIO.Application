@@ -42,8 +42,10 @@ MYAPP.showindex = (function () {
 
     var listView = $('#index-list').data("kendoMobileListView");
     //listView.dataSource.page(1);
-    listView.refresh();
+
     listView.dataSource.read();
+    listView.refresh();
+    
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
