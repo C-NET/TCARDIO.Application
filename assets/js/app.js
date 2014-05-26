@@ -4,7 +4,7 @@ var MYAPP = MYAPP || {};
 
 MYAPP.run = (function () {
     // create the Kendo UI Mobile application
-    MYAPP.app = new kendo.mobile.Application();
+    MYAPP.app = new kendo.mobile.Application(document.body, { transition: "slide" });
 
     //Test 
     window.localStorage.removeItem('eula-flag');
