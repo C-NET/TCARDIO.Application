@@ -46,6 +46,7 @@ MYAPP.showindex = (function () {
     //listView.dataSource.page(1);
     listView.refresh();
     listView.dataSource.read();
+    $('#index').trigger('refresh');
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
