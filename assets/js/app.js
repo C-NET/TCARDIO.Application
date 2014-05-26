@@ -44,7 +44,7 @@ MYAPP.showindex = (function () {
     //listView.dataSource.page(1);
     listView.refresh();
     listView.dataSource.read();
-    listView.reload(true);
+    location.listView.reload();
 
 });
 
