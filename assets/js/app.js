@@ -1,6 +1,7 @@
 // This global variable is where all the script goes so that
 // it doesn't polute the global namespace
 var MYAPP = MYAPP || {};
+var listView;
 
 MYAPP.run = (function () {
     // create the Kendo UI Mobile application
@@ -39,13 +40,12 @@ MYAPP.refuseEULA = function () {
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.showindex = (function () {
-
-    var listView = $('#index-list').data("kendoMobileListView");
+    debugger;
+    if (listView == null)
+        listView = $('#index-list').data("kendoMobileListView");
     //listView.dataSource.page(1);
     listView.refresh();
     listView.dataSource.read();
-    $('#index').trigger('refresh');
-
 });
 
 // this function runs at startup and attaches to the 'deviceready' event

@@ -7,6 +7,7 @@
         <!-- Kendo UI Mobile styles for all supported platforms -->
         <link rel="stylesheet" href="assets/css/master.css">
         <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
+        <!--<link rel="stylesheet" href="assets/css/master.css">-->
 
         <!-- APP styles for all supported platforms -->
         <!--    <link rel="stylesheet" href="assets/css/master.css">-->
@@ -56,20 +57,20 @@
             <input id="search-text" type="text" value="cardio" />
             <!-- TEXTBOX, ADS y BUTTON -->
             <!--data-click="search" -->
-            <a id="buscar-articulos" data-role="button" data-icon="search" href="#index">Buscar Art&#237;culos</a>
+            <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index" rel="external">Buscar Art&#237;culos</a>
         </div>
         <script>
-            $(document).on('pageinit', '[data-role="view"]', function () {
-                $(document).on('click', '#buscar-articulos', function () {
-                    MYAPP.showindex();
-                    
+            $(document).on('pageinit', '[data-role="page"]', function () {
+                $(document).on('click', '#register_button', function () {
+                    $('#error_message_label').text('E-mail not set.');
+                    $('#error_message').show();
                 });
             });
     </script>   
     </div>
 
     <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&#237;culos" style="overflow: scroll">
-        <ul
+        <div
             id="index-list"
             data-role="listview"
             data-source="MYAPP.abstracts"
@@ -77,15 +78,15 @@
             data-append-on-refresh="false"
             data-template="item-template"
             data-header-template="header-template">
-        </ul>
-        <script type="text/x-kendo-template" id="header-template">
+        </div>
+                <script type="text/x-kendo-template" id="header-template">
             Categor&iacute;a - #: value #
         </script>
 
         <script type="text/x-kendo-template" id="item-template">
             <div class="li-abstract">
                 <div>
-                    <a href="\#/abstracts/#: article #">
+                    <a href="\#/abstracts/#: article #" rel="external">
                         <h3>#: title #</h3>
                         <p>#: subtitle #</p>
                     </a>
