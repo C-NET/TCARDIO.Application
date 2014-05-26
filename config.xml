@@ -91,6 +91,8 @@
 
     Otherwise, you can specify specific domains: 
   -->
+
+  <access origin="http://127.0.0.1*"/>
   <access origin="*"/>
   <!-- allow local pages -->
   <!--
