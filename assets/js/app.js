@@ -40,7 +40,7 @@ MYAPP.refuseEULA = function () {
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.showindex = (function () {
-    debugger;
+
     if (listView == null)
         listView = $('#index-list').data("kendoMobileListView");
     //listView.dataSource.page(1);
@@ -69,7 +69,6 @@ MYAPP.showindex = (function () {
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
-
             // Retorna los subindices de las páginas que coinciden.
             var match = MYAPP.find($("#search-text").val());
 

@@ -13,7 +13,8 @@
         <!--    <link rel="stylesheet" href="assets/css/master.css">-->
 
         <!-- Phonegap JavaScript -->
-        <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+        <script src="cordova.js"></script>
+
 
         <!-- Kendo UI JavaScript -->
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -57,7 +58,7 @@
             <input id="search-text" type="text" value="cardio" />
             <!-- TEXTBOX, ADS y BUTTON -->
             <!--data-click="search" -->
-            <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index" rel="external">Buscar Art&#237;culos</a>
+            <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();" href="#index"> Buscar Art&#237;culos</a>
         </div>
         <script>
             $(document).on('pageinit', '[data-role="page"]', function () {
@@ -86,7 +87,7 @@
         <script type="text/x-kendo-template" id="item-template">
             <div class="li-abstract">
                 <div>
-                    <a href="\#/abstracts/#: article #" rel="external">
+                    <a href="\#/abstracts/#: article #">
                         <h3>#: title #</h3>
                         <p>#: subtitle #</p>
                     </a>
