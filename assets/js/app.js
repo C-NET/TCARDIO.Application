@@ -46,7 +46,6 @@ MYAPP.showindex = (function () {
     //listView.dataSource.page(1);
     listView.refresh();
     listView.dataSource.read();
-    $('#index').width();
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
@@ -67,7 +66,7 @@ MYAPP.showindex = (function () {
 
 })();
 
-MYAPP.abstracts = new kendo.data.DataSource({
+MYAPP.abstracts = new kendo.data.DataSource.create({
     transport: {
         read: function (options) {
             // Retorna los subindices de las páginas que coinciden.
