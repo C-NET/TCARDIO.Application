@@ -43,9 +43,8 @@ MYAPP.showindex = (function () {
 
     if (listView == null)
         listView = $('#index-list').data("kendoMobileListView");
-    //listView.dataSource.page(1);
     listView.refresh();
-    listView.dataSource.read();
+    MYAPP.abstracts.read();
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
@@ -66,7 +65,7 @@ MYAPP.showindex = (function () {
 
 })();
 
-MYAPP.abstracts = new kendo.data.DataSource.create({
+MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
             // Retorna los subindices de las páginas que coinciden.
@@ -80,6 +79,7 @@ MYAPP.abstracts = new kendo.data.DataSource.create({
 
             options.success(data);
         }
+        
     },
     group: { field: "category" }
 });
