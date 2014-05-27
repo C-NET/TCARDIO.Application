@@ -7,10 +7,6 @@
         <!-- Kendo UI Mobile styles for all supported platforms -->
         <link rel="stylesheet" href="assets/css/master.css">
         <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
-        <!--<link rel="stylesheet" href="assets/css/master.css">-->
-
-        <!-- APP styles for all supported platforms -->
-        <!--    <link rel="stylesheet" href="assets/css/master.css">-->
 
         <!-- Phonegap JavaScript -->
         <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
@@ -61,8 +57,8 @@
         </div>  
     </div>
 
-    <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&#237;culos" style="overflow: scroll">
-        <ul
+    <div data-role="view" data-show="showindex" data-layout="main-layout" id="index" data-title="Art&#237;culos">
+        <ul 
             id="index-list"
             data-role="listview"
             data-source="MYAPP.abstracts"
@@ -81,7 +77,7 @@
     <script type="text/x-kendo-template" id="item-template">
         <div class="li-abstract">
             <div>
-                <a href="\#/abstracts/#: article #">
+                <a href="\#/abstracts/#: article #" data-align:"left">
                     <h3>#: title #</h3>
                     <p>#: subtitle #</p>
                 </a>
