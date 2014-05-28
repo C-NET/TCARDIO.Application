@@ -40,7 +40,7 @@ MYAPP.refuseEULA = function () {
 // this is called when the intial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.showindex = (function () {
-    MYAPP.app.navigate("#articulos");
+    MYAPP.app.navigate("#index");
     if (listView == null)
         listView = $('#index-list').data("kendoMobileListView");
     listView.refresh();
