@@ -117,7 +117,5 @@ MYAPP.hideFooter = function () {
 };
 
 MYAPP.clickList = function (e) {
-    MYAPP.app.navigate("/abstracts/" + e.dataItem.article);
-};
-
-
+     MYAPP.app.navigate("/abstracts/" + e.dataItem.article);
+   };
