@@ -6,7 +6,7 @@ var listView;
 MYAPP.run = (function () {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, { transition: "slide" });
-
+   
     //Test 
     window.localStorage.removeItem('eula-flag');
 
@@ -30,7 +30,7 @@ MYAPP.acceptEULA = function (code) {
     //Save EULA flag
     if (MYAPP.check(code)) {
         window.localStorage.setItem('eula-flag', true);
-
+        $(".km-tabstrip").show();
         MYAPP.app.navigate("#home");
     }
 };
@@ -112,7 +112,6 @@ MYAPP.find = function (key) {
 };
 
 
-function onclick(e) {
-  //  MYAPP.app.navigate('/abstracts/'+ e.dataItem.article+'#Div1');
-    MYAPP.app.navigate('#articulos');
-}
+MYAPP.hideFooter = function () {
+    $(".km-tabstrip").hide();
+};
