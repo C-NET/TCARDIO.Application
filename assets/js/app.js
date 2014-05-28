@@ -110,3 +110,10 @@ MYAPP.find = function (key) {
 
     return [];
 };
+
+
+function onclick(e) {
+    debugger;   
+    MYAPP.app.navigate('#/abstracts/'+ e.dataItem.article);
+
+}

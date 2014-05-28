@@ -66,6 +66,7 @@
             data-append-on-refresh="false"
             data-template="item-template"
             data-header-template="header-template"
+            data-click="onclick"
             data-style ="inset">
         </ul>
     </div>
@@ -75,11 +76,12 @@
     </script>
 
     <script type="text/x-kendo-template" id="item-template">
-
-            <a href="\#/abstracts/#: article #" data-align:"left">           
-               #: title #  
-            </a>
-
+        <div class="li-abstract">  
+            <a  data-align:"left"  data-role="button">           
+                <h3>#: title #</h3>
+                <p>#: subtitle #</p>
+        <a>
+        </div>
     </script>
 
     <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">
