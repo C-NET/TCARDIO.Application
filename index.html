@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
         <title>Ensayos cardil&#243;gicos</title>
-
         <!-- Kendo UI Mobile styles for all supported platforms -->
         <link rel="stylesheet" href="assets/css/master.css">
         <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
@@ -20,135 +19,84 @@
 
         <!-- APP JavaScript -->
         <script type="text/javascript" src="assets/js/data.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>
-    
+        <script type="text/javascript" src="assets/js/app.js"></script>    
     </head>
-
-<body>
-
-    
-    <!-- These are the "views" that are displayed between the header and the footer
-			 of the layout above. They are specfied as contents of the layout via the
-			 data-layout="main-layout" where "main-layout" is the data-id of the desired
-			 layout -->
-    <div data-role="view" data-layout="main-layout" id="home" data-title="B&#250;squeda de art&#237;culos">
-        <h2 style="margin-bottom: 1rem;">Palabras a buscar:</h2>
-        <div>
-            <input id="search-text" type="text" value="aspi" />
-            <!-- TEXTBOX, ADS y BUTTON -->
-            <!--data-click="search" -->
-            <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();"> Buscar Art&#237;culos</a>
-        </div>  
-    </div>
-
-    <div data-role="view" data-layout="main-layout" id="index" data-title="Art&#237;culos">
-        <ul 
-            id="index-list"
-            data-role="listview"
-            data-source="MYAPP.abstracts"
-            data-pull-to-refresh="false"    
-            data-append-on-refresh="false"
-            data-template="item-template"
-            data-header-template="header-template"
-  
-            data-style ="inset">
-        </ul>
-    </div>
-
-    <!-- The "layout" defines the common navbar and footer. Views are then swapped
- 			 out as the content between this common header and footer -->
-
-
-    
-    <div data-role="view" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final" data-show="MYAPP.hideFooter">
-        <h1>BY DOWNLOADING AND INSTALLING OR OTHERWISE USING THE MOBILE APPLICATION, YOU AGREE TO BE BOUND BY THE TERMS OF THIS MOBILE END USER LICENSE AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS, YOU MAY NOT DOWNLOAD, INSTALL OR USE THE MOBILE APPLICATION. "YOU" MEANS THE NATURAL PERSON OR THE ENTITY THAT IS AGREEING TO BE BOUND BY THESE TERMS, THEIR EMPLOYEES, AND THIRD PARTY CONTRACTORS THAT PROVIDE SERVICES TO YOU. YOU SHALL BE LIABLE FOR ANY FAILURE BY SUCH EMPLOYEES AND THIRD PARTY CONTRACTORS TO COMPLY WITH THESE TERMS.</h1>
-        <p>a. Scope of License. This license granted to you for the Mobile Application by Mindjet is limited to a non-transferable license to use the Mobile Application on any Android device that you own or control. This license does not allow you to use the Mobile Application on any Android device that you do not own or control, and you may not distribute or make the Mobile Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense or otherwise transfer in whole or in part the Mobile Application to another party. You may not create, develop, license, install, use, or deploy any third party software or services to circumvent, enable, modify or provide access, permissions or rights to work around any technical limitations in the Mobile Application and these terms. You may not copy (except as expressly permitted by this license) or publish the Mobile Application for others to copy, decompile, reverse engineer, decompile, disassemble, attempt to derive the source code of, modify, or create derivative works of the Mobile Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Mobile Application). Any attempt to do so is a violation of the rights of Mindjet and its licensors. If you breach this restriction, you may be subject to prosecution and damages. You may not use the Mobile Application in any way that is against the law. The terms of the license will govern any upgrades provided by Mindjet that replace and/or supplement the original Mobile Application, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.</p>
-        <p>b. Map Usage. You may copy and use images, clip art, animations, sounds, music, shapes, video clips and templates provided with the Mobile Application and identified for such use in maps that you create. Unless otherwise specified in a license unique to a map or map template you purchase, you may distribute your maps.</p>
-        <p>c. Title and Ownership. Mindjet retains all rights, title, and interest in and to the Mobile Application and its documentation and in all related copyrights, trade secrets, patents, trademarks, and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals, and extensions of such rights. You may not remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary markings in the Mobile Application and its documentation. You are not granted any rights to any trademarks or service marks of Mindjet. Mindjet retains all rights not expressly granted to you in these terms.</p>
-        <p>Contenido EULA 4</p>
-        <p>Contenido EULA 5</p>
-        <p>Contenido EULA 6</p>
-        <h3>
-            C&#243;digo de aceptaci&#243;n:
-            <input type="text" value="777777" id="eula-accept-code" required="required" />
-        </h3>
+    <body>
+        <!-- These are the "views" that are displayed between the header and the footer
+            of the layout above. They are specfied as contents of the layout via the
+            data-layout="main-layout" where "main-layout" is the data-id of the desired
+            layout -->
+        <div data-role="view" data-layout="main-layout" id="home" data-title="B&#250;squeda de art&#237;culos">
+            <h2 style="margin-bottom: 1rem;">Palabras a buscar:</h2>
+            <div>
+                <input id="search-text" type="text" value="aspi" />
+                <!-- TEXTBOX, ADS y BUTTON -->
+                <!--data-click="search" -->
+                <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();"> Buscar Art&#237;culos</a>
+            </div>  
+        </div>
+        <div data-role="view" data-layout="main-layout" id="index" data-title="Art&#237;culos">
+            <ul 
+                id="index-list"
+                data-role="listview"
+                data-source="MYAPP.abstracts"
+                data-pull-to-refresh="false"    
+                data-append-on-refresh="false"
+                data-template="item-template"
+                data-header-template="header-template"
+                data-style ="inset">
+            </ul>
+        </div>
+        <!-- The "layout" defines the common navbar and footer. Views are then swapped
+            out as the content between this common header and footer -->    
+        <div data-role="view" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final" data-show="MYAPP.hideFooter">
+            <h4>BY DOWNLOADING AND INSTALLING OR OTHERWISE USING THE MOBILE APPLICATION, YOU AGREE TO BE BOUND BY THE TERMS OF THIS MOBILE END USER LICENSE AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS, YOU MAY NOT DOWNLOAD, INSTALL OR USE THE MOBILE APPLICATION. "YOU" MEANS THE NATURAL PERSON OR THE ENTITY THAT IS AGREEING TO BE BOUND BY THESE TERMS, THEIR EMPLOYEES, AND THIRD PARTY CONTRACTORS THAT PROVIDE SERVICES TO YOU. YOU SHALL BE LIABLE FOR ANY FAILURE BY SUCH EMPLOYEES AND THIRD PARTY CONTRACTORS TO COMPLY WITH THESE TERMS.</h4>
+            <p>a. Scope of License. This license granted to you for the Mobile Application by Mindjet is limited to a non-transferable license to use the Mobile Application on any Android device that you own or control. This license does not allow you to use the Mobile Application on any Android device that you do not own or control, and you may not distribute or make the Mobile Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense or otherwise transfer in whole or in part the Mobile Application to another party. You may not create, develop, license, install, use, or deploy any third party software or services to circumvent, enable, modify or provide access, permissions or rights to work around any technical limitations in the Mobile Application and these terms. You may not copy (except as expressly permitted by this license) or publish the Mobile Application for others to copy, decompile, reverse engineer, decompile, disassemble, attempt to derive the source code of, modify, or create derivative works of the Mobile Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Mobile Application). Any attempt to do so is a violation of the rights of Mindjet and its licensors. If you breach this restriction, you may be subject to prosecution and damages. You may not use the Mobile Application in any way that is against the law. The terms of the license will govern any upgrades provided by Mindjet that replace and/or supplement the original Mobile Application, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.</p>
+            <p>b. Map Usage. You may copy and use images, clip art, animations, sounds, music, shapes, video clips and templates provided with the Mobile Application and identified for such use in maps that you create. Unless otherwise specified in a license unique to a map or map template you purchase, you may distribute your maps.</p>
+            <p>c. Title and Ownership. Mindjet retains all rights, title, and interest in and to the Mobile Application and its documentation and in all related copyrights, trade secrets, patents, trademarks, and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals, and extensions of such rights. You may not remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary markings in the Mobile Application and its documentation. You are not granted any rights to any trademarks or service marks of Mindjet. Mindjet retains all rights not expressly granted to you in these terms.</p>
+            <p>Contenido EULA 4</p>
+            <p>Contenido EULA 5</p>
+            <p>Contenido EULA 6</p>
+            <h3>
+                C&#243;digo de aceptaci&#243;n:
+                <input type="text" value="777777" id="eula-accept-code" required="required" />
+            </h3>
         
-        <div  id="eula-footer">
-            <a data-role="button" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
-            <a data-role="button" onclick="MYAPP.refuseEULA();">Cancelar</a>
-        </div>
+            <div  id="eula-footer">
+                <a data-role="button" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
+                <a data-role="button" onclick="MYAPP.refuseEULA();">Cancelar</a>
+            </div>
                         
-    </div>
-    
-    <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">
-        <p>Contenido de la p&#225;gina acerca de...</p>
-        <div  class="image-logo">
-            <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
-        </div>
-    </div> 
-    
-    
-    <div data-role="layout" data-id="main-layout">
-        <div data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
+        </div>    
+        <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">
+            <p>Contenido de la p&#225;gina acerca de...</p>
+            <div  class="image-logo">
+                <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
             </div>
-        </div>     
-        <div data-role="footer">
-            <div data-role="tabstrip">
-                <a data-icon="search" href="#home" class="buttonAppearance-tabstrip">Principal</a>
-                <a data-icon="about" href="#about" class="buttonAppearance-tabstrip">Acerca de...</a>
+        </div>         
+        <div data-role="layout" data-id="main-layout">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </div>     
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                    <a data-icon="search" href="#home" class="buttonAppearance-tabstrip"></a>
+                    <a data-icon="about" href="#about" class="buttonAppearance-tabstrip"></a>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <!--    <div data-role="view" data-layout="main-layout" id="articulos" data-title="ÁCIDOS GRASOS POLIINSATURADOS  Y VITAMINA E LUEGO DEL INFARTO DE MIOCARDIO">
-                <h3>ESTUDIO GISSI PREVENZIONE</h3>
-                <h4>DISLIPIDEMIA Y PREVENCIÓN</h4>
-    
-                <h3>Lancet 1999;354:447-55</h3>
-                <p>GISSI-Prevenzione Investigators. Dietary suplementation with n-3 polyunsaturated fatty acids and vitamin E after infarction: results of the GISSI-Prevenzion Trial.<br>
-                </p>
-                <h3>OBJETIVO</h3>
-                <p>Estudiar el efecto independiente y combinado de los ácidos grasos poliinsaturados n-3 (AGP n-<br>
-                                                                                                                3) y de la vitamina  E sobre la morbilidad y mortalidad  luego del infarto agudo de miocardio.</p>
-                <h3>DISEÑO DEL ESTUDIO</h3>
-                <p>Estudio multicéntrico y abierto.</p>
-                <h3>11324  <span class="p">pacientes sobrevivientes de un infarto agudo de miocardio reciente (&lt;= 3 me- ses) fueron  randomizados  a 4 grupos de tratamiento:</span></h3>
-                <h3># 2836 <span class="p">recibieron AGP n-3 (1 g/día).</span></h3>
-                <h3># 2830 <span class="p">recibieron vitamina E (300 mg/día).</span></h3>
-                <h3># 2830 <span class="p">recibieron AGP n-3 y vitamina E.</span></h3>
-                <h3># 2828  <span class="p">pacientes fueron controles.</span></h3>
-                <p>El tratamiento se administró durante 3,5 años.</p>
-                <h3>Punto final de eficacia combinado primario: <span class="p">muerte de todas las causas, infarto de mio- cardio no fatal y stroke no fatal; y muerte cardiovascular, infarto de miocardio no fatal y stro- ke no fatal.</span></h3>
-                <p>Se realizó un análisis por intención  de tratar de acuerdo a un diseño factorial  (dos vías) y por grupo de tratamiento  (cuatro vías).</p>
-                <h3>RESULTADOS</h3>
-                <p>1. En el análisis factorial de 2 vías, los AGP n-3 causaron una reducción  significativa del ries- go relativo de muerte  de todas las causas, infarto de miocardio no fatal y stroke no fatal del<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      4. No hubo beneficios con la vitamina E.
-                </p>
-                <h3>CONCLUSIONES</h3>
-                <p>El suplemento de ácidos grasos poliinsaturados n-3 en la dieta tuvo un beneficio clínicamen- te importante  sobre la mortalidad  total y cardiovascular, mientras que la vitamina E no de- mostró tener un efecto beneficioso.</p>
-                <h3>COMENTARIOS</h3>
-                <p>El tratamiento  con ácidos grasos poliinsaturados n-3 disminuyó significativamente la tasa de muerte, infarto de miocardio y stroke no fatal durante 3,5 años. El beneficio obtenido en el punto final primario  combinado fue debido principalmente a la disminución  en la mortali- dad total del 20% y de la mortalidad  cardiovascular del 30%.<br>
-                                                                                                                                                                                                                                                                                                                                                                      Se puede concluir que en esta población  de pacientes con infarto  agudo de miocardio  1 g/día de ácidos grasos poliinsaturados  a largo plazo disminuye la mortalidad.<br>
-                </p>
-                <a  data-role="button" data-icon="share" onclick="MYAPP.sendMail('ÁCIDOS GRASOS POLIINSATURADOS  Y VITAMINA E LUEGO DEL INFARTO DE MIOCARDIO', 'ESTUDIO GISSI PREVENZIONE', 'PHAgY2xhc3M9InMzIj7DgUNJRE9TIEdSQVNPUyBQT0xJSU5TQVRVUkFET1MgIFkgVklUQU1JTkEgRSBMVUVHTyBERUwgSU5GQVJUTyBERSBNSU9DQVJESU88L3A+DQogICAgPGgxPkVTVFVESU8gR0lTU0kgUFJFVkVOWklPTkU8L2gxPg0KICAgIDxoMz5MYW5jZXQgMTk5OTszNTQ6NDQ3LTU1PC9oMz4NCiAgICA8cD5HSVNTSS1QcmV2ZW56aW9uZSBJbnZlc3RpZ2F0b3JzLiBEaWV0YXJ5IHN1cGxlbWVudGF0aW9uIHdpdGggbi0zIHBvbHl1bnNhdHVyYXRlZCBmYXR0eSBhY2lkcyBhbmQgdml0YW1pbiBFIGFmdGVyIGluZmFyY3Rpb246IHJlc3VsdHMgb2YgdGhlIEdJU1NJLVByZXZlbnppb24gVHJpYWwuPGJyIC8+DQogICAgIDwvcD4NCiAgICA8aDM+T0JKRVRJVk88L2gzPg0KICAgIDxwPkVzdHVkaWFyIGVsIGVmZWN0byBpbmRlcGVuZGllbnRlIHkgY29tYmluYWRvIGRlIGxvcyDDoWNpZG9zIGdyYXNvcyBwb2xpaW5zYXR1cmFkb3Mgbi0zIChBR1Agbi08YnIgLz4NCiAgICAgICAgMykgeSBkZSBsYSB2aXRhbWluYSAgRSBzb2JyZSBsYSBtb3JiaWxpZGFkIHkgbW9ydGFsaWRhZCAgbHVlZ28gZGVsIGluZmFydG8gYWd1ZG8gZGUgbWlvY2FyZGlvLjwvcD4NCiAgICA8aDM+RElTRcORTyBERUwgRVNUVURJTzwvaDM+DQogICAgPHA+RXN0dWRpbyBtdWx0aWPDqW50cmljbyB5IGFiaWVydG8uPC9wPg0KICAgIDxoMz4xMTMyNCAgPHNwYW4gY2xhc3M9InAiPnBhY2llbnRlcyBzb2JyZXZpdmllbnRlcyBkZSB1biBpbmZhcnRvIGFndWRvIGRlIG1pb2NhcmRpbyByZWNpZW50ZSAoJmx0Oz0gMyBtZS0gc2VzKSBmdWVyb24gIHJhbmRvbWl6YWRvcyAgYSA0IGdydXBvcyBkZSB0cmF0YW1pZW50bzo8L3NwYW4+PC9oMz4NCiAgICA8aDM+IyAyODM2IDxzcGFuIGNsYXNzPSJwIj5yZWNpYmllcm9uIEFHUCBuLTMgKDEgZy9kw61hKS48L3NwYW4+PC9oMz4NCiAgICA8aDM+IyAyODMwIDxzcGFuIGNsYXNzPSJwIj5yZWNpYmllcm9uIHZpdGFtaW5hIEUgKDMwMCBtZy9kw61hKS48L3NwYW4+PC9oMz4NCiAgICA8aDM+IyAyODMwIDxzcGFuIGNsYXNzPSJwIj5yZWNpYmllcm9uIEFHUCBuLTMgeSB2aXRhbWluYSBFLjwvc3Bhbj48L2gzPg0KICAgIDxoMz4jIDI4MjggIDxzcGFuIGNsYXNzPSJwIj5wYWNpZW50ZXMgZnVlcm9uIGNvbnRyb2xlcy48L3NwYW4+PC9oMz4NCiAgICA8cD5FbCB0cmF0YW1pZW50byBzZSBhZG1pbmlzdHLDsyBkdXJhbnRlIDMsNSBhw7Fvcy48L3A+DQogICAgPGgzPlB1bnRvIGZpbmFsIGRlIGVmaWNhY2lhIGNvbWJpbmFkbyBwcmltYXJpbzogPHNwYW4gY2xhc3M9InAiPm11ZXJ0ZSBkZSB0b2RhcyBsYXMgY2F1c2FzLCBpbmZhcnRvIGRlIG1pby0gY2FyZGlvIG5vIGZhdGFsIHkgc3Ryb2tlIG5vIGZhdGFsOyB5IG11ZXJ0ZSBjYXJkaW92YXNjdWxhciwgaW5mYXJ0byBkZSBtaW9jYXJkaW8gbm8gZmF0YWwgeSBzdHJvLSBrZSBubyBmYXRhbC48L3NwYW4+PC9oMz4NCiAgICA8cD5TZSByZWFsaXrDsyB1biBhbsOhbGlzaXMgcG9yIGludGVuY2nDs24gIGRlIHRyYXRhciBkZSBhY3VlcmRvIGEgdW4gZGlzZcOxbyBmYWN0b3JpYWwgIChkb3MgdsOtYXMpIHkgcG9yIGdydXBvIGRlIHRyYXRhbWllbnRvICAoY3VhdHJvIHbDrWFzKS48L3A+DQogICAgPGgzPlJFU1VMVEFET1M8L2gzPg0KICAgIDxwPjEuIEVuIGVsIGFuw6FsaXNpcyBmYWN0b3JpYWwgZGUgMiB2w61hcywgbG9zIEFHUCBuLTMgY2F1c2Fyb24gdW5hIHJlZHVjY2nDs24gIHNpZ25pZmljYXRpdmEgZGVsIHJpZXMtIGdvIHJlbGF0aXZvIGRlIG11ZXJ0ZSAgZGUgdG9kYXMgbGFzIGNhdXNhcywgaW5mYXJ0byBkZSBtaW9jYXJkaW8gbm8gZmF0YWwgeSBzdHJva2Ugbm8gZmF0YWwgZGVsPGJyIC8+DQogICAgICAgIDEwICUgKDEyLDYlIEFHUCBuLTMgdnMuIDEzLDklICBjb250cm9sZXMgW1JSIDAsOTAsIHAgPSAwLDA0OCksIHBlcm8gbm8gdW5hIGRpc21pbnUtIGNpw7NuIHNpZ25pZmljYXRpdmEgZGUgbGEgdGFzYSBkZSBtdWVydGUgIGNhcmRpb3Zhc2N1bGFyLCAgaW5mYXJ0byAgZGUgbWlvY2FyZGlvIG5vIGZhdGFsIHkgc3Ryb2tlIG5vIGZhdGFsIChwID0gMCwwNTMpLjxiciAvPg0KICAgICAgICAyLiBFbiBlbCBhbsOhbGlzaXMgZGUgNCB2w61hcywgbG9zIEFHUCBuLTMgcHJvZHVqZXJvbiAgdW5hIGRpc21pbnVjacOzbiAgZGVsIHJpZXNnbyByZWxhdGl2byBkZWwgcHVudG8gZmluYWwgY29tYmluYWRvIGRlIG11ZXJ0ZSAgZGUgdG9kYXMgbGFzIGNhdXNhcywgaW5mYXJ0byBkZSBtaW9jYXJkaW8gbm8gZmF0YWwgeSBzdHJvLSBrZSBubyBmYXRhbCBkZWwgMTUlICgxMiwzJSBBR1Agbi0zIHZzLiAxNCw2JSBbUlIgMCw4NSwgcCA9IDAsMDIzKSB5IGRlbCBjb21iaW5hZG8gZGUgbXVlcnRlIGNhcmRpb3Zhc2N1bGFyLCBpbmZhcnRvICBkZSBtaW9jYXJkaW8gbm8gZmF0YWwgeSBzdHJva2Ugbm8gZmF0YWwgKDksMiUgdnMuIDExLDQlIFtSUjxiciAvPg0KICAgICAgICAwLDgwLCBwID0gMCwwMDgpLjxiciAvPg0KICAgICAgICAzLiBFbiBlbCBhbsOhbGlzaXMgZGUgbG9zIGNvbXBvbmVudGVzIGluZGl2aWR1YWxlcyAgaHVibyB1bmEgZGlzbWludWNpw7NuICBkZSBsYSBtb3J0YWxpZGFkPGJyIC8+DQogICAgIDwvcD4NCiAgICAgICAgdG90YWwgZGVsIDIwJSwgZGUgbGEgbW9ydGFsaWRhZCAgY2FyZGlvdmFzY3VsYXIgZGVsIDMwJSB5IGRlIGxhIG11ZXJ0ZSBzw7piaXRhIGRlbCA0NSUuPGJyIC8+DQogICAgICAgIDQuIE5vIGh1Ym8gYmVuZWZpY2lvcyBjb24gbGEgdml0YW1pbmEgRS48L3A+DQogICAgPGgzPkNPTkNMVVNJT05FUzwvaDM+DQogICAgPHA+RWwgc3VwbGVtZW50byBkZSDDoWNpZG9zIGdyYXNvcyBwb2xpaW5zYXR1cmFkb3Mgbi0zIGVuIGxhIGRpZXRhIHR1dm8gdW4gYmVuZWZpY2lvIGNsw61uaWNhbWVuLSB0ZSBpbXBvcnRhbnRlICBzb2JyZSBsYSBtb3J0YWxpZGFkICB0b3RhbCB5IGNhcmRpb3Zhc2N1bGFyLCBtaWVudHJhcyBxdWUgbGEgdml0YW1pbmEgRSBubyBkZS0gbW9zdHLDsyB0ZW5lciB1biBlZmVjdG8gYmVuZWZpY2lvc28uPC9wPg0KICAgIDxoMz5DT01FTlRBUklPUzwvaDM+DQogICAgPHA+RWwgdHJhdGFtaWVudG8gIGNvbiDDoWNpZG9zIGdyYXNvcyBwb2xpaW5zYXR1cmFkb3Mgbi0zIGRpc21pbnV5w7Mgc2lnbmlmaWNhdGl2YW1lbnRlIGxhIHRhc2EgZGUgbXVlcnRlLCBpbmZhcnRvIGRlIG1pb2NhcmRpbyB5IHN0cm9rZSBubyBmYXRhbCBkdXJhbnRlIDMsNSBhw7Fvcy4gRWwgYmVuZWZpY2lvIG9idGVuaWRvIGVuIGVsIHB1bnRvIGZpbmFsIHByaW1hcmlvICBjb21iaW5hZG8gZnVlIGRlYmlkbyBwcmluY2lwYWxtZW50ZSBhIGxhIGRpc21pbnVjacOzbiAgZW4gbGEgbW9ydGFsaS0gZGFkIHRvdGFsIGRlbCAyMCUgeSBkZSBsYSBtb3J0YWxpZGFkICBjYXJkaW92YXNjdWxhciBkZWwgMzAlLjxiciAvPg0KICAgICAgICBTZSBwdWVkZSBjb25jbHVpciBxdWUgZW4gZXN0YSBwb2JsYWNpw7NuICBkZSBwYWNpZW50ZXMgY29uIGluZmFydG8gIGFndWRvIGRlIG1pb2NhcmRpbyAgMSBnL2TDrWEgZGUgw6FjaWRvcyBncmFzb3MgcG9saWluc2F0dXJhZG9zICBhIGxhcmdvIHBsYXpvIGRpc21pbnV5ZSBsYSBtb3J0YWxpZGFkLjxiciAvPg0KICAgICA8L3A+DQogICAg');">Compartir</a>
-            </div>-->
-    
-    <div id="main"></div>
-    
-    <script type="text/x-kendo-template" id="header-template">
-        Categor&iacute;a - #: value #
-    </script>
-
-    <script type="text/x-kendo-template" id="item-template">
-        <div class="li-abstract">  
-            <a  data-align:"left" href="\#abstracts/#: article #">           
-                <h3>#: title #</h3>
-                <p>#: subtitle #</p>
-            </a>
-        </div>
-    </script>
-
-
-</body>
+        </div>   
+        <script type="text/x-kendo-template" id="header-template">
+            <p id="header-categoria">Categor&iacute;a: #:value#</p>
+        </script>
+        <script type="text/x-kendo-template" id="item-template">
+            <li class="dv-item-template">  
+                <a  data-align:"left" href="\#abstracts/#: article #">        
+                    <h3>#: title #</h3>
+                    <p>#: subtitle #</p>                    
+                </a> 
+            </li>
+        </script>
+    </body>
 </html>

@@ -1,85 +1,12 @@
-        #header-template {
-            background-color: #E75E45;    
-        }
-
-        .km-view-title {
-            color: white !important;
-            background: #f2825b; /* Old browsers */
-            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
-            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
-
-        .km-button {
-
-             box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            background-color: #e55b2b !important;
-            color: white !important;           
-            font-weight: bold!important;
-            border: 2px solid!important;
-            border-width: 1px!important;
-            border-color: black !important;
-            text-align:center!important;
-            vertical-align:middle!important;            
-            
-        }
-
-        .km-widget:hover
-        .km-button:hover{  background-color: #C64311 !important;}
-
-
-                .buttonAppearance-tabstrip {
-            color: white !important;
-            background: #f2825b!important; /* Old browsers */
-            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
-            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
-            font-weight: bold!important;
-            text-decoration: none!important;
-            border: none!important;
-        }
-
-        .image-logo { 
-            /*float: right;*/
-            text-align: right;
-            margin-bottom: 25pt;
-            margin-top: 15pt;
-            margin-right: 25pt;
-        }
-
-        #search-text {
-            margin-left: 1rem;
-        }
-
-        #eula-footer {
-            margin: 1rem;
-        }
-
-        #buscar-articulos {
-            margin: 1rem!important;
-        }
-
-         .p
+        /*.p
         .s5
         {
             color: #231F20;
-            font-family: sans-serif;            
+            font-family: sans-serif;
             font-weight: normal;
             font-size: .7em;
         }
+
         p
         {
             color: #231F20;
@@ -95,6 +22,7 @@
             font-weight: bold;
             font-size: 1em;
         }
+
         h2
         {
             color: #231F20;
@@ -163,14 +91,81 @@
             font-style: italic;
             font-weight: bold;
             font-size: 0.6em;
+        }*/ 
+        
+        body{ background: #2980b9; font: 100%/1.618 'Lato', sans-serif; font-weight: 400; color: #444; text-rendering: optimizeLegibility;}       
+
+        #header-template {
+            background-color: #E75E45;    
+        }        
+
+        .buttonAppearance-tabstrip {
+            color: white;
+            background: #f2825b!important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
         }
+
+        .image-logo { 
+            text-align: right;
+            margin-bottom: 25pt;
+            margin-top: 15pt;
+            margin-right: 25pt;
+        }
+        
+        #search-text {
+            margin-left: 1rem;
+        }
+       
+        #eula-footer {
+            margin: 1rem;
+        }
+
+        #buscar-articulos {
+            margin: 1rem;
+        }
+
+        #header-categoria{
+            text-align:left;
+            color: #9b9b9b;          
+            font-size: 1.5em;
+            font-weight: 700;
+
+        }
+
+        #eula h4 {
+            text-align: justify ;
+        }
+
+        .horizontal-line {
+            width: 80%;
+            border-top: 1px solid #f2825b;
+            position: absolute;
+            margin-bottom: 15px;
+        }
+
+        .dv-item-template {
+            background:  #e1e1e1!important;
+        }
+        
+        /*----------------------------------------*/
+        /*------------- Estilos de Kendo ---------*/
+        /*----------------------------------------*/
+
 
         /*Poner TABSTRIP en el footer para Android*/
         .km-root .km-android .km-view {
             -webkit-box-direction: normal;
             -webkit-flex-direction: column;
         }
-
 
         .km-android .km-view .km-content {
             background-color: rgb(255, 255, 255);
@@ -203,5 +198,45 @@
 
         input[type="text"]{ 
         color: black !important;
+        }
 
+        .km-view-title {
+            color: white !important;
+            background: #f2825b; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+        }   
+             
+        .km-button {
+             box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background-color: #e55b2b !important;
+            color: white !important;           
+            font-weight: bold!important;
+            border: 2px solid!important;
+            border-width: 1px!important; 
+            border-color: black !important;
+            text-align:center!important;
+            vertical-align:middle!important;                        
+        }
+
+        .km-widget:hover
+        .km-button:hover{  background-color: #C64311 !important;}
+
+
+        html {
+            -webkit-text-size-adjust: none;
+        }
+
+        .km-list
+        .km-group-title {
+            margin: 0 auto!important;
         }
