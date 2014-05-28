@@ -113,6 +113,6 @@ MYAPP.find = function (key) {
 
 
 function onclick(e) {
-    MYAPP.app.navigate('/abstracts/'+ e.dataItem.article+'#Div1');
-
+  //  MYAPP.app.navigate('/abstracts/'+ e.dataItem.article+'#Div1');
+    MYAPP.app.navigate('#article');
 }
