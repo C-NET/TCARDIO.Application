@@ -167,6 +167,12 @@
             -webkit-flex-direction: column;
         }
 
+        .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
+        {
+            visibility: visible;
+        }
+
+
         .km-android .km-view .km-content {
             background-color: rgb(255, 255, 255);
             color: rgb(51, 51, 51);
@@ -199,6 +205,10 @@
         input[type="text"]{ 
         color: black !important;
         }
+
+        
+   
+        
 
         .km-view-title {
             color: white !important;
@@ -239,4 +249,8 @@
         .km-list
         .km-group-title {
             margin: 0 auto!important;
+        }
+
+        .layout-header {
+            background: blue!important; 
         }
