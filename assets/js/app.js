@@ -115,3 +115,9 @@ MYAPP.find = function (key) {
 MYAPP.hideFooter = function () {
     $(".km-tabstrip").hide();
 };
+
+MYAPP.clickList = function (e) {
+    MYAPP.app.navigate("/abstracts/" + e.dataItem.article);
+};
+
+
