@@ -114,3 +114,11 @@ MYAPP.find = function (key) {
 MYAPP.hideFooter = function () {
     $(".km-tabstrip").hide();
 };
+
+MYAPP.hideHeader = function () {
+    $(".km-navbar").hide();
+};
+
+MYAPP.showHeader = function () {
+    $(".km-navbar").show();
+};

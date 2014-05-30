@@ -1,99 +1,9 @@
-        /*.p
-        .s5
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: normal;
-            font-size: .7em;
-        }
-
-        p
-        {
-            color: #231F20;
-            font-family: sans-serif;            
-            font-weight: normal;
-            font-size: .7em;
-        }
-
-        h1
-        {
-            color:#231F20;
-            font-family: sans-serif;
-            font-weight: bold;
-            font-size: 1em;
-        }
-
-        h2
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        h3
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: bold;
-            font-size: 0.8em;
-        }
-
-        h4
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: bold;
-            font-size: 0.7em;
-        }
-
-        .s1
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: normal;
-            font-size: 0.8em;
-        }
-        .s3
-        .s6
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: normal;
-            font-size: 0.7em;
-        }
-
-
-        .s4
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-style: italic;
-            font-weight: normal;
-            font-size: 0.7em;
-        }
-
-        .s8
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-weight: normal;
-            font-size: 0.5em;
-        }
-                
-        .s9
-        .s10
-        .s11
-        .s12
-        {
-            color: #231F20;
-            font-family: sans-serif;
-            font-style: italic;
-            font-weight: bold;
-            font-size: 0.6em;
-        }*/ 
-        
-        body{ background: #2980b9; font: 100%/1.618 'Lato', sans-serif; font-weight: 400; color: #444; text-rendering: optimizeLegibility;}       
+        body {
+             font: 100%/1.618 'Lato', sans-serif; 
+             font-weight: 400; 
+             color: #444; 
+             text-rendering: optimizeLegibility;
+        }       
 
         #header-template {
             background-color: #E75E45;    
@@ -135,8 +45,8 @@
 
         #header-categoria{
             text-align:left;
-            color: #9b9b9b;          
-            font-size: 1.5em;
+            color: #e55b2b;          
+            font-size: 1em;
             font-weight: 700;
 
         }
@@ -145,16 +55,59 @@
             text-align: justify ;
         }
 
-        .horizontal-line {
-            width: 80%;
-            border-top: 1px solid #f2825b;
-            position: absolute;
-            margin-bottom: 15px;
+        .item-template-titulo{
+            font-size: .8em;
+        }
+
+        .item-template-subtitulo {
+            color: #9b9b9b;
+            font-size: .7em;
         }
 
         .dv-item-template {
-            background:  #e1e1e1!important;
+
+            }
+
+        /*ARTICULOS*/
+
+        .subtitulo {
+            font-size: 1.1em;
+            color: black;
+            font-weight: bold;
+            margin: 1rem;
+            font-style: italic;
+            text-decoration: underline;
         }
+
+        .titulo-articulo {
+            font-size: 1.2em;
+            color: black;
+            font-weight: bold;
+            margin: 1rem;
+        }
+
+        .sub-titulo-articulo{
+            font-size: 1.2em;
+            margin: 1rem;
+            color: #9b9b9b; 
+        }
+        
+        .contenedor-articulo {
+          text-rendering: optimizeLegibility;
+            margin: 1rem!important;
+        }
+
+        .compartir {
+            margin: 1rem!important;
+        }
+
+        .p {
+            font: 100%/1.618 'Lato', sans-serif; 
+             font-weight: 400; 
+             color: #444; 
+             text-rendering: optimizeLegibility;
+        }
+
         
         /*----------------------------------------*/
         /*------------- Estilos de Kendo ---------*/
@@ -188,7 +141,7 @@
         }
         .km-android .km-view .km-navbar .km-button .km-text {
             color: rgb(51, 51, 51);
-        }
+        }   
         .km-android .km-listview .km-list {
             border-top-color: rgb(255, 255, 255);
         }
@@ -205,24 +158,6 @@
         input[type="text"]{ 
         color: black !important;
         }
-
-        
-   
-        
-
-        .km-view-title {
-            color: white !important;
-            background: #f2825b; /* Old browsers */
-            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
-            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
-            font-weight: bold;
-            text-decoration: none;
-        }   
              
         .km-button {
              box-sizing: border-box;
@@ -241,16 +176,25 @@
         .km-widget:hover
         .km-button:hover{  background-color: #C64311 !important;}
 
-
-        html {
-            -webkit-text-size-adjust: none;
-        }
-
         .km-list
         .km-group-title {
             margin: 0 auto!important;
         }
 
-        .layout-header {
-            background: blue!important; 
-        }
+        .km-view-title {
+            color: white;
+            background: #f2825b; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: none;
+        } 
+
+
+       
