@@ -92,7 +92,8 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
     //    body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
     //    attachments: [encoded64]
     //});
-    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, ['TCARDIO_ARTICULO', encoded64]);
+    var attach = [['TCARDIO_ARTICULO', encoded64]];
+    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, attach);
 
 };
 MYAPP.find = function (key) {
