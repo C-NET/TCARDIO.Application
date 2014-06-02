@@ -10,15 +10,6 @@ MYAPP.run = (function() {
     //Test 
     window.localStorage.removeItem('eula-flag');
     window.plugins.emailComposer = new EmailComposer();
-    if (window.plugin != null) {
-        alert("no es nulo");
-        window.plugin.email.isServiceAvailable(
-            function(isAvailable) {
-                // alert('Email service is not available') unless isAvailable;
-            });
-    } else {
-        alert('PLUGIN NULO');
-    }
 
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
@@ -100,7 +91,7 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
     //    body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
     //    attachments: [encoded64]
     //});
-    window.plugins.emailComposer.showEmailComposer("Quote request", "Hey Phil!<br/><br/>Can you help me out with a quote?", "te...@test.com", null, null, true, null);
+    window.plugins.emailComposer.showEmailComposerWithCallback('ok', title, 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle, null, null, null, false, null, '[[TCARDIO_ARTICULO,'+encoded64 +']]');
 };
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
