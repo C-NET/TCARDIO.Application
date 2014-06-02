@@ -9,14 +9,11 @@ MYAPP.run = (function () {
    
     //Test 
     window.localStorage.removeItem('eula-flag');
+
     if (window.plugin != null && window.plugin.email != null) {
         window.plugin.email.isServiceAvailable(
             function (isAvailable) {
-                if (isAvailable)
-                    alert('Email service is not available');    
-                else {
-                    alert('NO DISPONIBLE');
-                }
+                // alert('Email service is not available') unless isAvailable;
             });
     }
 
@@ -47,7 +44,7 @@ MYAPP.showindex = (function () {
     if (listView == null)
         listView = $('#index-list').data("kendoMobileListView");
     listView.refresh();
-    MYAPP.abstracts.read(); 
+    MYAPP.abstracts.read();
     
 });
 
@@ -95,11 +92,13 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-    window.plugin.open({
+    alert('mail enviado');
+    window.plugin.email.open({
         subject: title,
         body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
         attachments: [encoded64]
     });
+    
 };
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
