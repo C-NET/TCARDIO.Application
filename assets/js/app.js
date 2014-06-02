@@ -9,8 +9,8 @@ MYAPP.run = (function() {
 
     //Test 
     window.localStorage.removeItem('eula-flag');
-
-    if (window.plugin != null && window.plugin.emailComposer != null) {
+    window.plugins.emailComposer = new EmailComposer();
+    if (window.plugin != null) {
         alert("no es nulo");
         window.plugin.email.isServiceAvailable(
             function(isAvailable) {
