@@ -94,11 +94,8 @@ MYAPP.check = function (code) {
 MYAPP.sendMail = function (title, subtitle, encoded64) {
     window.plugin.email.open({
         subject: title,
-        body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
-        attachments: [encoded64]
+        body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle
     });
-    alert(window.plugin);
-
 };
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
