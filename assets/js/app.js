@@ -92,10 +92,12 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-    window.plugin.email.open({
-        subject: title,
-        body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle
-    });
+    //window.plugin.email.open({
+    //    subject: title,
+    //    body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
+    //    attachments: [encoded64]
+    //});
+    window.plugins.emailComposer.showEmailComposerWithCallback(callback, title, 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle, '', '', '', true, '', '');
 };
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
