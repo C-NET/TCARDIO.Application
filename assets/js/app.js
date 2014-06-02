@@ -9,7 +9,7 @@ MYAPP.run = (function () {
    
     //Test 
     window.localStorage.removeItem('eula-flag');
-
+    debugger;
     if (window.plugin != null && window.plugin.email != null) {
         window.plugin.email.isServiceAvailable(
             function (isAvailable) {
