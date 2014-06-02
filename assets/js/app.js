@@ -11,10 +11,13 @@ MYAPP.run = (function () {
     window.localStorage.removeItem('eula-flag');
 
     if (window.plugin != null && window.plugin.email != null) {
+        alert("no es nulo");
         window.plugin.email.isServiceAvailable(
             function (isAvailable) {
                 // alert('Email service is not available') unless isAvailable;
             });
+    } else {
+        alert('PLUGIN NULO'); 
     }
 
     /*Check EULA flag*/
