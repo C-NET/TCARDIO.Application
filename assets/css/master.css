@@ -1,9 +1,13 @@
         body {
              font: 100%/1.618 'Lato', sans-serif; 
-             font-weight: 400; 
+             font-weight: 400!important; 
              color: #444; 
              text-rendering: optimizeLegibility;
-        }       
+             font-size: 1em;
+        }  
+        p {
+            text-rendering: optimizeLegibility;
+        }
 
         #header-template {
             background-color: #E75E45;    
@@ -44,10 +48,11 @@
         }
 
         #header-categoria{
-            text-align:left;
+
             color: #e55b2b;          
             font-size: 1em;
             font-weight: 700;
+
 
         }
 
@@ -68,14 +73,15 @@
 
             }
 
-        .s4
+
+        /*ARTICULOS*/
+
+        .s4,
         .s9 {
             font-style: italic;
         }
 
-        /*ARTICULOS*/
-
-        .subtitulo {
+        .s2 {
             font-size: 1.1em;
             color: black;
             font-weight: bold;
@@ -102,16 +108,24 @@
             margin: 1rem!important;
         }
 
+        .categoria-articulo {
+            visibility: hidden;
+        }
+
         .compartir {
             margin: 1rem!important;
         }
 
-        .p {
+        .p,
+        .s5 {
             font: 100%/1.618 'Lato', sans-serif; 
              font-weight: 400; 
              color: #444; 
              text-rendering: optimizeLegibility;
+            font-size: .8em;
         }
+
+        
 
         
         /*----------------------------------------*/
@@ -181,7 +195,7 @@
         .km-widget:hover
         .km-button:hover{  background-color: #C64311 !important;}
 
-        .km-list
+        .km-lists
         .km-group-title {
             margin: 0 auto!important;
         }

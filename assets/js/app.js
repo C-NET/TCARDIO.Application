@@ -9,8 +9,6 @@ MYAPP.run = (function() {
 
     //Test 
     window.localStorage.removeItem('eula-flag');
-    window.plugins.emailComposer = new EmailComposer();
-
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
 
@@ -18,6 +16,7 @@ MYAPP.run = (function() {
 
         MYAPP.app.navigate("#eula");
     }
+    window.plugins.emailComposer = new EmailComposer();
 });
 
 MYAPP.acceptEULA = function (code) {
@@ -86,11 +85,7 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-    //window.plugin.email.open({
-    //    subject: title,
-    //    body: 'Adjunto se encuentra una página de un ensayo clínico: ' + title + '\n' + subtitle,
-    //    attachments: [encoded64]
-    //});
+
     var attach = [['TCARDIO_ARTICULO.html', encoded64]];
     window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false,null, attach);
 
