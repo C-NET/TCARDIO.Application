@@ -84,8 +84,17 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-    window.plugins.emailComposer = new EmailComposer();
-    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [[title+'.html', encoded64]]);
+//    window.plugins.emailComposer = new EmailComposer();
+//    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [[title+'.html', encoded64]]);
+
+    var args = {
+        subject: title,
+        body: 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle,
+        bIsHtml: false,
+        attachmentsData:  [[ title +'.html', encoded64 ]]
+    };
+
+    Cordova.exec(null, null, "EmailComposer", "showEmailComposer", [args]);
 
 };
 MYAPP.find = function (key) {
