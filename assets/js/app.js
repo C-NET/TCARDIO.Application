@@ -15,8 +15,7 @@ MYAPP.run = (function() {
     if (eula == null || !eula) {
 
         MYAPP.app.navigate("#eula");
-    }
-    window.plugins.emailComposer = new EmailComposer();
+    }    
 });
 
 MYAPP.acceptEULA = function (code) {
@@ -85,8 +84,8 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-
-    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false,null, ['TCARDIO_ARTICULO.html', encoded64]);
+    window.plugins.emailComposer = new EmailComposer();
+    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false,null, [['TCARDIO_ARTICULO.html', encoded64]]);
 
 };
 MYAPP.find = function (key) {
