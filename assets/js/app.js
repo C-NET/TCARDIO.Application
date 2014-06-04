@@ -6,9 +6,7 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        transition: "slide",
-
-        skin: "flat"
+        transition: "slide"
     });
 
     //Test 
@@ -120,10 +118,13 @@ MYAPP.hideFooter = function () {
     $(".km-tabstrip").hide();
 };
 
-MYAPP.hideHeader = function () {
-    $(".km-view-title").hide();
-};
+//MYAPP.hideHeader = function () {
+//    $(".km-header").hide();
+//    $(".km-navbar").hide();
+//};
 
-MYAPP.showHeader = function () {
-    $(".km-view-title").show();
-};
+//MYAPP.showHeader = function () {
+//    $(".km-navbar").show();
+//    $("km-header").show();
+    
+//};
