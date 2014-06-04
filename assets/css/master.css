@@ -208,5 +208,8 @@
             text-shadow: none;
         } 
 
+        /*TEST*/
 
-       
+        .km-insetcontent {
+            background-color: white!important;
+        }
