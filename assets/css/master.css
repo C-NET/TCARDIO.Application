@@ -86,7 +86,11 @@
         }
 
         .categoria-articulo {
-            visibility: hidden;
+            color: #e55b2b;          
+            font-size: .8em;
+            font-weight: 700;
+            margin: 1rem;
+            /*visibility: hidden;*/ 
         }
 
         .compartir {

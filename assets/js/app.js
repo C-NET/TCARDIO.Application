@@ -5,7 +5,11 @@ var listView;
 
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
-    MYAPP.app = new kendo.mobile.Application(document.body, { transition: "slide" });
+    MYAPP.app = new kendo.mobile.Application(document.body, {
+        transition: "slide",
+        loading: "<h1>Please wait...</h1>",
+        skin: "flat"
+    });
 
     //Test 
     window.localStorage.removeItem('eula-flag');
