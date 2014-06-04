@@ -7,11 +7,7 @@
              color: #444; 
              text-rendering: optimizeLegibility;
              font-size: 1em;
-            height: 66px;
             line-height: normal;
-            background-clip: border-box!important;
-            -webkit-background-clip: border-box!important;
-
         }  
        
         /*ACERCA DE*/
@@ -26,7 +22,7 @@
         #eula h4 {text-align: left ;}
         #eula-footer {
             margin: 1rem;
-        }fam
+        }
 
         /*BÚSQUEDA DE ARTÍCULOS*/
         #buscar-articulos {
@@ -43,7 +39,10 @@
             color: #e55b2b;          
             font-size: 1em;
             font-weight: 700;
+            margin: 0;
+            padding: 0;
         }
+
 
         .item-template-titulo{
             font-size: .8em;
@@ -131,6 +130,8 @@
             font-weight: bold;
             text-decoration: none;
             border: none;
+
+
         }
 
 
@@ -188,11 +189,17 @@
             background-color: #e55b2b !important;
             color: white !important;           
             font-weight: bold!important;
-            border: 2px solid!important;
-            border-width: 1px!important; 
-            border-color: black !important;
             text-align:center!important;
-            vertical-align:middle!important;                        
+            vertical-align:middle!important;      
+            position: relative;
+            vertical-align: top;
+            padding: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            border: 0;
+            border-bottom: 2px solid #e55b2b;
+            cursor: pointer;
+            -webkit-box-shadow: inset 0 -2px #e55b2b;
+            box-shadow: inset 0 -2px #e55b2b;                   
         }
 
         .km-widget:hover
@@ -212,10 +219,6 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
             font-weight: bold;
             -webkit-background-size: auto!important;
-            box-shadow: none!important;
-           
+            box-shadow: none!important;  
         } 
 
-        .km-widget {
-            -webkit-background-clip: border-box!important;
-        }
