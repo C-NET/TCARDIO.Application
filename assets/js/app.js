@@ -15,7 +15,8 @@ MYAPP.run = (function() {
     if (eula == null || !eula) {
 
         MYAPP.app.navigate("#eula");
-    }    
+    }
+    window.plugins.emailComposer = new EmailComposer();
 });
 
 MYAPP.acceptEULA = function (code) {
@@ -84,19 +85,18 @@ MYAPP.check = function (code) {
 };
 
 MYAPP.sendMail = function (title, subtitle, encoded64) {
-//    window.plugins.emailComposer = new EmailComposer();
-//    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [[title+'.html', encoded64]]);
 
-    var args = {
-        subject: title,
-        body: 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle,
-        bIsHtml: false,
-        attachmentsData:  [[ title +'.html', encoded64 ]]
-    };
-
-    Cordova.exec(null, null, "EmailComposer", "showEmailComposer", [args]);
+    var now = new Date();
+    var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");
+   
+    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
 
 };
+//Pad given value to the left with "0"
+function AddZero(num) {
+    return (num >= 0 && num < 10) ? "0" + num : num + "";
+}
+
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
 
@@ -109,6 +109,8 @@ MYAPP.find = function (key) {
 
     return [];
 };
+
+
 
 MYAPP.hideFooter = function () {
     $(".km-tabstrip").hide();
