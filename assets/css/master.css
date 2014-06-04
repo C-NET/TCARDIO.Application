@@ -129,7 +129,10 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
             font-weight: bold;
             text-decoration: none;
-            border: none;
+            border: black!important;
+            border-style: solid!important;
+            border-width: 1px!important;
+
         }
 
         /*Poner TABSTRIP en el footer para Android*/
