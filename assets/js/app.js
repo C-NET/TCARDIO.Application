@@ -121,9 +121,9 @@ MYAPP.hideFooter = function () {
 };
 
 MYAPP.hideHeader = function () {
-    $(".km-navbar").hide();
+    $(".km-view-title").hide();
 };
 
 MYAPP.showHeader = function () {
-    $(".km-navbar").show();
+    $(".km-view-title").show();
 };
