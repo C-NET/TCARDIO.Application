@@ -1,63 +1,42 @@
-        body {
+      /*GENERAL*/ 
+        body 
+        {
              font: 100%/1.618 'Lato', sans-serif; 
              font-weight: 400!important; 
              color: #444; 
              text-rendering: optimizeLegibility;
              font-size: 1em;
         }  
-        p {
-            text-rendering: optimizeLegibility;
-        }
-
-        #header-template {
-            background-color: #E75E45;    
-        }        
-
-        .buttonAppearance-tabstrip {
-            color: white;
-            background: #f2825b!important; /* Old browsers */
-            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
-            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
-            font-weight: bold;
-            text-decoration: none;
-            border: none;
-        }
-
+       
+        /*ACERCA DE*/
         .image-logo { 
             text-align: right;
             margin-bottom: 25pt;
             margin-top: 15pt;
             margin-right: 25pt;
         }
-        
-        #search-text {
-            margin-left: 1rem;
-        }
-       
+
+        /*EULA*/
+        #eula h4 {text-align: left ;}
         #eula-footer {
             margin: 1rem;
         }
 
+        /*BÚSQUEDA DE ARTÍCULOS*/
         #buscar-articulos {
             margin: 1rem;
         }
+        #search-text {
+            margin-left: 1rem;
+            font-size: 1em;
+        }
+
+        /*LISTA DE ARTÍCULOS */
 
         #header-categoria{
-
             color: #e55b2b;          
             font-size: 1em;
             font-weight: 700;
-
-
-        }
-
-        #eula h4 {
-            text-align: justify ;
         }
 
         .item-template-titulo{
@@ -70,11 +49,10 @@
         }
 
         .dv-item-template {
-
+            margin: 0;
             }
 
-
-        /*ARTICULOS*/
+        /*ARTÍCULOS*/
 
         .s4,
         .s9 {
@@ -105,7 +83,6 @@
         
         .contenedor-articulo {
           text-rendering: optimizeLegibility;
-            margin: 1rem!important;
         }
 
         .categoria-articulo {
@@ -126,11 +103,25 @@
         }
 
         
-
-        
         /*----------------------------------------*/
         /*------------- Estilos de Kendo ---------*/
         /*----------------------------------------*/
+
+        /*Apariencia TAB STRIP*/
+        .buttonAppearance-tabstrip {
+            color: white;
+            background: #f2825b!important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
+        }
 
 
         /*Poner TABSTRIP en el footer para Android*/
@@ -139,11 +130,11 @@
             -webkit-flex-direction: column;
         }
 
+        /*SIMULAR LIGHT HOLO THEME*/
         .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
         {
             visibility: visible;
         }
-
 
         .km-android .km-view .km-content {
             background-color: rgb(255, 255, 255);
@@ -173,7 +164,9 @@
         .km-android .km-view .km-content .km-list > li .km-switch .km-switch-container {
             background-color: #ffffff;
         }
+        /*---------------------------------------------------------------------------*/
 
+        /*INPUT TEXT*/
         input[type="text"]{ 
         color: black !important;
         }
@@ -195,10 +188,6 @@
         .km-widget:hover
         .km-button:hover{  background-color: #C64311 !important;}
 
-        .km-lists
-        .km-group-title {
-            margin: 0 auto!important;
-        }
 
         .km-view-title {
             color: white;
