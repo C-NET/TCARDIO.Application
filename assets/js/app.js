@@ -8,7 +8,7 @@ MYAPP.run = (function() {
     MYAPP.app = new kendo.mobile.Application(document.body, {
         transition: "slide"
     });
-    navigator.splashscreen.hide();
+
     //Test 
     window.localStorage.removeItem('eula-flag');
     /*Check EULA flag*/
