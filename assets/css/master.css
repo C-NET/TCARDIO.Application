@@ -90,6 +90,14 @@
           text-rendering: optimizeLegibility;
         }
 
+        .contenedor-articulo > h3 {
+            font-size: 1em;
+        }
+
+         .contenedor-articulo  h3 > .p {
+             font-size: 1em;
+        }
+
         .categoria-articulo {
             color: #e55b2b;          
             font-size: .8em;
@@ -109,6 +117,7 @@
              color: #444; 
              text-rendering: optimizeLegibility;
             font-size: .8em;
+
         }
 
         
