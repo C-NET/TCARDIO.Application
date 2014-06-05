@@ -207,7 +207,8 @@
             border-bottom: 2px solid #e55b2b;
             cursor: pointer;
             -webkit-box-shadow: inset 0 -2px #e55b2b;
-            box-shadow: inset 0 -2px #e55b2b;                   
+            box-shadow: inset 0 -2px #e55b2b; 
+            width: 35%                  
         }
 
         .km-widget:hover
