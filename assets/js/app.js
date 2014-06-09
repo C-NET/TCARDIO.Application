@@ -101,7 +101,7 @@ function AddZero(num) {
 
 MYAPP.find = function (key) {
     var idx = MYAPP.idx;
-
+ 
     key = key.toLowerCase();
 
     for (var i = 0; i < idx.length; i++) {
@@ -116,6 +116,16 @@ MYAPP.find = function (key) {
 
 MYAPP.hideFooter = function () {
     $(".km-tabstrip").hide();
+    $(".div-banner").hide();
+};
+
+MYAPP.showFooter = function () {
+    $(".div-banner").show();
+};
+
+MYAPP.scrollTop = function(e) {
+    var scroller = e.view.scroller;
+    scroller.reset();
 };
 
 //MYAPP.hideHeader = function () {

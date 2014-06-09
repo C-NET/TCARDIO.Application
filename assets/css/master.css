@@ -9,6 +9,24 @@
              font-size: 1em;
             line-height: normal;
         }  
+
+        /*BANNER*/
+        .div-banner {
+            width: 100%;
+            vertical-align: central;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background: rgb(255, 255, 255)!important;
+            background-color: rgb(255, 255, 255)!important;
+            color: rgb(255, 255, 255);
+        }
+        .image-banner {
+
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+      
        
         /*ACERCA DE*/
         .image-logo { 
@@ -35,6 +53,10 @@
         #search-text {
             margin-left: 1rem;
             font-size: 1.1em;
+        }
+
+        #home > .km-scroll-container {
+            height: 100%!important;
         }
 
         /*LISTA DE ARTÍCULOS */
@@ -188,6 +210,11 @@
             background-color: #ffffff;
         }
         /*---------------------------------------------------------------------------*/
+
+        .km-footer {
+           background-color: rgb(255, 255, 255)!important; 
+           background:rgb(255, 255, 255); 
+        }
 
         /*INPUT TEXT*/
         input[type="text"]{ 

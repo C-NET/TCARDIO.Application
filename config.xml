@@ -73,6 +73,9 @@
   <preference name="disallowOverscroll"         value="true" />
   <!-- android: set to true if you want to disable the glow when a user scrolls beyond the edge of the webview. -->
   <preference name="splash-screen-duration" value="10000"/>
+  
+  <gap:splash src="splash.png" />
+
  
   <!-- Define app icon for each platform. -->
 
