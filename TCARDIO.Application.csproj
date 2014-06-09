@@ -555,6 +555,7 @@
     <Content Include="abstracts\Abstract-99.html" />
     <Content Include="assets\css\images\back.png" />
     <Content Include="assets\css\images\logo.gif" />
+    <Content Include="assets\css\images\trials.png" />
     <Content Include="assets\css\images\wp8_icons.png" />
     <Content Include="assets\css\images\wp8_inverseicons.png" />
     <Content Include="assets\css\kendo.icenium.min.css" />
@@ -580,6 +581,7 @@
     </Content>
     <Content Include="icon.png" />
     <Content Include="index.html" />
+    <Content Include="splash.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\images\kendoui.ttf" />
@@ -589,6 +591,15 @@
     <Folder Include="assets\icons\android\" />
     <Folder Include="assets\icons\ios\" />
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

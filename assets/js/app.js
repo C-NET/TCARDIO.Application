@@ -9,26 +9,53 @@ MYAPP.run = (function() {
         transition: "slide"
     });
 
-    //Test 
-    window.localStorage.removeItem('eula-flag');
+    //Test para quitar de memoria 
+    // window.localStorage.removeItem('eula-flag');
+    
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
 
     if (eula == null || !eula) {
-
         MYAPP.app.navigate("#eula");
     }
     window.plugins.emailComposer = new EmailComposer();
 });
 
-MYAPP.acceptEULA = function (code) {
-    //Save EULA flag
-    if (MYAPP.check(code)) {
-        window.localStorage.setItem('eula-flag', true);
-        $(".km-tabstrip").show();
-        MYAPP.app.navigate("#home");
-    }
+MYAPP.call = function (operation, data, successFn, errorFn) {
+    $.ajax({
+        url: "http://localhost:3355/Auth.svc/" + operation,
+        dataType: "jsonp",
+        data: data,
+        crossDomain: true,
+        type: "POST",   
+        username: null,
+        password: null,
+        timeout: 10000, //10 segundos de TO
+        success: successFn,
+        error: errorFn
+    });
+
 };
+
+
+MYAPP.acceptEULA = function (code) {
+        MYAPP.call(
+            "Check",
+            { code: code },
+            function(result) {
+                if (result == "OK") {
+                    window.localStorage.setItem('eula-flag', true);
+                    MYAPP.app.navigate("#home");
+                } else {
+                    /* CODIGO INCORRECTO */
+                }
+            },
+            function(result, error) {
+                /* ERROR SERVICIO NO DISPONIBLE */
+            }
+        );
+};
+    
 MYAPP.refuseEULA = function () {
     navigator.app.exitApp();
 };
@@ -121,6 +148,7 @@ MYAPP.hideFooter = function () {
 
 MYAPP.showFooter = function () {
     $(".div-banner").show();
+    $(".km-tabstrip").show();
 };
 
 MYAPP.scrollTop = function(e) {
