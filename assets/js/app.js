@@ -39,21 +39,25 @@ MYAPP.call = function (operation, data, successFn, errorFn) {
 
 
 MYAPP.acceptEULA = function (code) {
-        MYAPP.call(
-            "Check",
-            { code: code },
-            function(result) {
-                if (result == "OK") {
-                    window.localStorage.setItem('eula-flag', true);
-                    MYAPP.app.navigate("#home");
-                } else {
-                    /* CODIGO INCORRECTO */
-                }
-            },
-            function(result, error) {
-                /* ERROR SERVICIO NO DISPONIBLE */
-            }
-        );
+    
+    window.localStorage.setItem('eula-flag', true);
+    MYAPP.app.navigate("#home");
+    //COMENTADO PARA USAR EN EL TELEFONO
+        //MYAPP.call(
+        //    "Check",
+        //    { code: code },
+        //    function(result) {
+        //        if (result == "OK") {
+        //            window.localStorage.setItem('eula-flag', true);
+        //            MYAPP.app.navigate("#home");
+        //        } else {
+        //            /* CODIGO INCORRECTO */
+        //        }
+        //    },
+        //    function(result, error) {
+        //        /* ERROR SERVICIO NO DISPONIBLE */
+        //    }
+        //);
 };
     
 MYAPP.refuseEULA = function () {
