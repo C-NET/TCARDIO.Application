@@ -25,7 +25,7 @@
   <icon src="icons/android/ic_app_mdpi.png" gap:platform="android" gap:density="mdpi" />
   <icon src="icons/android/ic_app_hdpi.png" gap:platform="android" gap:density="hdpi" />
   <icon src="icons/android/ic_app_xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-  
+
   <!--  Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event. -->
   <feature name="http://api.phonegap.com/1.0/device" />
@@ -41,7 +41,7 @@
 
 
   <!-- Customize your app and platform with the preference element. -->
-  <preference name="phonegap-version"           value="3.1.0" />
+  <preference name="phonegap-version"           value="3.4.0" />
   <!-- all: current version of PhoneGap -->
   <!--<preference name="orientation"                value="portrait" />-->
   <!-- all: default means both landscape and portrait are enabled -->
@@ -101,7 +101,8 @@
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
         <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
     -->
-  <gap:plugin name="com.phonegap.plugins.emailcomposer" version="1.3" />
+  <!--<gap:plugin name="com.phonegap.plugins.emailcomposer" version="1.3" />-->
+  <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
   <plugin name="TelephoneNumber" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>
 
 </widget>
