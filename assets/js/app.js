@@ -10,7 +10,7 @@ MYAPP.run = (function() {
     });
 
     //Test para quitar de memoria 
-    //window.localStorage.removeItem('eula-flag');
+    window.localStorage.removeItem('eula-flag');
     
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
