@@ -42,15 +42,11 @@ MYAPP.acceptEULA = function () {
     
     window.localStorage.setItem('eula-flag', true);
     window.localStorage.setItem('eula-accept', true);
-    
-    var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-    telephoneNumber.get(function (result) {
-    
-        window.localStorage.setItem('telephoneNumber', result);
+    window.plugins.telephoneNumber.get(function (result) {
+        alert('re'+'sult ='+result);
     }, function (error) {
-        
+        alert('error = ' + error.code);
     });
-    alert(window.localStorage.getItem('telephoneNumber'));
     MYAPP.app.navigate("#ListCategoriesView.html");
     //COMENTADO LLAMADA AJAX  A WEB SERVICE
         //MYAPP.call(
