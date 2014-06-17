@@ -44,7 +44,9 @@ MYAPP.acceptEULA = function () {
     window.localStorage.setItem('eula-accept', true);
     var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
     telephoneNumber.get(function (result) {
-        alert('result = ' + result);
+        alert('result = ' + result.getStrMessage());
+        alert('result = ' + result.getJSONString());
+       
     }, function (error) {
         alert('error = ' + error.code);
     });
