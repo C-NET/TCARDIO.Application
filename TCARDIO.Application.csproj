@@ -586,7 +586,10 @@
     <Content Include="icon.png" />
     <Content Include="index.html" />
     <Content Include="ListCategoriesView.html" />
+    <Content Include="plugin.xml" />
     <Content Include="splash.png" />
+    <Content Include="src\com\simonmacdonald\cordova\plugins\TelephoneNumber.java" />
+    <Content Include="www\telephonenumber.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\images\kendoui.ttf" />
@@ -599,6 +602,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
+    <Content Include="src\com\simonmacdonald\cordova\plugins\.DS_Store" />
+    <Content Include="src\com\simonmacdonald\.DS_Store" />
+    <Content Include="src\com\simonmacdonald\cordova\.DS_Store" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
