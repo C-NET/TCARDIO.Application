@@ -74,15 +74,14 @@
             margin-right:.5rem;
         }
 
-        .radioButtons {
+        .inputs-busqueda {
             margin-right:.5rem;
             margin-left: .5rem;
             display:inline;            
         }
 
         .items-inputs{
-            margin:.8rem; 
-                 
+            margin:.8rem;                  
         }
 
         .header-busqueda {
