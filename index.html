@@ -31,85 +31,56 @@
 
         <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
 
-        <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR:</div>        
-        <div class="items-radioButtons">
-            <input class="radioButtons" name="radio" type="radio" checked="checked" id="rbCategoria"/>Categor&#237;a
-            <input class="radioButtons" name="radio" type="radio"id="rbTitulo"/>T&#237;tulo
-             <input class="radioButtons" name="radio" type="radio" id="rbAcronimo"/>Acr&#243;nimo
+        <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR:</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" />Categor&#237;a
+            <input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" />T&#237;tulo
+             <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" />Acr&#243;nimo
         </div>
 
         <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
 
-        <div class="items-checkbox" >
-            <div class="checkbox-lista">
-                <input id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()"/>
-            </div>
-            <div class="texto-checkbox">TODAS</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()"/>TODAS
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat0" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</div>
-        </div>
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat1" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">ANGINA ESTABLE</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" />S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat2" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">DISLIPIDEMIA Y PREVENCI&#211;N</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat1" type="checkbox" checked="checked" />ANGINA ESTABLE
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat3" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">INSUFICIENCIA CARD&#205;ACA</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat2" type="checkbox" checked="checked" />DISLIPIDEMIA Y PREVENCI&#211;N
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat4" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">ARRITMIAS</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat3" type="checkbox" checked="checked" />INSUFICIENCIA CARD&#205;ACA
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat5" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">INTERVENCIONISMO CARDIOVASCULAR</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat4" type="checkbox" checked="checked" />ARRITMIAS
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat6" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">TEP- TVP</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat5" type="checkbox" checked="checked" />INTERVENCIONISMO CARDIOVASCULAR
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat7" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">HIPERTENSI&#211;N ARTERIAL</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat6" type="checkbox" checked="checked" />TEP- TVP
         </div>
 
-        <div class="items-checkbox">
-            <div class="checkbox-lista">
-                <input id="chkCat8" type="checkbox" checked="checked" />
-            </div>
-            <div class="texto-checkbox">STROKE</div>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat7" type="checkbox" checked="checked" />HIPERTENSI&#211;N ARTERIAL
         </div>
 
-        <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
+        <div class="items-inputs">
+            <input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE
+        </div>
+
+    <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
     </div>
 
     <!-- VISTA DEL INDICE COMPLETO -->

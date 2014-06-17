@@ -74,19 +74,14 @@
             margin-right:.5rem;
         }
 
-        .items-checkbox {
-            margin:.5rem; 
-            text-align:left;          
-        }
-
         .radioButtons {
             margin-right:.5rem;
             margin-left: .5rem;
             display:inline;            
         }
 
-        .items-radioButtons{
-            margin-left:.8rem; 
+        .items-inputs{
+            margin:.8rem; 
                  
         }
 
