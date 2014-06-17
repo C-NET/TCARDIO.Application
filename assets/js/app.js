@@ -256,10 +256,9 @@ MYAPP.scrollTop = function(e) {
     scroller.reset();
 };
 
-$("#search").kendoTouch({
+$("#index").kendoTouch({
     enableSwipe: true,
-    swipe: function (e) {
-        debugger;
-        console.log("You swiped" + e.target.text())
+    swipe: function (e) {     
+        alert("You swiped" + e.target.text())
     }
 }); 
