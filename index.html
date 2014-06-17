@@ -1,107 +1,230 @@
 <!doctype html>
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" charset="utf-8"/>
-        <title>Ensayos cardil&#243;gicos</title>
-        <!-- Kendo UI Mobile styles for all supported platforms -->
-        <link rel="stylesheet" href="assets/css/master.css">
-        <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" charset="utf-8" />
+    <title>Ensayos cardil&#243;gicos</title>
+    <!-- Kendo UI Mobile styles for all supported platforms -->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/kendo.mobile.all.min.css">
 
-        <!-- Phonegap JavaScript -->
-        <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
-        <script type="text/javascript" src="EmailComposer.js" charset="utf-8"></script>
+    <!-- Phonegap JavaScript -->
+    <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+    <script type="text/javascript" src="EmailComposer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="telephonenumber.js" charset="utf-8"></script>
 
-        <!-- Kendo UI JavaScript -->
-        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/kendo.mobile.min.js"></script>
+    <!-- Kendo UI JavaScript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/kendo.mobile.min.js"></script>
 
-        <!-- Kendo UI Culture JavaScript -->
-        <script type="text/javascript" src="assets/js/cultures/kendo.culture.es-AR.min.js"></script>
+    <!-- Kendo UI Culture JavaScript -->
+    <script type="text/javascript" src="assets/js/cultures/kendo.culture.es-AR.min.js"></script>
 
-        <!-- APP JavaScript -->
-        <script type="text/javascript" src="assets/js/data.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>    
-    </head>
-    <body>
-        <!-- These are the "views" that are displayed between the header and the footer
-            of the layout above. They are specfied as contents of the layout via the
-            data-layout="main-layout" where "main-layout" is the data-id of the desired
-            layout -->
-        <div data-role="view" data-layout="main-layout" id="home" data-title="B&#250;squeda de art&#237;culos" data-show="MYAPP.showFooter">            
-            <h2 style="margin-bottom: 1rem;">Palabra a buscar:</h2>
-            <div>
-                <input id="search-text" type="text" value="GISSI"/>
-                <!-- TEXTBOX, ADS y BUTTON -->
-                <!--data-click="search" -->
-                <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.showindex();"> Buscar Art&#237;culos</a>
-            </div>              
+    <!-- APP JavaScript -->
+    <script type="text/javascript" src="assets/js/data.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</head>
+<body>
+
+    <!-- VISTA DE BÚSQUEDA DE ARTÍCULOS -->
+    <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda de art&#237;culos">
+        <!--    <h2 style="margin-bottom: 1rem;">Palabra a buscar:</h2>-->
+
+        <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
+
+        <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR:</div>        
+        <div class="items-radioButtons">
+            <input class="radioButtons" name="radio" type="radio" checked="checked" id="rbCategoria"/>Categor&#237;a
+            <input class="radioButtons" name="radio" type="radio"id="rbTitulo"/>T&#237;tulo
+             <input class="radioButtons" name="radio" type="radio" id="rbAcronimo"/>Acr&#243;nimo
         </div>
-        <div data-role="view" data-layout="main-layout" id="index" data-title="Art&#237;culos" data-show="MYAPP.scrollTop">
-            <ul 
-                id="index-list"
-                data-role="listview"
-                data-source="MYAPP.abstracts"
-                data-pull-to-refresh="false"    
-                data-append-on-refresh="false"
-                data-template="item-template"
-                data-header-template="header-template"
-                data-style ="inset">
-            </ul> 
+
+        <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
+
+        <div class="items-checkbox" >
+            <div class="checkbox-lista">
+                <input id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()"/>
+            </div>
+            <div class="texto-checkbox">TODAS</div>
         </div>
-        <!-- The "layout" defines the common navbar and footer. Views are then swapped
-            out as the content between this common header and footer -->    
-        <div data-role="view" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final" data-show="MYAPP.hideFooter">
-            <h4>BY DOWNLOADING AND INSTALLING OR OTHERWISE USING THE MOBILE APPLICATION SHALL BE LIABLE FOR ANY FAILURE BY SUCH EMPLOYEES AND THIRD PARTY CONTRACTORS TO COMPLY WITH THESE TERMS.</h4>            
-            <p>b. Map Usage. You may copy and use images, clip art, animations, sounds, music, shapes, video clips and templates provided with the Mobile Application and identified for such use in maps that you create. Unless otherwise specified in a license unique to a map or map template you purchase, you may distribute your maps.</p>
-            <p>c. Title and Ownership. Mindjet retains all rights, title, and interest in and to the Mobile Application and its documentation and in all related copyrights, trade secrets, patents, trademarks, and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals, and extensions of such rights. You may not remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary markings in the Mobile Application and its documentation. You are not granted any rights to any trademarks or service marks of Mindjet. Mindjet retains all rights not expressly granted to you in these terms.</p>
-            <p>Contenido EULA 4</p>
-            <h3>
-                C&#243;digo de aceptaci&#243;n:
-                <input type="text" value="777777" id="eula-accept-code" required="required" />
-            </h3>
-            <div  id="eula-footer">
-                <a data-role="button" onclick="MYAPP.acceptEULA($('#eula-accept-code').val());">Aceptar</a>
-                <a data-role="button" onclick="MYAPP.refuseEULA();">Cancelar</a>
-            </div>
-        </div>    
-        <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">                          
-                <p>616 Fitz Maurice, Mario<br/>
-                FIT Trials de la terap&#233;utica cardiovascular<br/>
-                Mario Fitz Maurice y Sergio Brieva - 8a. ed. - Buenos Aires:<br/>
-                Ediciones de Estudios Cardiovasculares, 2011.<br/>
-                ISBN 978-987-23785-1-6<br/>
-                I. Brieva, Sergio II. T&#237;tulo -1. Terap&#233;utica Cardiovascular</p>
 
-            <p><b>ISBN: 978-987-23785-1-6</b><br/>
-            Todos los derechos reservados. Esta publicaci&#243;n no puede ser reproducida, archivada o transmitida en forma total ni parcial, sea por medios electr&#243;nicos, mec&#225;nicos, fotocopiado o grabado, sin el permiso de los autores que deber&#225; solicitarse por escrito.</p>
-            <p>&#169; Mario Daniel Fitz Maurice y Sergio Fernando Brieva, 2005</p>
-
-        </div>         
-        <div data-role="layout" data-id="main-layout" data-zoom="true">
-            <div data-role="header">
-                <div data-role="navbar">
-                    <span data-role="view-title"></span>
-                </div>
-            </div>     
-            <div data-role="footer">
-                <div class='div-banner' id="banner">
-                <img src="assets/css/images/logo.gif" alt="logoNovartis"/>
-            </div>                                
-                <div data-role="tabstrip">                    
-                    <a data-icon="search" href="#home" class="buttonAppearance-tabstrip"></a>
-                    <a data-icon="about" href="#about" class="buttonAppearance-tabstrip"></a>
-                </div>
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat0" type="checkbox" checked="checked" />
             </div>
-        </div>   
-        <script type="text/x-kendo-template" id="header-template">
-            <div id="header-categoria"> #:value#</div>
-        </script>
-        <script type="text/x-kendo-template" id="item-template">
+            <div class="texto-checkbox">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</div>
+        </div>
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat1" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">ANGINA ESTABLE</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat2" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">DISLIPIDEMIA Y PREVENCI&#211;N</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat3" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">INSUFICIENCIA CARD&#205;ACA</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat4" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">ARRITMIAS</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat5" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">INTERVENCIONISMO CARDIOVASCULAR</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat6" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">TEP- TVP</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat7" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">HIPERTENSI&#211;N ARTERIAL</div>
+        </div>
+
+        <div class="items-checkbox">
+            <div class="checkbox-lista">
+                <input id="chkCat8" type="checkbox" checked="checked" />
+            </div>
+            <div class="texto-checkbox">STROKE</div>
+        </div>
+
+        <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
+    </div>
+
+    <!-- VISTA DEL INDICE COMPLETO -->
+    <div data-role="view" data-layout="main-layout" id="index" data-title="INDICE">
+        <ul
+            id="index-list"
+            data-role="listview"
+            data-source="MYAPP.showIndexList"
+            data-pull-to-refresh="false"
+            data-append-on-refresh="false"
+            data-template="item-template-index"
+            data-header-template="header-template-index"
+            data-style="inset">
+        </ul>
+    </div>
+    <script type="text/x-kendo-template" id="header-template-index">
+        <div class="header-categoria"> 
+        # var val = MYAPP.getCategoryName(value); #
+            #= val #
+        </div>
+    </script>
+    <script type="text/x-kendo-template" id="item-template-index">
             <div class="dv-item-template">  
-                <a  data-align:"left" href="\#abstracts/#: article #">        
+                <a  data-align:"left" href=javascript:MYAPP.navigateToArticle('\#abstracts/#: article #'); >        
                     <span class="item-template-titulo">#: title #</span></a>  <br/>
                     <span class="item-template-subtitulo">#: subtitle #</span>                    
             </div>
-        </script>
-    </body>
+    </script>
+
+    <!-- VISTA DE LOS ARTICULOS ENCONTRADOS DE LA BÚSQUEDA -->
+    <div data-role="view" data-layout="main-layout" id="articulos" data-title="Art&#237;culos" data-show="MYAPP.scrollTop">
+        <ul
+            id="result-list"
+            data-role="listview"
+            data-source="MYAPP.abstracts"
+            data-pull-to-refresh="false"
+            data-append-on-refresh="false"
+            data-template="item-template"
+            data-header-template="header-template"
+            data-style="inset">
+        </ul>
+    </div>
+    <script type="text/x-kendo-template" id="header-template">
+            <div class="header-categoria"> #:value#</div>
+    </script>
+    <script type="text/x-kendo-template" id="item-template">
+            <div class="dv-item-template">  
+                <a  data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/#: article #');">        
+                    <span class="item-template-titulo">#: title #</span></a>  <br/>
+                    <span class="item-template-subtitulo">#: subtitle #</span>                    
+            </div>
+    </script>
+
+    <!-- VISTA DE ACEPTACIÓN DE COMPARTIR INFORMACION CON NOVARTIS-->
+    <div data-role="view" data-layout="main-layout" id="eula" data-title="Acuerdo de Licencia de Usuario Final" data-show="MYAPP.hideFooter" data-before-hide="MYAPP.showFooter">
+        <h4>BY DOWNLOADING AND INSTALLING OR OTHERWISE USING THE MOBILE APPLICATION SHALL BE LIABLE FOR ANY FAILURE BY SUCH EMPLOYEES AND THIRD PARTY CONTRACTORS TO COMPLY WITH THESE TERMS.</h4>
+        <p>b. Map Usage. You may copy and use images, clip art, animations, sounds, music, shapes, video clips and templates provided with the Mobile Application and identified for such use in maps that you create. Unless otherwise specified in a license unique to a map or map template you purchase, you may distribute your maps.</p>
+        <p>c. Title and Ownership. Mindjet retains all rights, title, and interest in and to the Mobile Application and its documentation and in all related copyrights, trade secrets, patents, trademarks, and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals, and extensions of such rights. You may not remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary markings in the Mobile Application and its documentation. You are not granted any rights to any trademarks or service marks of Mindjet. Mindjet retains all rights not expressly granted to you in these terms.</p>
+        <p>Contenido EULA 4</p>
+        <h3>Acepta que Novartis acceda a su informaci&#243;n?
+        </h3>
+        <div id="eula-footer">
+            <a data-role="button" onclick="MYAPP.acceptEULA();">SI</a>
+            <a data-role="button" onclick="MYAPP.refuseEULA();">NO</a>
+        </div>
+    </div>
+
+    <!-- VISTA DE INFORMACIÓN - ACERCA DE -->
+    <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">
+        <p>
+            616 Fitz Maurice, Mario<br />
+            FIT Trials de la terap&#233;utica cardiovascular<br />
+            Mario Fitz Maurice y Sergio Brieva - 8a. ed. - Buenos Aires:<br />
+            Ediciones de Estudios Cardiovasculares, 2011.<br />
+            ISBN 978-987-23785-1-6<br />
+            I. Brieva, Sergio II. T&#237;tulo -1. Terap&#233;utica Cardiovascular
+        </p>
+        <p>
+            <b>ISBN: 978-987-23785-1-6</b><br />
+            Todos los derechos reservados. Esta publicaci&#243;n no puede ser reproducida, archivada o transmitida en forma total ni parcial, sea por medios electr&#243;nicos, mec&#225;nicos, fotocopiado o grabado, sin el permiso de los autores que deber&#225; solicitarse por escrito.
+        </p>
+        <p>&#169; Mario Daniel Fitz Maurice y Sergio Fernando Brieva, 2005</p>
+        <div style="text-align: center">
+            <hr style="background:black; border:0; height:1.5px; margin-left: 10px; margin-right:10px"/>
+            <p>
+                <b>Material para el uso exclusivo del personal m&#233;dico.<br />
+                    Proh&#237;bida su exhibici&#243;n y/o entrega a pacientes, consumidores y/o p&#250;blico en general
+                </b>
+            </p>
+            <hr style="background:black; border:0; height:1.5px; margin-left: 10px; margin-right:10px"/>
+            <p>Gentileza de</p>
+            <div class='div-banner' id="banner">
+                <img src="assets/css/images/logo.gif" alt="logoNovartis" />
+            </div>
+            <p><b>NOVARTIS ARGENTINA S.A.</b></p>
+            <p>Ramallo 1851 C1429DUC - Buenos Aires, Argentina - Tel: (011) 4703-7000</p>
+            <br />
+            <p>ARG 6304667 - April 2014</p>
+        </div>
+    </div>
+
+    <!--LAYOUT PRINCIPAL-->
+    <div data-role="layout" data-id="main-layout" data-zoom="true">
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a data-icon="home" href="#ListCategoriesView.html" class="buttonAppearance-tabstrip"></a>
+                <a data-icon="search" href="#search" class="buttonAppearance-tabstrip"></a>
+                <a data-icon="about" href="#about" class="buttonAppearance-tabstrip"></a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

@@ -42,27 +42,69 @@
             margin: 1rem;
         }
 
-        #eula-footer > .km-button {
-             width: 30%;
-        }
-
         /*BÚSQUEDA DE ARTÍCULOS*/
         #buscar-articulos {
             margin: 1rem;
         }
         #search-text {
-            margin-left: 1rem;
+            margin-left: 1.4rem!important;
             font-size: 1.1em;
+            width:70%;
+        }
+
+        .km-listview-label {           
+            font-size: .8em!important;
+            font-weight:600;
+            margin:0 auto;                
         }
 
         #home > .km-scroll-container {
             height: 100%!important;
         }
 
-        /*LISTA DE ARTÍCULOS */
+        .checkbox-lista {
+            float:left; 
+            width:15px;
+            margin-right:.5rem;
+            margin-left: .5rem;
+        }
 
-        #header-categoria{
-            color: #e55b2b;          
+        .texto-checkbox {
+    
+            margin-right:.5rem;
+        }
+
+        .items-checkbox {
+            margin:.5rem; 
+            text-align:left;          
+        }
+
+        .radioButtons {
+            margin-right:.5rem;
+            margin-left: .5rem;
+            display:inline;            
+        }
+
+        .items-radioButtons{
+            margin-left:.8rem; 
+                 
+        }
+
+        .header-busqueda {
+            color: #e55b2b!important;
+            font-size: 1em;
+            font-weight: 700;
+            margin: 1rem!important;
+        }        
+
+        /*LISTA DE CATEGORIAS*/
+        .category-list-template{
+            margin: 1.6rem
+        }
+
+        /*LISTA DE ARTÍCULOS */
+        .header-categoria{
+            color: #e55b2b!important;          
             font-size: 1em;
             font-weight: 700;
             margin: 0;
@@ -118,6 +160,9 @@
         .contenedor-articulo > h3 {
             font-size: 1em;
         }
+        .contenedor-articulo > h2 {
+            font-size: 1em;
+        }
 
          .contenedor-articulo  h3 > .p {
              font-size: 1em;
@@ -137,13 +182,38 @@
 
         .p,
         .s5 {
-            font: 100%/1.618 'Lato', sans-serif; 
              font-weight: 400; 
              color: #444; 
-             text-rendering: optimizeLegibility;
-            font-size: .8em;
+             text-rendering: optimizeLegibility;           
+        }
+
+        .km-arrow-right:after,
+        .km-arrow-right:before
+        {
+            content: "\e010"!important;
+        }
+        
+
+        .km-arrow-left:after,
+        .km-arrow-left:before
+        {
+            content: "\e013"!important;
+        }
+         .left-arrow 
+        {
+            float: left; width: 50%; text-align: left;
 
         }
+         .right-arrow 
+        {
+           float: left; width: 50%; text-align: right;
+ 
+        }
+        .div-arrows 
+        {
+          margin: 1rem;    
+        }
+
 
         
         /*----------------------------------------*/

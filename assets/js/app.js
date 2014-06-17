@@ -10,14 +10,16 @@ MYAPP.run = (function() {
     });
 
     //Test para quitar de memoria 
-    // window.localStorage.removeItem('eula-flag');
+    window.localStorage.removeItem('eula-flag');
     
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
 
-    if (eula == null || !eula) {
+    if (eula == null || !eula) 
         MYAPP.app.navigate("#eula");
-    }
+    else
+        MYAPP.app.navigate("#ListCategoriesView.html");
+    
     window.plugins.emailComposer = new EmailComposer();
 });
 
@@ -34,15 +36,20 @@ MYAPP.call = function (operation, data, successFn, errorFn) {
         success: successFn,
         error: errorFn
     });
-
 };
 
-
-MYAPP.acceptEULA = function (code) {
+MYAPP.acceptEULA = function () {
     
     window.localStorage.setItem('eula-flag', true);
-    MYAPP.app.navigate("#home");
-    //COMENTADO PARA USAR EN EL TELEFONO
+    window.localStorage.setItem('eula-accept', true);
+    var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
+    telephoneNumber.get(function (result) {
+        alert('result = ' + result);
+    }, function (error) {
+        alert('error = ' + error.code);
+    });
+    MYAPP.app.navigate("#ListCategoriesView.html");
+    //COMENTADO LLAMADA AJAX  A WEB SERVICE
         //MYAPP.call(
         //    "Check",
         //    { code: code },
@@ -61,17 +68,38 @@ MYAPP.acceptEULA = function (code) {
 };
     
 MYAPP.refuseEULA = function () {
-    navigator.app.exitApp();
+    //navigator.app.exitApp();
+    window.localStorage.setItem('eula-flag', true);
+    window.localStorage.setItem('eula-accept', false);
+    MYAPP.app.navigate("#ListCategoriesView.html");
 };
-// this is called when the intial view shows. it prevents the flash
+
+// this is called when the initial view shows. it prevents the flash
 // of unstyled content (FOUC)
-MYAPP.showindex = (function () {
-    MYAPP.app.navigate("#index");
+MYAPP.search = (function () {
+    MYAPP.app.navigate("#articulos");
     if (listView == null)
-        listView = $('#index-list').data("kendoMobileListView");
+        listView = $('#result-list').data("kendoMobileListView");
     listView.refresh();
     MYAPP.abstracts.read();
-    
+    //ORDENAMIENTO
+    if ($("#rbTitulo")[0].checked) {
+        MYAPP.abstracts.sort({ field: "title", dir: "asc" });
+        MYAPP.abstracts.group([]);
+        //CORRECION BUG DE KENDO 
+        $('#result-list').removeClass("km-listgroup");
+        $('#result-list').addClass("km-list");
+        /////////////////////////
+    }
+    if ($("#rbCategoria")[0].checked) {
+        MYAPP.abstracts.group({ field: "category" });
+       
+    }
+        if ($("#rbAcronimo")[0].checked)
+    {
+        MYAPP.abstracts.group({ field: "subtitle" });
+        MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
+    }
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
@@ -86,40 +114,47 @@ MYAPP.showindex = (function () {
         // attach to deviceready event, which is fired when phonegap is all good to go.
         document.addEventListener('deviceready', MYAPP.run, false);
     }
-
     MYAPP.idx = MYAPP.getIndex();
     MYAPP.src = MYAPP.getData();
+    MYAPP.cat = MYAPP.getCategories();
 
 })();
 
+//FILTRA LOS ARTICULOS POR BÚSQUEDA
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
-            // Retorna los subindices de las páginas que coinciden.
-            var match = MYAPP.find($("#search-text").val());
-
-            var data = [];
-
-            for (var i = 0; i < match.length; i++) {
-                data.push(MYAPP.src[match[i]]);
+            var categoryCodes = 0;
+            //Recorro los checkbox de categorías
+            for (var k = 0; k < 9; k++)
+            {
+                //Si está chequeado agrego la categoría a categoryCodes.
+                if ($("#chkCat"+k)[0].checked)
+                    categoryCodes |= (1 << (4+k));
             }
-
+            // Retorna las páginas que coinciden.
+            var data = MYAPP.find($("#search-text").val(), categoryCodes);
             options.success(data);
-        }
-        
-    },
-    group: { field: "category" }
+        } 
+    }   
 });
 
-MYAPP.check = function (code) {
-    var n = parseInt(code, 16);
+//DEVUELVE TODOS LOS ARTICULOS PARA EL INDIDCE GENERAL
+MYAPP.showIndexList = new kendo.data.DataSource({
+    transport: {
+        read: function (options) {
+            options.success(MYAPP.src);
+        }
+    },
+    group: { field: "categoryCode" }
+});
 
-    return code.length == 6 && ((n % 7) == 0);
-};
 
+//FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (title, subtitle, encoded64) {
 
     var now = new Date();
+    //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");
    
     window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
@@ -130,29 +165,90 @@ function AddZero(num) {
     return (num >= 0 && num < 10) ? "0" + num : num + "";
 }
 
-MYAPP.find = function (key) {
+
+//BUSCA EL INDICE DEL ARTICULO DE LA PALABRA ENCONTRADA
+MYAPP.find = function (key, categories) {
     var idx = MYAPP.idx;
  
     key = key.toLowerCase();
 
-    for (var i = 0; i < idx.length; i++) {
-        if (idx[i].key == key)
-            return (idx[i].src);
+    var match = [];
+
+    // Recorre el índice
+    for (var i = 0; i < idx.length; i++)
+    {
+        // Compara la categoria del grupo contra la categorías que se buscan
+        if ((idx[i].cat & categories) != 0 && idx[i].key.indexOf(key) >= 0)
+        {
+            var count = idx[i].src.length;
+
+            // Se agregan todos los subindices de los artículos sin repetir.
+            for (var j = 0; j < count; j++)
+            {
+                var e = idx[i].src[j];
+
+                // Si está repetido no se agrega
+                if (match.indexOf(e) < 0)
+                    match.push(e);
+            }
+        }
     }
 
-    return [];
+    var data = [];
+    //Filtra los artículos por categoría
+    for (var i = 0; i < match.length; i++) {
+        var art = MYAPP.src[match[i]];
+        if ((art.categoryCode & categories) != 0)
+            data.push(art);
+    }
+
+    return data;
 };
 
+MYAPP.cambiarArticulo = function (indice) {
+    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
+};
 
+//Obtiene el nombre de la categoría mediante el código.
+MYAPP.getCategoryName = function (categoryCode) {
+    var cat = MYAPP.cat;
 
-MYAPP.hideFooter = function () {
+    for (var i = 0; i < cat.length; i++)
+        if (cat[i].id == categoryCode)
+            return cat[i].desc;
+
+    return "";
+}
+
+MYAPP.CheckAll = function (e) {
+    // Listen for click on toggle checkbox
+    if ($('#chkCatTodas')[0].checked) {
+        // Iterate each checkbox
+        $(':checkbox').each(function () {
+            this.checked = true;
+        });
+    }
+    else { // Iterate each checkbox 
+        $(":checkbox").each(function () { this.checked = false; });
+    }
+
+}
+
+MYAPP.navigateToArticle = function (article) {
+    /*Chequeo si acepta compartir informacion con Novartis*/
+    var eulaAceptado = window.localStorage.getItem('eula-accept');
+    if (eulaAceptado == 'false')
+        MYAPP.app.navigate("#eula");
+    else
+        MYAPP.app.navigate(article);
+}
+
+MYAPP.hideFooter = function (e) {
     $(".km-tabstrip").hide();
-    $(".div-banner").hide();
 };
 
-MYAPP.showFooter = function () {
-    $(".div-banner").show();
-    $(".km-tabstrip").show();
+MYAPP.showFooter = function (e) {
+    $(".km-tabstrip").show(); 
 };
 
 MYAPP.scrollTop = function(e) {
@@ -160,13 +256,10 @@ MYAPP.scrollTop = function(e) {
     scroller.reset();
 };
 
-//MYAPP.hideHeader = function () {
-//    $(".km-header").hide();
-//    $(".km-navbar").hide();
-//};
-
-//MYAPP.showHeader = function () {
-//    $(".km-navbar").show();
-//    $("km-header").show();
-    
-//};
+$("#search").kendoTouch({
+    enableSwipe: true,
+    swipe: function (e) {
+        debugger;
+        console.log("You swiped" + e.target.text())
+    }
+}); 
