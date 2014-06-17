@@ -103,6 +103,5 @@
     -->
   <!--<gap:plugin name="com.phonegap.plugins.emailcomposer" version="1.3" />-->
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
-  <plugin name="TelephoneNumber" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>
-
+  <gap:plugin name="com.simonmacdonald.telephonenumber" version="1.0.0" />
 </widget>
