@@ -183,6 +183,7 @@ MYAPP.find = function (key, categories) {
 };
 
 MYAPP.cambiarArticulo = function (indice) {
+    spinnerplugin.show();
     MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
 };
 
@@ -230,16 +231,8 @@ MYAPP.showFooter = function (e) {
 
 MYAPP.scrollTop = function(e) {
     var scroller = e.view.scroller;
-    scroller.reset();
+    scroller.reset();c  
 };
-
-$("#index").kendoTouch({
-    enableSwipe: true,
-    swipe: function (e) {     
-        alert("You swiped" + e.target.text())
-    }
-}); 
-
 
 
 
