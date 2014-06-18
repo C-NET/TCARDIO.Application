@@ -1,4 +1,4 @@
-      /*GENERAL*/ 
+      /*GENERAL*/
         body 
         {
              font-family: 'HelveticaNeue Light', 'Roboto Light', 'Slate Light', 'Segoe WP', NokiaPureTextLight, sans-serif!important;
@@ -9,7 +9,9 @@
              font-size: 1em;
             line-height: normal;
         }  
-
+        p > * {
+            pointer-events: none;
+        }
         /*BANNER*/
         .div-banner {
             width: 100%;
@@ -112,7 +114,7 @@
 
         .item-template-subtitulo {
             color: #9b9b9b;
-            font-size: .7em;
+            font-size: .7em;           
         }
 
         .dv-item-template {

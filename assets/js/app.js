@@ -6,7 +6,7 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        transition: "slide"
+        transition: "slide", loading: "Cargando..."
     });
 
     //Test para quitar de memoria 
@@ -182,10 +182,11 @@ MYAPP.find = function (key, categories) {
     return data;
 };
 
-MYAPP.cambiarArticulo = function (indice) {
-    spinnerplugin.show();
+MYAPP.cambiarArticulo = function (indice, e) {
+    e.preventDefault();
     MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
 };
+
 
 //Obtiene el nombre de la categoría mediante el código.
 MYAPP.getCategoryName = function (categoryCode) {
@@ -229,9 +230,10 @@ MYAPP.showFooter = function (e) {
     $(".km-tabstrip").show(); 
 };
 
-MYAPP.scrollTop = function(e) {
+MYAPP.scrollTop = function (e) {
+    e.preventDefault();
     var scroller = e.view.scroller;
-    scroller.reset();c  
+    scroller.reset(); 
 };
 
 

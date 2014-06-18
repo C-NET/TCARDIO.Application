@@ -11,8 +11,6 @@
     <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
     <script type="text/javascript" src="EmailComposer.js" charset="utf-8"></script>
     <script type="text/javascript" src="telephonenumber.js" charset="utf-8"></script>
-    <script type="text/javascript" src="spinnerplugin.js" charset="utf-8"></script>
-    
 
     <!-- Kendo UI JavaScript -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -34,9 +32,9 @@
 
         <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR:</div>
         <div class="items-inputs">
-            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" />Categor&#237;a
-            <input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" />T&#237;tulo
-             <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" />Acr&#243;nimo
+            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria"  /><span>Categor&#237;</span>
+            <input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" /><span>T&#237;tulo</span>
+             <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" /><span>Acr&#243;nimo</span>
         </div>
 
         <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
@@ -46,7 +44,7 @@
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" />S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST
+            <input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" /><a onclick="toggle">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</a>
         </div>
 
         <div class="items-inputs">
@@ -184,7 +182,7 @@
     </div>
 
     <!--LAYOUT PRINCIPAL-->
-    <div data-role="layout" data-id="main-layout" data-zoom="true">
+    <div data-role="layout" data-id="main-layout">
         <div data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
