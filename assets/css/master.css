@@ -170,9 +170,6 @@
             /*visibility: hidden;*/ 
         }
 
-        .compartir {
-            margin: 1rem!important;
-        }
 
         .p,
         .s5 {
@@ -193,23 +190,26 @@
         {
             content: "\e013"!important;
         }
-         .left-arrow 
+        .contededor-alineamiento
         {
-            float: left; width: 50%; text-align: left;
-
+          margin: 1rem;
+          text-align:center;
+          vertical-align:top;
+          clear:both;
         }
-         .right-arrow 
+         .alineacion-izquierda 
         {
-           float: left; width: 50%; text-align: right;
- 
+            float: left;          
         }
-        .div-arrows 
+         .alineacion-derecha
         {
-          margin: 1rem;    
+           float: right;                 
+        }
+         
+        .alineacion-centrado {      
+            margin:0 auto;          
         }
 
-
-        
         /*----------------------------------------*/
         /*------------- Estilos de Kendo ---------*/
         /*----------------------------------------*/

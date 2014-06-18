@@ -134,7 +134,7 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
     //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");
    
-    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [['Articulo_' + strDateTime + '.pdf', encoded64]]);
+    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
 
 };
 //Pad given value to the left with "0"
