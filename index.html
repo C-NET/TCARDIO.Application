@@ -29,18 +29,18 @@
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda de art&#237;culos">
 
         <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
-
-        <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR:</div>
+        <a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
+        <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR</div>
         <div class="items-inputs">
-            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria"  /><span>Categor&#237;</span>
+            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" /><span>Categor&#237;a</span>
             <input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" /><span>T&#237;tulo</span>
-             <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" /><span>Acr&#243;nimo</span>
+            <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" /><span>Acr&#243;nimo</span>
         </div>
 
         <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()"/>TODAS
+            <input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS
         </div>
 
         <div class="items-inputs">
@@ -78,8 +78,7 @@
         <div class="items-inputs">
             <input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE
         </div>
-
-    <a id="buscar-articulos" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
+        <!--<a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>-->
     </div>
 
     <!-- VISTA DEL INDICE COMPLETO -->
@@ -141,6 +140,11 @@
         <p>Contenido EULA 4</p>
         <h3>Acepta que Novartis acceda a su informaci&#243;n?
         </h3>
+        <div class="divInfoUsuario">
+            <div><input id="txtNombre" type="text" value="" placeholder="Nombre"/></div>
+            <div><input id="txtEmail" type="text" value="" placeholder="E-Mail"/></div>
+            <div><input id="txtTelefono" type="text" value="" placeholder="Telefono"/></div>
+        </div>
         <div id="eula-footer">
             <a data-role="button" onclick="MYAPP.acceptEULA();">Acepto</a>
             <a data-role="button" onclick="MYAPP.refuseEULA();">No Acepto</a>
@@ -163,13 +167,13 @@
         </p>
         <p>&#169; Mario Daniel Fitz Maurice y Sergio Fernando Brieva, 2005</p>
         <div style="text-align: center">
-            <hr style="background:black; border:0; height:1.5px; margin-left: 10px; margin-right:10px"/>
+            <hr style="background: black; border: 0; height: 1.5px; margin-left: 10px; margin-right: 10px" />
             <p>
                 <b>Material para el uso exclusivo del personal m&#233;dico.<br />
                     Proh&#237;bida su exhibici&#243;n y/o entrega a pacientes, consumidores y/o p&#250;blico en general
                 </b>
             </p>
-            <hr style="background:black; border:0; height:1.5px; margin-left: 10px; margin-right:10px"/>
+            <hr style="background: black; border: 0; height: 1.5px; margin-left: 10px; margin-right: 10px" />
             <p>Gentileza de</p>
             <div class='div-banner' id="banner">
                 <img src="assets/css/images/logo.gif" alt="logoNovartis" />

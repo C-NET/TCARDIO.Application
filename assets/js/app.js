@@ -6,7 +6,7 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        transition: "slide", loading: "Cargando..."
+        transition: "slide"
     });
 
     //Test para quitar de memoria 
@@ -38,11 +38,35 @@ MYAPP.call = function (operation, data, successFn, errorFn) {
     });
 };
 
-MYAPP.acceptEULA = function () {    
+MYAPP.acceptEULA = function () {
+
+    var nombre = $("#txtNombre").val();
+    var email = $("#txtEmail").val();
+    var tel = $("#txtTelefono").val();
+
+    if (nombre == null || nombre == '')
+    {
+        alert ('Debe completar el Nombre')
+        return false;
+    }
+    if (email == null || email == '') {
+        alert('Debe completar su direcci\u00F3n de correo electr\u00F3nico')
+        return false;
+    }
+    if (tel == null || tel == '') {
+        alert('Debe ingresar su tel\u00E9fono')
+        return false;
+    }
+    //Guardar información de usuario
+    window.localStorage.setItem('nombre', nombre);
+    window.localStorage.setItem('email', email);
+    window.localStorage.setItem('telefono', tel);
+
     window.localStorage.setItem('eula-flag', true);
     window.localStorage.setItem('eula-accept', true);
     MYAPP.app.navigate("#ListCategoriesView.html");
 };
+
     
 MYAPP.refuseEULA = function () {
     //navigator.app.exitApp();

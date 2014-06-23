@@ -44,9 +44,14 @@
             margin: 1rem;
         }
 
-        /*BÚSQUEDA DE ARTÍCULOS*/
-        #buscar-articulos {
+        .divInfoUsuario {
             margin: 1rem;
+        }
+
+        /*BÚSQUEDA DE ARTÍCULOS*/
+        .boton-buscar 
+        {
+            margin: 1rem!important;
         }
         #search-text {
             margin-left: 1.4rem!important;
@@ -171,7 +176,6 @@
             margin: 1rem;
             /*visibility: hidden;*/ 
         }
-
 
         .p,
         .s5 {
