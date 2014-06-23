@@ -9,8 +9,10 @@ MYAPP.run = (function() {
         transition: "slide"
     });
 
+
+
     //Test para quitar de memoria 
-    window.localStorage.removeItem('eula-flag');
+    //window.localStorage.removeItem('eula-flag');
     
     /*Check EULA flag*/
     var eula = window.localStorage.getItem('eula-flag');
@@ -23,20 +25,7 @@ MYAPP.run = (function() {
     window.plugins.emailComposer = new EmailComposer();
 });
 
-MYAPP.call = function (operation, data, successFn, errorFn) {
-    $.ajax({
-        url: "http://localhost:3355/Auth.svc/" + operation,
-        dataType: "jsonp",
-        data: data,
-        crossDomain: true,
-        type: "POST",   
-        username: null,
-        password: null,
-        timeout: 10000, //10 segundos de TO
-        success: successFn,
-        error: errorFn
-    });
-};
+
 
 MYAPP.acceptEULA = function () {
 
@@ -206,9 +195,10 @@ MYAPP.find = function (key, categories) {
     return data;
 };
 
-MYAPP.cambiarArticulo = function (indice, e) {
-    e.preventDefault();
-    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
+MYAPP.cambiarArticulo = function (indice, direccion) {
+    if (indice < 0) return false;
+
+    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article, 'slide:'+direccion);
 };
 
 
@@ -260,6 +250,9 @@ MYAPP.scrollTop = function (e) {
     scroller.reset(); 
 };
 
+MYAPP.GuardarEstadisticasAbstract = function (articulo) {
+    //Se guardarán las estadísticas de uso
+}
 
 
 //CODIGO QUE PUEDO LLEGAR A NECESITAR: (BORRAR LUEGO)
@@ -286,3 +279,19 @@ MYAPP.scrollTop = function (e) {
 //        /* ERROR SERVICIO NO DISPONIBLE */
 //    }
 //);
+
+
+//MYAPP.call = function (operation, data, successFn, errorFn) {
+//    $.ajax({
+//        url: "http://localhost:3355/Auth.svc/" + operation,
+//        dataType: "jsonp",
+//        data: data,
+//        crossDomain: true,
+//        type: "POST",
+//        username: null,
+//        password: null,
+//        timeout: 10000, //10 segundos de TO
+//        success: successFn,
+//        error: errorFn
+//    });
+//};

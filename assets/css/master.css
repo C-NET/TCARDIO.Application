@@ -184,36 +184,8 @@
              text-rendering: optimizeLegibility;           
         }
 
-        .km-arrow-right:after,
-        .km-arrow-right:before
-        {
-            content: "\e010"!important;
-        }
-        
-
-        .km-arrow-left:after,
-        .km-arrow-left:before
-        {
-            content: "\e013"!important;
-        }
-        .contededor-alineamiento
-        {
-          margin: 1rem;
-          text-align:center;
-          vertical-align:top;
-          clear:both;
-        }
-         .alineacion-izquierda 
-        {
-            float: left;          
-        }
-         .alineacion-derecha
-        {
-           float: right;                 
-        }
-         
-        .alineacion-centrado {      
-            margin:0 auto;          
+        .margen {
+            margin:1rem;
         }
 
         /*----------------------------------------*/
