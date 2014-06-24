@@ -9,7 +9,7 @@ MYAPP.run = (function() {
         transition: "slide"
     });
 
-    MYAPP.app.navigate("#ListCategoriesView.html");
+  //  MYAPP.app.navigate("#ListCategoriesView.html");
     
     window.plugins.emailComposer = new EmailComposer();
 });
@@ -17,29 +17,32 @@ MYAPP.run = (function() {
 // this is called when the initial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.search = (function () {
+    debugger;
     MYAPP.app.navigate("#articulos");
     if (listView == null)
         listView = $('#result-list').data("kendoMobileListView");
     listView.refresh();
     MYAPP.abstracts.read();
-    //ORDENAMIENTO
-    if ($("#rbTitulo")[0].checked) {
-        MYAPP.abstracts.sort({ field: "title", dir: "asc" });
-        MYAPP.abstracts.group([]);
-        //CORRECION BUG DE KENDO 
-        $('#result-list').removeClass("km-listgroup");
-        $('#result-list').addClass("km-list");
-        /////////////////////////
+    if (MYAPP.abstracts.total() > 0) {
+        //ORDENAMIENTO
+        if ($("#rbTitulo")[0].checked) {
+            MYAPP.abstracts.sort({ field: "title", dir: "asc" });
+            MYAPP.abstracts.group([]);
+            //CORRECION BUG DE KENDO 
+            $('#result-list').removeClass("km-listgroup");
+            $('#result-list').addClass("km-list");
+            /////////////////////////
+        }
+        if ($("#rbCategoria")[0].checked) {
+            MYAPP.abstracts.group({ field: "category" });
+
+        }
+        if ($("#rbAcronimo")[0].checked) {
+            MYAPP.abstracts.group({ field: "subtitle" });
+            MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
+        }
     }
-    if ($("#rbCategoria")[0].checked) {
-        MYAPP.abstracts.group({ field: "category" });
-       
-    }
-        if ($("#rbAcronimo")[0].checked)
-    {
-        MYAPP.abstracts.group({ field: "subtitle" });
-        MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
-    }
+    else { MYAPP.app.navigate("#404NotFound"); }
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
