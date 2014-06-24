@@ -12,6 +12,10 @@
         p > * {
             pointer-events: none;
         }
+
+        input[type="checkbox"] {width:14px;height:14px;}
+        input[type="radio"] {width:13px;height:13px}
+
         /*BANNER*/
         .div-banner {
             width: 100%;
@@ -24,7 +28,6 @@
             color: rgb(255, 255, 255);
         }
         .image-banner {
-
             padding-top: .5rem;
             padding-bottom: .5rem;
         }
@@ -84,7 +87,12 @@
         .inputs-busqueda {
             margin-right:.5rem;
             margin-left: .5rem;
-            display:inline;            
+            display:inline-block;
+                                
+        }
+
+        .texto-categorias {
+            
         }
 
         .items-inputs{
@@ -96,7 +104,10 @@
             font-size: 1em;
             font-weight: 700;
             margin: 1rem!important;
-        }        
+        }
+
+         
+
 
         /*LISTA DE CATEGORIAS*/
         .category-list-template{
@@ -156,6 +167,7 @@
         
         .contenedor-articulo {
           text-rendering: optimizeLegibility;
+
         }
 
         .contenedor-articulo > h3 {

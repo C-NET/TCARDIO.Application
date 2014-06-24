@@ -10,7 +10,6 @@
     <!-- Phonegap JavaScript -->
     <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
     <script type="text/javascript" src="EmailComposer.js" charset="utf-8"></script>
-    <script type="text/javascript" src="telephonenumber.js" charset="utf-8"></script>
 
     <!-- Kendo UI JavaScript -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -19,7 +18,7 @@
     <!-- Kendo UI Culture JavaScript -->
     <script type="text/javascript" src="assets/js/cultures/kendo.culture.es-AR.min.js"></script>
 
-    <!-- APP JavaScript -->
+    <!-- APP JavaScript --> 
     <script type="text/javascript" src="assets/js/data.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
 </head>
@@ -32,51 +31,51 @@
         <a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
         <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR</div>
         <div class="items-inputs">
-            <input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" /><span>Categor&#237;a</span>
-            <input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" /><span>T&#237;tulo</span>
-            <input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" /><span>Acr&#243;nimo</span>
+             <label><input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" />Categor&#237;a</label>
+            <label><input class="inputs-busqueda" name="radio" type="radio" id="rbTitulo" />T&#237;tulo</label>
+            <label><input class="inputs-busqueda" name="radio" type="radio" id="rbAcronimo" />Acr&#243;nimo</label>
         </div>
 
         <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS
+           <label class="texto-categorias"><input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" /><a onclick="toggle">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</a>
+            <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" />S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat1" type="checkbox" checked="checked" />ANGINA ESTABLE
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat1" type="checkbox" checked="checked" />ANGINA ESTABLE</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat2" type="checkbox" checked="checked" />DISLIPIDEMIA Y PREVENCI&#211;N
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat2" type="checkbox" checked="checked" />DISLIPIDEMIA Y PREVENCI&#211;N</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat3" type="checkbox" checked="checked" />INSUFICIENCIA CARD&#205;ACA
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat3" type="checkbox" checked="checked" />INSUFICIENCIA CARD&#205;ACA</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat4" type="checkbox" checked="checked" />ARRITMIAS
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat4" type="checkbox" checked="checked" />ARRITMIAS</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat5" type="checkbox" checked="checked" />INTERVENCIONISMO CARDIOVASCULAR
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat5" type="checkbox" checked="checked" />INTERVENCIONISMO CARDIOVASCULAR</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat6" type="checkbox" checked="checked" />TEP- TVP
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat6" type="checkbox" checked="checked" />TEP- TVP</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat7" type="checkbox" checked="checked" />HIPERTENSI&#211;N ARTERIAL
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat7" type="checkbox" checked="checked" />HIPERTENSI&#211;N ARTERIAL</label>
         </div>
 
         <div class="items-inputs">
-            <input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE
+             <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE</label>
         </div>
         <!--<a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>-->
     </div>
