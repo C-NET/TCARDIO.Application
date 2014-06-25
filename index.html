@@ -28,7 +28,7 @@
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda de art&#237;culos">
 
         <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
-        <a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>
+        <a class="boton-buscar" data-role="button" data-icon="search" data-click="MYAPP.search;">Buscar Art&#237;culos</a>
         <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR</div>
         <div class="items-inputs">
              <label><input class="inputs-busqueda" name="radio" type="radio" checked="checked" id="rbCategoria" />Categor&#237;a</label>
@@ -166,7 +166,7 @@
     </div>
 
     <!-- VISTA "NO SE ENCONTRARON ARTICULOS QUE COINCIDAN CON LOS ARGUEMTNO DE BUSQUEDA -->
-    <div data-role="view" data-layout="main-layout" id="404NotFound" data-title="Art&#237;culos">  
+    <div data-role="view" data-layout="main-layout" id="NotFound" data-title="Art&#237;culos">  
         <h3>No se encontraron art&#237;culos.</h3>
     </div>
 

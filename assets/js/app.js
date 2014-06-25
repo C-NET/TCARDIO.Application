@@ -6,24 +6,26 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
+        initial: "ListCategoriesView.html",
         transition: "slide"
     });
 
-  //  MYAPP.app.navigate("#ListCategoriesView.html");
-    
     window.plugins.emailComposer = new EmailComposer();
 });
+
 
 // this is called when the initial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.search = (function () {
-    debugger;
-    MYAPP.app.navigate("#articulos");
-    if (listView == null)
-        listView = $('#result-list').data("kendoMobileListView");
-    listView.refresh();
+   // debugger;
+
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
+        MYAPP.app.navigate("#articulos");
+        if (listView == null)
+            listView = $('#result-list').data("kendoMobileListView");
+        listView.refresh();
+
         //ORDENAMIENTO
         if ($("#rbTitulo")[0].checked) {
             MYAPP.abstracts.sort({ field: "title", dir: "asc" });
@@ -42,7 +44,9 @@ MYAPP.search = (function () {
             MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
         }
     }
-    else { MYAPP.app.navigate("#404NotFound"); }
+    else {
+        MYAPP.app.navigate("#NotFound");
+    }
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
