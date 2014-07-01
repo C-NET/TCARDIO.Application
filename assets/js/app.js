@@ -101,8 +101,16 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
     var now = new Date();
     //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");   
-    window.plugins.emailComposer.showEmailComposer(title, 'Adjunto se encuentra una p\u00e1gina de un ensayo cl\u00ednico: ' + title + '\n' + subtitle, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
+    var asunto = 'Abstract de terapeútica cardiovascular';
+    var cuerpo = 'Adjunto el siguiente abstract de terapéutica cardiovascular que puede resultar de tu interés: ' + title + '\n\n Te recomiendo Cardio Trials, una aplicación de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edición de “Trials de la Terapéutica Cardiovascular”. \n Podrás descargar esta aplicación en forma gratuita hasta  el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).';
+    window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
 };
+MYAPP.compartirAplicacion = function () {
+    var asunto = 'Te recomiendo esta aplicación!'
+    var cuerpo = 'Te recomiendo Cardio Trials, una aplicación de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edición de “Trials de la Terapéutica Cardiovascular”. \n Podrás descargar esta aplicación en forma gratuita hasta  el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).'
+    window.plugins.emailComposer.showEmailComposer(asunto, body, null, null, null, false, null, null);
+};
+
 //Pad given value to the left with "0"
 function AddZero(num) {
     return (num >= 0 && num < 10) ? "0" + num : num + "";
@@ -177,6 +185,7 @@ MYAPP.navigateToArticle = function (article)
 {
     MYAPP.app.navigate(article);
 }
+
 
 MYAPP.scrollTop = function (e) {
     e.preventDefault();

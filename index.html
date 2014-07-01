@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" charset="utf-8" />
@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <!-- VISTA DE B�SQUEDA DE ART�CULOS -->
+    <!-- VISTA DE BÚSQUEDA DE ARTÍCULOS -->
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda de art&#237;culos">
 
         <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
@@ -107,7 +107,7 @@
             </div>
     </script>
 
-    <!-- VISTA DE LOS ARTICULOS ENCONTRADOS DE LA B�SQUEDA -->
+    <!-- VISTA DE LOS ARTICULOS ENCONTRADOS DE LA BÚSQUEDA -->
     <div data-role="view" data-layout="main-layout" id="articulos" data-title="Art&#237;culos" data-show="MYAPP.scrollTop">
         <ul
             id="result-list"
@@ -131,7 +131,7 @@
             </div>
     </script>
 
-    <!-- VISTA DE INFORMACI�N - ACERCA DE -->
+    <!-- VISTA DE INFORMACIÓN - ACERCA DE -->
     <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">  
         <p>
             616 Fitz Maurice, Mario<br />
@@ -146,22 +146,30 @@
             Todos los derechos reservados. Esta publicaci&#243;n no puede ser reproducida, archivada o transmitida en forma total ni parcial, sea por medios electr&#243;nicos, mec&#225;nicos, fotocopiado o grabado, sin el permiso de los autores que deber&#225; solicitarse por escrito.
         </p>
         <p>&#169; Mario Daniel Fitz Maurice y Sergio Fernando Brieva, 2005</p>
-        <div style="text-align: center">
-            <hr style="background: black; border: 0; height: 1.5px; margin-left: 10px; margin-right: 10px" />
-            <p>
-                <b>Material para el uso exclusivo del personal m&#233;dico.<br />
-                    Proh&#237;bida su exhibici&#243;n y/o entrega a pacientes, consumidores y/o p&#250;blico en general
-                </b>
-            </p>
-            <hr style="background: black; border: 0; height: 1.5px; margin-left: 10px; margin-right: 10px" />
-            <p>Gentileza de</p>
-            <div class='div-banner' id="banner">
-                <img src="assets/css/images/logo.gif" alt="logoNovartis" />
-            </div>
-            <p><b>NOVARTIS ARGENTINA S.A.</b></p>
-            <p>Ramallo 1851 C1429DUC - Buenos Aires, Argentina - Tel: (011) 4703-7000</p>
-            <br />
-            <p>ARG 6304667 - April 2014</p>
+
+        <p><b>Acerca de Cardio Trials</b></p>
+        <p>
+            Cardio Trials es una aplicaci&#243;n que Novartis Argentina pone a disposici&#243;n de la comunidad m&#225;dica con el contenido de la 9na edici&#243;n de “Trials de la Terap&#225;utica Cardiovascular”.
+        </p>
+        <p>Con Cardio Trials, Ud. podrá:<br/>
+            − Buscar abstracts  de acuerdo a palabras claves del título tales como autor, acrónimo o droga.<br/>
+            − Visualizar el abstract de su interés.<br/>
+            − Compartir abstracts con sus colegas.
+        </p>
+        <p>Esta es una aplicación móvil desarrollada por CNET S.R.L. según requerimientos de Novartis Argentina S.A.</p>
+
+        <p><b>Términos y Condiciones de Uso</b></p>
+        <p>
+            Este programa de software dentro del teléfono celular (en adelante Aplicación Móvil) es una herramienta de apoyo para uso exclusivo el profesional médico.  Está prohibida su exhibición y/o entrega a pacientes, consumidores y/o público en general.<br />
+            Esta es una aplicación móvil desarrollada por CNET S.R.L. según requerimientos de Novartis Argentina S.A.<br />
+            Novartis Argentina S.A. cuenta con los derechos para difundir el contenido del compendio  “Trials de la Terapéutica Cardiovascular 9na edición 2014” hasta el 31/03/2015.  Novartis Argentina S.A. se reserva el derecho, en cualquier momento y sin previo aviso, de discontinuar la Aplicación Móvil, como así también, de discontinuar su actualización.
+        </p>
+        <p><b>Acerca de Novartis Argentina</b></p>
+        <p>
+            Novartis brinda soluciones innovadoras para el cuidado de la salud acordes con las necesidades de pacientes y sociedades. Con su casa matriz en Basilea, Suiza, Novartis ofrece un portfolio diversificado para responder de la mejor manera a estas necesidades: fármacos innovadores con receta; cuidado de la visión; medicamentos genéricos de alta calidad y que ayudan al ahorro de costos; vacunas que contribuyen a la prevención; herramientas de diagnóstico; productos de venta libre para el cuidado de la salud y para la salud animal. Novartis es la única compañía global que ha logrado una posición de liderazgo en estas áreas. En 2012, el Grupo invirtió cerca del 16,4% de las ventas totales en Investigación y Desarrollo. Las compañías del Grupo Novartis emplean aproximadamente a 128.000 personas y están presentes en más de 140 países en todo el mundo. Para más información, puede visitar los sitios www.novartis.com.ar y www.novartis.com
+        </p>
+        <div class="margen">
+         <a data-role="button" data-icon="share" onclick="MYAPP.compartirAplicacion();">Compartir Aplicación</a>
         </div>
     </div>
 
