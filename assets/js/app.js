@@ -101,14 +101,14 @@ MYAPP.sendMail = function (title, subtitle, encoded64) {
     var now = new Date();
     //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");   
-    var asunto = 'Abstract de terapeútica cardiovascular';
-    var cuerpo = 'Adjunto el siguiente abstract de terapéutica cardiovascular que puede resultar de tu interés: ' + title + '\n\n Te recomiendo Cardio Trials, una aplicación de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edición de “Trials de la Terapéutica Cardiovascular”. \n Podrás descargar esta aplicación en forma gratuita hasta  el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).';
+    var asunto = 'Abstract de terape\u00fatica cardiovascular';
+    var cuerpo = 'Adjunto el siguiente abstract de terap\u00e9utica cardiovascular que puede resultar de tu inter\u00e9s: ' + title + '\n\n Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edici\u00f3n de \“Trials de la Terap\u00e9utica Cardiovascular\”. \n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).';
     window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
 };
 MYAPP.compartirAplicacion = function () {
-    var asunto = 'Te recomiendo esta aplicación!'
-    var cuerpo = 'Te recomiendo Cardio Trials, una aplicación de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edición de “Trials de la Terapéutica Cardiovascular”. \n Podrás descargar esta aplicación en forma gratuita hasta  el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).'
-    window.plugins.emailComposer.showEmailComposer(asunto, body, null, null, null, false, null, null);
+    var asunto = 'Te recomiendo esta aplicaci\u00f3n!'
+    var cuerpo = 'Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edici\u00f3n de “Trials de la Terap\u00e9utica Cardiovascular”. \n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta  el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).'
+    window.plugins.emailComposer.showEmailComposer(asunto, body, null, null, null, false, null);
 };
 
 //Pad given value to the left with "0"
