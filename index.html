@@ -185,7 +185,8 @@
                 <ul data-role="listview">
                     <li data-icon="home"data-transition="none"><a href="#home">Principal</a></li>
                     <li data-icon="search" data-transition="none"><a href="#search" >Buscar</a></li>
-                    <li data-icon="about" data-transition="none"> <a href="#about" >Acerca de..</a></li>
+                    <li data-icon="details" data-transition="none"><a href="#index" >Índice General</a></li>
+                    <li data-icon="about" data-transition="none"> <a href="#about" >Acerca de...</a></li>
                 </ul>
             </li>
         </ul>
@@ -232,9 +233,6 @@
     <div class="category-list-template"> 
         <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-492.html');">STROKE</a>            
     </div>
-    <div class="category-list-template">
-        <a data-role="button" href="#index" data-icon="details">Indice General</a>
-    </div>
 </div>
 
 
@@ -242,17 +240,10 @@
     <div data-role="layout" data-id="main-layout">
         <div data-role="header">
             <div data-role="navbar">
-                <a data-role="button" data-rel="drawer" href="#panel-menu" data-icon="drawer-button" data-align="left"></a>
+                <a data-role="button" data-rel="drawer" href="#panel-menu" data-icon="drawer-button" data-align="left" class:"left-btn"></a>
                 <span data-role="view-title"></span>
-            </div>
+            </div>             
         </div>
-<!--        <div data-role="footer">
-            <div data-role="tabstrip">
-                <a data-icon="home" href="#ListCategoriesView.html" class="buttonAppearance-tabstrip"></a>
-                <a data-icon="search" href="#search" class="buttonAppearance-tabstrip"></a>
-                <a data-icon="about" href="#about" class="buttonAppearance-tabstrip"></a>
-            </div>
-        </div>-->
     </div>
 </body>
 </html>

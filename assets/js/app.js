@@ -6,7 +6,7 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        initial: "#home"
+        initial: "#home",skin:"flat"
     });
 
     window.plugins.emailComposer = new EmailComposer();

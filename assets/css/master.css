@@ -1,4 +1,4 @@
-      /*GENERAL*/
+ /*GENERAL*/
         body 
         {
              font-family: 'HelveticaNeue Light', 'Roboto Light', 'Slate Light', 'Segoe WP', NokiaPureTextLight, sans-serif!important;
@@ -12,7 +12,7 @@
         p > * {
             pointer-events: none;
         }
-
+        
         input[type="checkbox"] {width:14px;height:14px;}
         input[type="radio"] {width:13px;height:13px}
 
@@ -25,16 +25,16 @@
         .km-ios #panel-menu .km-listview-link > .km-icon, .km-android #panel-menu .km-listview-link > .km-icon, .km-blackberry #panel-menu .km-listview-link > .km-icon,
         .km-ios #panel-menu .km-list li > .km-icon, .km-android #panel-menu .km-list li > .km-icon, .km-blackberry #panel-menu .km-list li > .km-icon
         {
-            background-color: #4e4e4e;
-            color: #fff;
+            background-color: #4e4e4e!important;
+            color: #fff!important;
         }
 
         .km-android #panel-menu .km-group-title,
         .km-ios #panel-menu .km-group-title,
         .km-blackberry #panel-menu .km-group-title
         {
-            background-color: #6e6e6e;
-            color: #fff;    
+            background-color: #6e6e6e!important;
+            color: #fff!important;    
         }
 
         .km-listview-wrapper 
@@ -45,17 +45,8 @@
         .km-ios #panel-menu .km-group-title,
         .km-blackberry #panel-menu .km-group-title
         {
-            background-color: #6e6e6e;
-            color: #fff;
-        }
-
-        .km-ios .km-button,
-        .km-android .km-button {
-            text-align: center!important;
-            border-width: 0px 0px 1px!important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5)!important;
-            padding: 0.4em 0.8em!important;           
-            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3) inset, 0px 1px 3px rgba(0, 0, 0, 0.5) inset!important;
+            background-color: #6e6e6e!important;
+            color: #fff!important;
         }
 
         
@@ -259,11 +250,6 @@
 
         }
 
-        /*Poner TABSTRIP en el footer para Android*/
-        .km-root .km-android .km-view {
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-        }
 
         /*SIMULAR LIGHT HOLO THEME*/
         .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
@@ -335,5 +321,42 @@
             font-weight: bold;
             -webkit-background-size: auto!important;
             box-shadow: none!important;  
+ 
         } 
 
+
+        .km-flat .km-switch-handle,
+        .km-flat .k-slider-selection,
+        .km-flat .km-switch-background
+        {
+            color: #e55b2b!important;
+        }
+
+        .km-flat .km-loader,
+        .km-flat .km-rowinsert,
+        .km-flat .km-state-active,
+        .km-flat .km-scroller-pull,
+        .km-flat .k-slider-selection,
+        .km-flat .km-touch-scrollbar,
+        .km-flat .km-pages .km-current-page,
+        .km-flat .k-slider .k-draghandle,
+        .km-flat .k-slider .k-draghandle:hover,
+        .km-flat .km-tabstrip .km-state-active,
+        .km-flat .km-scroller-refresh.km-load-more,
+        .km-flat .km-popup .k-state-hover,
+        .km-flat .km-popup .k-state-focused,
+        .km-flat .km-popup .k-state-selected,
+        .km-flat .km-actionsheet > li > a:active,
+        .km-flat .km-actionsheet > li > a:hover,
+        .km-flat li.km-state-active .km-listview-link,
+        .km-flat li.km-state-active .km-listview-label,
+        .km-flat .km-listview-label input[type=radio]:checked,
+        .km-flat .km-listview-label input[type=checkbox]:checked
+        {
+            background: #e55b2b!important;
+        }
+
+        .km-flat .km-filter-wrap > input:focus
+        {
+            border-color: #e55b2b!important;
+        }
