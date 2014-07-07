@@ -10,6 +10,7 @@ MYAPP.run = (function() {
     });
 
     window.plugins.emailComposer = new EmailComposer();
+    window.plugins.Shortcut.CreateShortcut("TCARDIO", successfunc, failfunc);
 });
 
 
@@ -183,25 +184,9 @@ MYAPP.navigateToArticle = function (article) {
     MYAPP.app.navigate(article);
 };
 
-MYAPP.salir = (function (e) {
+MYAPP.salir = function (e) {
     navigator.app.exitApp();
-});
-
-MYAPP.NavegarA = function (pagina) {
-    debugger;
-    if (kendo.support.mobileOS.android)
-        navigator.app.loadUrl(pagina, { openExternal: true });
-
-    if (kendo.support.mobileOS.ios)
-        window.open(pagina, '_system');
-
-    //if (device.platform === 'Android') {
-    //    navigator.app.loadUrl(pagina, { openExternal: true });
-    //} else {
-    //    window.open(pagina, '_system');
-    //}
 };
-
 
 MYAPP.scrollTop = function (e) {
     e.preventDefault();
