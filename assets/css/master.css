@@ -8,6 +8,7 @@
              text-rendering: optimizeLegibility;
              font-size: 1em;
             line-height: normal;
+            overflow: hidden;
         }  
         p > * {
             pointer-events: none;
