@@ -191,7 +191,7 @@ MYAPP.salir = function (e) {
 MYAPP.scrollTop = function (e) {
     e.preventDefault();
     var scroller = e.view.scroller;
-    scroller.reset(); 
+    scroller.reset();       
 };
 
 MYAPP.hideFooter = function (e) {
