@@ -10,7 +10,7 @@ MYAPP.run = (function() {
     });
 
     window.plugins.emailComposer = new EmailComposer();
-    window.plugins.Shortcut.CreateShortcut("TCARDIO", successfunc, failfunc);
+
 });
 
 
