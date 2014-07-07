@@ -26,8 +26,18 @@
             color: #fff!important;
         }
 
+        .km-salir:after,
+        .km-salir:before
+        {
+           content: "\e0b9"!important;
+        }
 
-        
+        .km-indice-general:after,
+        .km-indice-general:before
+        {
+           content: "\e052"!important;
+        }
+
         /*BANNER*/
         .div-banner {
             width: 100%;

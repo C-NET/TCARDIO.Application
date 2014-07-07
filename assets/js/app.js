@@ -184,6 +184,9 @@ MYAPP.navigateToArticle = function (article)
     MYAPP.app.navigate(article);
 }
 
+MYAPP.salir = function (e) {
+    navigator.app.exitApp();
+};
 
 MYAPP.scrollTop = function (e) {
     e.preventDefault();
@@ -198,4 +201,8 @@ MYAPP.hideFooter = function (e) {
 MYAPP.showFooter = function (e) {
     $(".km-tabstrip").show();
 };
+
+
+
+
 
