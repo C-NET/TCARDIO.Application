@@ -19,13 +19,6 @@
         /*MENU LATERAL*/
         .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"!important; }
     
-
-       #left-btn
-        {
-            background-color: white!important;
-            color: #fff!important;
-        }
-
         .km-salir:after,
         .km-salir:before
         {
@@ -36,6 +29,11 @@
         .km-indice-general:before
         {
            content: "\e052"!important;
+        }
+
+        #panel-menu 
+        {
+            width:170px;
         }
 
         /*BANNER*/

@@ -152,7 +152,7 @@ MYAPP.find = function (key, categories) {
 MYAPP.cambiarArticulo = function (indice, direccion) {
     if (indice < 0 || indice > 510) return false;
     MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article, 'slide:'+direccion);
-};
+};  
 
 //Obtiene el nombre de la categoría mediante el código.
 MYAPP.getCategoryName = function (categoryCode) {
@@ -163,7 +163,7 @@ MYAPP.getCategoryName = function (categoryCode) {
             return cat[i].desc;
 
     return "";
-}
+};
 
 MYAPP.CheckAll = function (e) {
     // Listen for click on toggle checkbox
@@ -177,16 +177,31 @@ MYAPP.CheckAll = function (e) {
         $(":checkbox").each(function () { this.checked = false; });
     }
 
-}
-
-MYAPP.navigateToArticle = function (article)
-{
-    MYAPP.app.navigate(article);
-}
-
-MYAPP.salir = function (e) {
-    navigator.app.exitApp();
 };
+
+MYAPP.navigateToArticle = function (article) {
+    MYAPP.app.navigate(article);
+};
+
+MYAPP.salir = (function (e) {
+    navigator.app.exitApp();
+});
+
+MYAPP.NavegarA = function (pagina) {
+    debugger;
+    if (kendo.support.mobileOS.android)
+        navigator.app.loadUrl(pagina, { openExternal: true });
+
+    if (kendo.support.mobileOS.ios)
+        window.open(pagina, '_system');
+
+    //if (device.platform === 'Android') {
+    //    navigator.app.loadUrl(pagina, { openExternal: true });
+    //} else {
+    //    window.open(pagina, '_system');
+    //}
+};
+
 
 MYAPP.scrollTop = function (e) {
     e.preventDefault();
