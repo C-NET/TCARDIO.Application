@@ -19,7 +19,7 @@ MYAPP.search = (function () {
 
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
-        MYAPP.app.navigate("#articulos", "slide:right");
+        MYAPP.app.navigate("#articulos");
         if (listView == null)
             listView = $('#result-list').data("kendoMobileListView");
         listView.refresh();
@@ -43,7 +43,7 @@ MYAPP.search = (function () {
         }
     }
     else {
-        MYAPP.app.navigate("#NotFound", "slide:right");
+        MYAPP.app.navigate("#NotFound");
     }
 });
 

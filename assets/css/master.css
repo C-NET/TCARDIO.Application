@@ -20,34 +20,12 @@
         .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"!important; }
     
 
-        .km-ios #panel-menu .km-content, .km-android #panel-menu .km-content, .km-blackberry #panel-menu .km-content,
-        .km-ios #panel-menu .km-list > li, .km-android #panel-menu .km-list > li, .km-blackberry #panel-menu .km-list > li,
-        .km-ios #panel-menu .km-listview-link > .km-icon, .km-android #panel-menu .km-listview-link > .km-icon, .km-blackberry #panel-menu .km-listview-link > .km-icon,
-        .km-ios #panel-menu .km-list li > .km-icon, .km-android #panel-menu .km-list li > .km-icon, .km-blackberry #panel-menu .km-list li > .km-icon
+       #left-btn
         {
-            background-color: #4e4e4e!important;
+            background-color: white!important;
             color: #fff!important;
         }
 
-        .km-android #panel-menu .km-group-title,
-        .km-ios #panel-menu .km-group-title,
-        .km-blackberry #panel-menu .km-group-title
-        {
-            background-color: #6e6e6e!important;
-            color: #fff!important;    
-        }
-
-        .km-listview-wrapper 
-        {
-            padding:0!important;
-        }
-
-        .km-ios #panel-menu .km-group-title,
-        .km-blackberry #panel-menu .km-group-title
-        {
-            background-color: #6e6e6e!important;
-            color: #fff!important;
-        }
 
         
         /*BANNER*/
@@ -231,26 +209,6 @@
         /*------------- Estilos de Kendo ---------*/
         /*----------------------------------------*/
 
-        /*Apariencia TAB STRIP*/
-        .buttonAppearance-tabstrip {
-            color: white;
-            background: #f2825b!important; /* Old browsers */
-            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
-            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
-            font-weight: bold;
-            text-decoration: none;
-            border: black!important;
-            border-style: solid!important;
-            border-width: 1px!important;
-
-        }
-
-
         /*SIMULAR LIGHT HOLO THEME*/
         .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
         {
@@ -307,8 +265,8 @@
         .km-widget:hover
         .km-button:hover{  background-color: #C64311 !important;}
 
-        .km-header,
-        .km-navbar {
+        .km-flat .km-header,
+        .km-flat .km-navbar {
             color: white;
             background: #f2825b; /* Old browsers */
             background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6+ */
