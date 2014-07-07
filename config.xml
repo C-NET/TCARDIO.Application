@@ -47,7 +47,7 @@
   <!-- all: default means both landscape and portrait are enabled -->
   <preference name="target-device"              value="universal" />
   <!-- all: possible values handset, tablet, or universal -->
-  <preference name="fullscreen"                 value="true" />
+  <preference name="fullscreen"                 value="false" />
   <!-- all: hides the status bar at the top of the screen -->
   <preference name="webviewbounce"              value="true" />
   <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
@@ -74,10 +74,12 @@
   <preference name="disallowOverscroll"         value="true" />
   <!-- android: set to true if you want to disable the glow when a user scrolls beyond the edge of the webview. -->
   <preference name="splash-screen-duration" value="10000"/>
-  
+
+  <preference name="android-windowSoftInputMode" value="stateVisible" />
+
   <gap:splash src="splash.png" />
 
-
+  
   <!-- Define app icon for each platform. -->
 
 

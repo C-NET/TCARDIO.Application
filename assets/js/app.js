@@ -184,6 +184,10 @@ MYAPP.navigateToArticle = function (article) {
     MYAPP.app.navigate(article);
 };
 
+MYAPP.navigateToArticle = function (article) {
+    MYAPP.app.navigate(article);
+};
+
 MYAPP.salir = function (e) {
     navigator.app.exitApp();
 };
