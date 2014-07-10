@@ -1094,12 +1094,12 @@
 
 .km-scrollview, .km-scroll-container {
     -moz-user-select: none;
-    -webkit-user-select: none;
+    /*-webkit-user-select: none;*/
     -ms-user-select: none;
     user-select: none;
     -moz-user-select: -moz-none;
-    -webkit-margin-collapse: separate;
-    margin-collapse: separate;
+    /*-webkit-margin-collapse: separate;*/
+    /*margin-collapse: separate;*/
 }
 
 .km-scroll-wrapper {

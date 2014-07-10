@@ -152,7 +152,7 @@ MYAPP.find = function (key, categories) {
 
 MYAPP.cambiarArticulo = function (indice, direccion) {
     if (indice < 0 || indice > 510) return false;
-    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article, 'slide:'+direccion);
+    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
 };  
 
 //Obtiene el nombre de la categoría mediante el código.
