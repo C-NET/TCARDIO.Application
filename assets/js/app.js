@@ -8,7 +8,7 @@ MYAPP.run = (function() {
     MYAPP.app = new kendo.mobile.Application(document.body, {
         initial: "#home",skin:"flat"
     });
-
+    $("#panel-menu").data("kendoMobileDrawer").show();
     window.plugins.emailComposer = new EmailComposer();
 
 });
