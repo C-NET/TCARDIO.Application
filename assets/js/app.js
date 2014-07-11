@@ -6,11 +6,11 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        initial: "#home",skin:"flat"
+        initial: "#home",
+        skin: "flat"
     });
-    $("#panel-menu").data("kendoMobileDrawer").show();
-    window.plugins.emailComposer = new EmailComposer();
 
+    window.plugins.emailComposer = new EmailComposer();
 });
 
 
@@ -79,7 +79,7 @@ MYAPP.abstracts = new kendo.data.DataSource({
                     categoryCodes |= (1 << (4+k));
             }
             // Retorna las páginas que coinciden.
-            var data = MYAPP.find($("#search-text").val(), categoryCodes);
+            var data = MYAPP.find($(".search-text").val(), categoryCodes);
             options.success(data);
         } 
     }   
@@ -96,13 +96,14 @@ MYAPP.showIndexList = new kendo.data.DataSource({
 });
 
 //FUNCIONALIDAD BOTÓN COMPARTIR
-MYAPP.sendMail = function (title, subtitle, encoded64) {
+MYAPP.sendMail = function (e) {
+    var data = e.button.data();
     var now = new Date();
     //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");   
     var asunto = 'Abstract de terape\u00fatica cardiovascular';
-    var cuerpo = 'Adjunto el siguiente abstract de terap\u00e9utica cardiovascular que puede resultar de tu inter\u00e9s: ' + title + '\n\n Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edici\u00f3n de \"Trials de la Terap\u00e9utica Cardiovascular\". \n\n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).';
-    window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', encoded64]]);
+    var cuerpo = 'Adjunto el siguiente abstract de terap\u00e9utica cardiovascular que puede resultar de tu inter\u00e9s: ' + data.title + '\n\n Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na edici\u00f3n de \"Trials de la Terap\u00e9utica Cardiovascular\". \n\n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta el 31/03/2015 desde las Tiendas de Aplicaciones de Android (Google Play) y iOS (App Store).';
+    window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', data.base64]]);
 };
 MYAPP.compartirAplicacion = function () {
     var asunto = 'Te recomiendo esta aplicaci\u00f3n!';
@@ -152,8 +153,8 @@ MYAPP.find = function (key, categories) {
 
 MYAPP.cambiarArticulo = function (indice, direccion) {
     if (indice < 0 || indice > 510) return false;
-    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article);
-};  
+    MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article, 'slide:'+direccion);
+};
 
 //Obtiene el nombre de la categoría mediante el código.
 MYAPP.getCategoryName = function (categoryCode) {
@@ -164,7 +165,7 @@ MYAPP.getCategoryName = function (categoryCode) {
             return cat[i].desc;
 
     return "";
-};
+}
 
 MYAPP.CheckAll = function (e) {
     // Listen for click on toggle checkbox
@@ -178,24 +179,18 @@ MYAPP.CheckAll = function (e) {
         $(":checkbox").each(function () { this.checked = false; });
     }
 
-};
+}
 
-MYAPP.navigateToArticle = function (article) {
+MYAPP.navigateToArticle = function (article)
+{
     MYAPP.app.navigate(article);
-};
+}
 
-MYAPP.navigateToArticle = function (article) {
-    MYAPP.app.navigate(article);
-};
-
-MYAPP.salir = function (e) {
-    navigator.app.exitApp();
-};
 
 MYAPP.scrollTop = function (e) {
     e.preventDefault();
     var scroller = e.view.scroller;
-    scroller.reset();       
+    scroller.reset(); 
 };
 
 MYAPP.hideFooter = function (e) {
@@ -205,8 +200,3 @@ MYAPP.hideFooter = function (e) {
 MYAPP.showFooter = function (e) {
     $(".km-tabstrip").show();
 };
-
-
-
-
-

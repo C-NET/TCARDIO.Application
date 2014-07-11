@@ -20,14 +20,19 @@
 
     <!-- APP JavaScript --> 
     <script type="text/javascript" src="assets/js/data.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script> 
 </head>
 <body>
 
     <!-- VISTA DE BÚSQUEDA DE ARTÍCULOS -->
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda">
-
-        <input id="search-text" type="text" value="" placeholder="Palabra a buscar" />
+        <div data-role="header">
+            <div data-role="navbar">
+                 <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div> 
+        <input class="search-text" type="text" value="" placeholder="Palabra a buscar" />
         <a class="boton-buscar" data-role="button" data-icon="search" data-click="MYAPP.search;">Buscar Art&#237;culos</a>
         <div class="header-busqueda" style="margin: 1rem">ORDERNAR POR</div>
         <div class="items-inputs">
@@ -76,13 +81,18 @@
 
         <div class="items-inputs">
              <label class="texto-categorias"><input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE</label>
-        </div>
-        <!--<a class="boton-buscar" data-role="button" data-icon="search" onclick="MYAPP.search();">Buscar Art&#237;culos</a>-->
+        </div>       
     </div>
 
     <!-- VISTA DEL INDICE COMPLETO -->
     <div data-role="view" data-layout="main-layout" id="index" data-title="INDICE">
-        <ul
+     <div data-role="header">
+            <div data-role="navbar">
+                 <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>  
+          <ul
             id="index-list"
             data-role="listview"
             data-source="MYAPP.showIndexList"
@@ -90,7 +100,7 @@
             data-append-on-refresh="false"
             data-template="item-template-index"
             data-header-template="header-template-index"
-            data-style="inset">
+            >
         </ul>
     </div>
     <script type="text/x-kendo-template" id="header-template-index">
@@ -100,15 +110,20 @@
         </div>
     </script>
     <script type="text/x-kendo-template" id="item-template-index">
-            <div class="dv-item-template">  
-                <a  data-align:"left" href=javascript:MYAPP.navigateToArticle('\#abstracts/#: article #'); >        
-                    <span class="item-template-titulo">#: title #</span></a>  <br/>
-                    <span class="item-template-subtitulo">#: subtitle #</span>                    
-            </div>
+        <a  href='\#abstracts/#: article #' >        
+            <span class="item-template-titulo">#: title #</span>  <br/> 
+            <span class="item-template-subtitulo">#: subtitle #</span>  
+        </a>                  
     </script>
 
     <!-- VISTA DE LOS ARTICULOS ENCONTRADOS DE LA BÚSQUEDA -->
     <div data-role="view" data-layout="main-layout" id="articulos" data-title="Art&#237;culos" data-show="MYAPP.scrollTop">
+     <div data-role="header">
+            <div data-role="navbar">
+                 <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>    
         <ul
             id="result-list"
             data-role="listview"
@@ -116,23 +131,28 @@
             data-pull-to-refresh="false"
             data-append-on-refresh="false"
             data-template="item-template"
-            data-header-template="header-template"
-            data-style="inset">
+            data-header-template="header-template">
         </ul>
     </div>
     <script type="text/x-kendo-template" id="header-template">
             <div class="header-categoria"> #:value#</div>
     </script>
-    <script type="text/x-kendo-template" id="item-template">
-            <div class="dv-item-template">  
-                <a  data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/#: article #');">        
-                    <span class="item-template-titulo">#: title #</span></a>  <br/>
-                    <span class="item-template-subtitulo">#: subtitle #</span>                    
-            </div>
+    <script type="text/x-kendo-template" id="item-template">  
+        <a  data-align:"left" href='\#abstracts/#: article #'>        
+            <span class="item-template-titulo">#: title #</span>  <br/>
+            <span class="item-template-subtitulo">#: subtitle #</span>
+        </a>                    
     </script>
 
     <!-- VISTA DE INFORMACIÓN - ACERCA DE -->
     <div data-role="view" data-layout="main-layout" id="about" data-title="Acerca de...">  
+        <div data-role="header">
+            <div data-role="navbar">
+                 <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+                 <a data-role="button" data-icon="share" data-click="MYAPP.compartirAplicacion" data-align="right"></a>
+            </div>
+        </div>           
         <p>
             616 Fitz Maurice, Mario<br />
             FIT Trials de la terap&#233;utica cardiovascular<br />
@@ -166,89 +186,60 @@
         </p>
         <p><b>Acerca de Novartis Argentina</b></p>
      <div>
-         <p>
+        <p>
             Novartis brinda soluciones innovadoras para el cuidado de la salud acordes con las necesidades de pacientes y sociedades. Con su casa matriz en Basilea, Suiza, Novartis ofrece un portfolio diversificado para responder de la mejor manera a estas necesidades: fármacos innovadores con receta; cuidado de la visión; medicamentos genéricos de alta calidad y que ayudan al ahorro de costos; vacunas que contribuyen a la prevención; herramientas de diagnóstico; productos de venta libre para el cuidado de la salud y para la salud animal. Novartis es la única compañía global que ha logrado una posición de liderazgo en estas áreas. En 2012, el Grupo invirtió cerca del 16,4% de las ventas totales en Investigación y Desarrollo. Las compañías del Grupo Novartis emplean aproximadamente a 128.000 personas y están presentes en más de 140 países en todo el mundo. Para más información, puede visitar los sitios:</p> 
          <div style="margin:1rem"><a href="http://www.novartis.com.ar" data-rel="external">www.novartis.com.ar</a> y <a href="http://www.novartis.com" data-rel="external">www.novartis.com</a></div>
        
-             </div>
-        <div class="margen">
-         <a data-role="button" data-icon="share" onclick="MYAPP.compartirAplicacion();">Compartir Aplicación</a>
         </div>
     </div>
 
     <!-- VISTA "NO SE ENCONTRARON ARTICULOS QUE COINCIDAN CON LOS ARGUEMTNO DE BUSQUEDA -->
-    <div data-role="view" data-layout="main-layout" id="NotFound" data-title="Art&#237;culos">  
+    <div data-role="view" data-layout="main-layout" id="NotFound" data-title="Art&#237;culos"> 
+        <div data-role="header">
+            <div data-role="navbar">
+                 <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div> 
         <h3>No se encontraron art&#237;culos.</h3>
     </div>
 
-    <!-- MENU PANEL -->
-    <div data-role="drawer" id="panel-menu" data-swipe-to-open="false">
-         <ul data-role="listview" data-type="group" style="margin-top:5px">
-            <li><span style="margin:10px;">OPCIONES</span>
-                <ul data-role="listview">
-                    <li data-icon="home"data-transition="none"><a href="#home">Principal</a></li>
-                    <li data-icon="search" data-transition="none"><a href="#search" >Buscar</a></li>
-                    <li data-icon="indice-general" data-transition="none"><a href="#index" >Índice General</a></li>
-                    <li data-icon="about" data-transition="none"> <a href="#about" >Acerca de...</a></li>
-                    <li data-icon="salir" data-transition="none"> <a onclick="MYAPP.salir()">Salir</a></li>
-                </ul>
-            </li>
+    <!-- VISTA PRINCIPAL, DEBE COPIARSE DEL CONTENIDO ListCategoriesView.html SI SE QUIERE CAMBIAR ALGO, YA QUE ES GENEREDA CON EL CONTENT GENERATOR -->
+    <div data-role="view" data-layout="main-layout" id="home" data-title="Categorías">
+        <div data-role="header">
+            <div data-role="navbar">
+                <a data-role="backbutton" data-align="left" data-icon="boton-atras" data-transition="slide:left reverse">Atrás</a>
+                <span data-role="view-title"></span>
+                <a data-role="button" data-align="right" data-icon="indice-general" href="#index" data-transition="slide"></a>
+            </div>
+        </div>
+         <ul data-role="listview">
+            <li><a href="abstracts/Abstract-000.html">Comentadores invitados</a></li>
+            <li><a href="abstracts/Abstract-001.html">Prólogo</a></li>  
+            <li><a href="abstracts/Abstract-002.html">Prefacio</a></li>
+            <li><a href="abstracts/Abstract-003.html">Dedicatoria</a></li>           
+            <li><a href="abstracts/Abstract-004.html">Síndromes coronarios agudos con y sin elevación del ST</a></li> 
+            <li><a href="abstracts/Abstract-172.html">Angina Estable</a></li>
+            <li><a href="abstracts/Abstract-211.html">Dislipidemia y prevención</a></li>
+            <li><a href="abstracts/Abstract-263.html">Insuficiencia cardíaca</a></li>
+            <li><a href="abstracts/Abstract-304.html">Arritmias</a></li>
+            <li><a href="abstracts/Abstract-380.html">Intervensionismo cardiovascular</a></li>
+            <li><a href="abstracts/Abstract-439.html">TEP. TVP</a></li>
+            <li><a href="abstracts/Abstract-458.html">Hipertensión Arterial</a></li>
+            <li><a href="abstracts/Abstract-492.html">Stroke</a></li>
         </ul>
-</div>
-
-<!-- VISTA PRINCIPAL, DEBE COPIARSE DEL CONTENIDO ListCategoriesView.html SI SE QUIERE CAMBIAR ALGO, YA QUE ES GENEREDA CON EL CONTENT GENERATOR -->
-<div data-role="view" data-layout="main-layout" id="home" data-title="Categorías">
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-000.html');">COMENTADORES INVITADOS</a>            
-    </div>       
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-001.html');">PRÓLOGO</a>            
     </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-002.html');">PREFACIO</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-003.html');">DEDICATORIA</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-004.html');">SÍNDROMES CORONARIOS AGUDOS CON Y SIN ELEVACIÓN DEL ST</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-172.html');">ANGINA ESTABLE</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-211.html');">DISLIPIDEMIA Y PREVENCIÓN</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-263.html');">INSUFICIENCIA CARDÍACA</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-304.html');">ARRITMIAS</a>            
-    </div>       
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-380.html');">INTERVENSIONISMO CARDIOVASCULAR</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-439.html');">TEP. TVP</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-458.html');">HIPERTENSIÓN ARTERIAL</a>            
-    </div>
-    <div class="category-list-template"> 
-        <a data-align:"left" href="javascript:MYAPP.navigateToArticle('\#abstracts/Abstract-492.html');">STROKE</a>            
-    </div>
-</div>
 
 
     <!--LAYOUT PRINCIPAL-->
-    <div data-role="layout" data-id="main-layout">
-        <div data-role="header">
-            <div data-role="navbar">
-                <a data-role="button" data-rel="drawer" href="#panel-menu" data-icon="drawer-button" data-align="left"></a>
-                <span data-role="view-title"></span>
-            </div>             
+    <div data-role="layout" data-id="main-layout">        
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a data-icon="home" href="#home" data-transition="slide"  class="buttonAppearance-tabstrip"></a>
+                <a data-icon="search" href="#search" data-transition="slide" class="buttonAppearance-tabstrip"></a>
+                <a data-icon="about" href="#about" data-transition="slide" class="buttonAppearance-tabstrip"></a>
+            </div>
         </div>
-        <div data-role="footer"></div>
     </div>
 </body>
 </html>

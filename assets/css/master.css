@@ -1,4 +1,4 @@
- /*GENERAL*/
+      /*GENERAL*/
         body 
         {
              font-family: 'HelveticaNeue Light', 'Roboto Light', 'Slate Light', 'Segoe WP', NokiaPureTextLight, sans-serif!important;
@@ -7,35 +7,28 @@
              color: #444; 
              text-rendering: optimizeLegibility;
              font-size: 1em;
-            line-height: normal;
-            overflow: hidden;
+             line-height: normal;
+             overflow:hidden;
         }  
         p > * {
             pointer-events: none;
         }
-        
+
         input[type="checkbox"] {width:14px;height:14px;}
         input[type="radio"] {width:13px;height:13px}
-
-        /*MENU LATERAL*/
-        .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"!important; }
-    
-        .km-salir:after,
-        .km-salir:before
-        {
-           content: "\e0b9"!important;
-        }
 
         .km-indice-general:after,
         .km-indice-general:before
         {
            content: "\e052"!important;
         }
-
-        #panel-menu 
+        .km-boton-atras:after,
+        .km-boton-atras:before
         {
-            width:170px;
+           content: "\e013"!important;
         }
+
+        
 
         /*BANNER*/
         .div-banner {
@@ -77,8 +70,9 @@
         {
             margin: 1rem!important;
         }
-        #search-text {
-            margin-left: 1.4rem!important;
+        .search-text {
+            margin-top:1rem;
+            margin-left: 1.1rem!important;
             font-size: 1.1em;
             width:70%;
         }
@@ -89,10 +83,6 @@
             margin:0 auto;                
         }
 
-        #home > .km-scroll-container {
-            height: 100%!important;
-        }
-
         .checkbox-lista {
             float:left; 
             width:15px;
@@ -101,8 +91,7 @@
         }
 
         .texto-checkbox {
-    
-            margin-right:.5rem;
+            margin-right:.5rem;            
         }
 
         .inputs-busqueda {
@@ -125,16 +114,21 @@
 
         /*LISTA DE CATEGORIAS*/
         .category-list-template{
-            margin: 1.6rem
+            margin:10px!important;
         }
 
         /*LISTA DE ARTÍCULOS */
         .header-categoria{
             color: #e55b2b!important;          
-            font-size: 1em;
+            font-size: .9em;
             font-weight: 700;
             margin: 0;
             padding: 0;
+            display: block;
+            padding-left: 0.7em;
+            text-indent: -.1em;
+            margin-top:1em;
+
         }
 
 
@@ -214,13 +208,35 @@
             margin:1rem;
         }
 
-.km-view-title {
-color:white!important;
-}
+        .km-view-title {
+        color:white!important;
+        }
 
         /*----------------------------------------*/
         /*------------- Estilos de Kendo ---------*/
         /*----------------------------------------*/
+
+        /*Apariencia TAB STRIP*/
+        .buttonAppearance-tabstrip {
+            color: white;
+            background: #f2825b!important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%)!important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(50%,#e55b2b), color-stop(100%,#f07146))!important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* IE10+ */
+            background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%)!important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 )!important; /* IE6-9 */
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+
+        /*Poner TABSTRIP en el footer para Android*/
+        .km-root .km-android .km-view {
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+        }
 
         /*SIMULAR LIGHT HOLO THEME*/
         .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
@@ -252,7 +268,7 @@ color:white!important;
         }
         .km-android .km-view .km-content .km-listgroup .km-group-title .km-text {
             color: #333;
-        }   
+        }
         .km-android .km-view .km-content .km-list > li .km-switch .km-switch-container {
             background-color: #ffffff;
         }
@@ -272,7 +288,7 @@ color:white!important;
 
             background-color: #e55b2b !important;
             color: white !important;           
-            font-weight: bold!important;    
+            font-weight: bold!important;
         }
 
         .km-widget:hover
@@ -294,7 +310,6 @@ color:white!important;
             box-shadow: none!important;  
  
         } 
-
 
         .km-flat .km-switch-handle,
         .km-flat .k-slider-selection,
