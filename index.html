@@ -46,15 +46,15 @@
 
         <ul data-role="listview">
             <li class="li-margen"><label><input id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS</label></li>
-            <li  class="li-margen"><label><input id="chkCat0" type="checkbox" checked="checked"/><div class="category-list-template">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</div></label></li>
-            <li  class="li-margen"><label><input id="chkCat1" type="checkbox" checked="checked"/><div class="category-list-template">ANGINA ESTABLE                                                  </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat2" type="checkbox" checked="checked"/><div class="category-list-template">DISLIPIDEMIA Y PREVENCI&#211;N                                  </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat3" type="checkbox" checked="checked"/><div class="category-list-template">INSUFICIENCIA CARD&#205;ACA                                     </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat4" type="checkbox" checked="checked"/><div class="category-list-template">ARRITMIAS                                                       </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat5" type="checkbox" checked="checked"/><div class="category-list-template">INTERVENCIONISMO CARDIOVASCULAR                                 </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat6" type="checkbox" checked="checked"/><div class="category-list-template">TEP- TVP                                                        </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat7" type="checkbox" checked="checked"/><div class="category-list-template">HIPERTENSI&#211;N ARTERIAL                                      </div></label></li>
-            <li  class="li-margen"><label><input id="chkCat8" type="checkbox" checked="checked"/><div class="category-list-template">STROKE                                                          </div></label></li>
+            <li class="li-margen"><label><input id="chkCat0" type="checkbox" checked="checked"/><div class="category-list-template">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</div></label></li>
+            <li class="li-margen"><label><input id="chkCat1" type="checkbox" checked="checked"/><div class="category-list-template">ANGINA ESTABLE                                                  </div></label></li>
+            <li class="li-margen"><label><input id="chkCat2" type="checkbox" checked="checked"/><div class="category-list-template">DISLIPIDEMIA Y PREVENCI&#211;N                                  </div></label></li>
+            <li class="li-margen"><label><input id="chkCat3" type="checkbox" checked="checked"/><div class="category-list-template">INSUFICIENCIA CARD&#205;ACA                                     </div></label></li>
+            <li class="li-margen"><label><input id="chkCat4" type="checkbox" checked="checked"/><div class="category-list-template">ARRITMIAS                                                       </div></label></li>
+            <li class="li-margen"><label><input id="chkCat5" type="checkbox" checked="checked"/><div class="category-list-template">INTERVENCIONISMO CARDIOVASCULAR                                 </div></label></li>
+            <li class="li-margen"><label><input id="chkCat6" type="checkbox" checked="checked"/><div class="category-list-template">TEP- TVP                                                        </div></label></li>
+            <li class="li-margen"><label><input id="chkCat7" type="checkbox" checked="checked"/><div class="category-list-template">HIPERTENSI&#211;N ARTERIAL                                      </div></label></li>
+            <li class="li-margen"><label><input id="chkCat8" type="checkbox" checked="checked"/><div class="category-list-template">STROKE                                                          </div></label></li>
         </ul>   
     </div>
 
@@ -72,7 +72,8 @@
             data-pull-to-refresh="false"
             data-append-on-refresh="false"
             data-template="item-template-index"
-            data-header-template="header-template-index"> 
+            data-header-template="header-template-index"
+            class="li-margen"> 
         </ul>
     </div>
     <script type="text/x-kendo-template" id="header-template-index">
@@ -102,7 +103,8 @@
             data-pull-to-refresh="false"
             data-append-on-refresh="false"
             data-template="item-template"
-            data-header-template="header-template">
+            data-header-template="header-template"
+            class="li-margen">
         </ul>
     </div>
     <script type="text/x-kendo-template" id="header-template">
@@ -184,19 +186,19 @@
             </div>
         </div>
         <ul data-role="listview">
-            <li><div class="category-list-template">Comentadores invitados                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-000.html"></a></li>
-            <li><div class="category-list-template">Prólogo                                                 </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-001.html"></a></li>
-            <li><div class="category-list-template">Prefacio                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-002.html"></a></li>
-            <li><div class="category-list-template">Dedicatoria                                             </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-003.html"></a></li>
-            <li><div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-004.html"></a></li>
-            <li><div class="category-list-template">Angina Estable                                          </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-172.html"></a></li>
-            <li><div class="category-list-template">Dislipidemia y prevención                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-211.html"></a></li>
-            <li><div class="category-list-template">Insuficiencia cardíaca                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-263.html"></a></li>
-            <li><div class="category-list-template">Arritmias                                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-304.html"></a></li>
-            <li><div class="category-list-template">Intervensionismo cardiovascular                         </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-380.html"></a></li>
-            <li><div class="category-list-template">TEP. TVP                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-439.html"></a></li>
-            <li><div class="category-list-template">Hipertensión Arterial                                   </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-458.html"></a></li>
-            <li><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Comentadores invitados                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-000.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Prólogo                                                 </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-001.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Prefacio                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-002.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Dedicatoria                                             </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-003.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-004.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Angina Estable                                          </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-172.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Dislipidemia y prevención                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-211.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Insuficiencia cardíaca                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-263.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Arritmias                                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-304.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Intervensionismo cardiovascular                         </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-380.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">TEP. TVP                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-439.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Hipertensión Arterial                                   </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-458.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
         </ul>
     </div>
 
