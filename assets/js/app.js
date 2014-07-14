@@ -210,11 +210,19 @@ function indexListviewInit() {
     $("#indexListview").kendoMobileListView({
         dataSource: new kendo.data.DataSource({
             data: MYAPP.src,
-            serverPaging: false,
-            pageSize: 30
+            serverPaging: true,
+            serverSorting: true,
+            pageSize:50
         }),
         template: $("#item-template-index").text(),
-        loadMore:true
+       // virtualViewSize: 40, // needed setting, since local data virtualization does not use paging
+        endlessScroll: true
     });
-}   
+}
+
+function refrescarLista() {
+    var listview = $("#indexListview").data("kendoMobileListView");
+    listview.dataSource.page(0); //request the first page
+    listview.scroller().reset(); //reset the scroller
+}
 
