@@ -208,11 +208,13 @@ function seleccionarRadioButton() {
 /*Lista Indice Principal*/
 function indexListviewInit() {
     $("#indexListview").kendoMobileListView({
-        dataSource: new kendo.data.DataSource({ data: MYAPP.src}),
-        template: $("#item-template-index").html(),
-        endlessScroll: true,
-        virtualViewSize: 50 // needed setting, since local data virtualization does not use paging
-        //loadMore:true
+        dataSource: new kendo.data.DataSource({
+            data: MYAPP.src,
+            serverPaging: false,
+            pageSize: 30
+        }),
+        template: $("#item-template-index").text(),
+        loadMore:true
     });
-}
+}   
 
