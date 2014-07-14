@@ -112,9 +112,11 @@
             margin: 1rem!important;
         }
 
+          
+
         /*LISTA DE CATEGORIAS*/
         .category-list-template{
-            margin:10px!important;
+            margin-right:35px;
         }
 
         /*LISTA DE ARTÍCULOS */
@@ -131,19 +133,20 @@
 
         }
 
-
         .item-template-titulo{
             font-size: .8em;
+            margin-right:35px;
         }
 
         .item-template-subtitulo {
             color: #9b9b9b;
-            font-size: .7em;           
+            font-size: .7em;  
+            margin-right:35px;         
         }
 
         .dv-item-template {
             margin: 0;
-            }
+        }
 
         /*ARTÍCULOS*/
 
@@ -291,6 +294,8 @@
             font-weight: bold!important;
         }
 
+        
+
         .km-widget:hover
         .km-button:hover{  background-color: #C64311 !important;}
 
@@ -309,7 +314,7 @@
             -webkit-background-size: auto!important;
             box-shadow: none!important;  
  
-        } 
+        }  
 
         .km-flat .km-switch-handle,
         .km-flat .k-slider-selection,
@@ -335,14 +340,39 @@
         .km-flat .km-actionsheet > li > a:active,
         .km-flat .km-actionsheet > li > a:hover,
         .km-flat li.km-state-active .km-listview-link,
-        .km-flat li.km-state-active .km-listview-label,
+        .km-flat li.km-state-active .km-listview-label
+        {
+            background: #e55b2b!important;
+        }
+
         .km-flat .km-listview-label input[type=radio]:checked,
         .km-flat .km-listview-label input[type=checkbox]:checked
         {
             background: #e55b2b!important;
+            color:white!important;
         }
 
         .km-flat .km-filter-wrap > input:focus
         {
             border-color: #e55b2b!important;
         }
+
+         .radioGroup 
+         {
+            background:white!important;   
+            color:  #e55b2b!important;
+            border-style:solid;
+            border-color:#e55b2b!important;
+        }
+
+         .radioGroup:active,
+         .radioGroup:hover,
+         .radioGroup:root
+         {
+            background:#e55b2b!important;   
+            color:  white!important;
+        }
+
+    li.km-state-active {
+        color:white!important;
+    }

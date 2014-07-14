@@ -9,38 +9,43 @@ MYAPP.run = (function() {
         initial: "#home",
         skin: "flat"
     });
-
-    window.plugins.emailComposer = new EmailComposer();
+    window.plugins.emailComposer = new EmailComposer();  
 });
 
 
 // this is called when the initial view shows. it prevents the flash
 // of unstyled content (FOUC)
-MYAPP.search = (function () {
+MYAPP.search = (function (e) {
 
+    e.preventDefault();
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
         if (listView == null)
             listView = $('#result-list').data("kendoMobileListView");
         listView.refresh();
-
         //ORDENAMIENTO
-        if ($("#rbTitulo")[0].checked) {
+        var indice = $("#buttongroup").data("kendoMobileButtonGroup").selectedIndex;
+        //Si esta chequeada la categoria
+        if (indice == 0) {
+            MYAPP.abstracts.group({ field: "category" });
+            return true;
+        }
+        //Si esta chequeado el titulo
+        if (indice== 1) {
             MYAPP.abstracts.sort({ field: "title", dir: "asc" });
             MYAPP.abstracts.group([]);
             //CORRECION BUG DE KENDO 
             $('#result-list').removeClass("km-listgroup");
             $('#result-list').addClass("km-list");
+            return true;
             /////////////////////////
-        }
-        if ($("#rbCategoria")[0].checked) {
-            MYAPP.abstracts.group({ field: "category" });
-
-        }
-        if ($("#rbAcronimo")[0].checked) {
+        }       
+        //Si esta chequeado el acronimo
+        if (indice == 2) {
             MYAPP.abstracts.group({ field: "subtitle" });
             MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
+            return true;
         }
     }
     else {
@@ -200,3 +205,11 @@ MYAPP.hideFooter = function (e) {
 MYAPP.showFooter = function (e) {
     $(".km-tabstrip").show();
 };
+
+function seleccionarRadioButton() {
+    var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
+    // selects by jQuery object
+    buttongroup.select(buttongroup.element.children().eq(0));
+    // selects by index
+    buttongroup.select(0);
+}
