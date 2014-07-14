@@ -90,16 +90,6 @@ MYAPP.abstracts = new kendo.data.DataSource({
     }   
 });
 
-//DEVUELVE TODOS LOS ARTICULOS PARA EL INDIDCE GENERAL
-MYAPP.showIndexList = new kendo.data.DataSource({
-    transport: {
-        read: function (options) {
-            options.success(MYAPP.src);
-        }
-    },
-    group: { field: "categoryCode" }
-});
-
 //FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (e) {
     var data = e.button.data();
@@ -213,3 +203,16 @@ function seleccionarRadioButton() {
     // selects by index
     buttongroup.select(0);
 }
+
+
+/*Lista Indice Principal*/
+function indexListviewInit() {
+    $("#indexListview").kendoMobileListView({
+        dataSource: new kendo.data.DataSource({ data: MYAPP.src}),
+        template: $("#item-template-index").html(),
+        endlessScroll: true,
+        virtualViewSize: 50 // needed setting, since local data virtualization does not use paging
+        //loadMore:true
+    });
+}
+
