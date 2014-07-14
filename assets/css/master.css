@@ -106,11 +106,14 @@
             margin: 1rem!important;
         }
 
-          
-
         /*LISTA DE CATEGORIAS*/
         .category-list-template{
             margin-right:35px;
+        }
+
+        .li-margen {
+            margin-top:10px;
+            margin-bottom:10px;
         }
 
         /*LISTA DE ARTÍCULOS */
@@ -124,7 +127,6 @@
             padding-left: 0.7em;
             text-indent: -.1em;
             margin-top:1em;
-
         }
 
         .item-template-titulo{
@@ -340,6 +342,11 @@
             color:  white!important;
         }
 
-    li.km-state-active {
-        color:white!important;
-    }
+        li.km-state-active 
+        {
+            color:white!important;
+        }
+
+        li {
+        background:inherit!important;
+        }
