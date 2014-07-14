@@ -43,17 +43,18 @@
         </ul>
         </div>
         <div class="header-busqueda">FILTRAR POR CATEGOR&#205;AS</div>
+
         <ul data-role="listview">
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat0" type="checkbox" checked="checked" />S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat1" type="checkbox" checked="checked" />ANGINA ESTABLE</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat2" type="checkbox" checked="checked" />DISLIPIDEMIA Y PREVENCI&#211;N</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat3" type="checkbox" checked="checked" />INSUFICIENCIA CARD&#205;ACA</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat4" type="checkbox" checked="checked" />ARRITMIAS</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat5" type="checkbox" checked="checked" />INTERVENCIONISMO CARDIOVASCULAR</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat6" type="checkbox" checked="checked" />TEP- TVP</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat7" type="checkbox" checked="checked" />HIPERTENSI&#211;N ARTERIAL</label></li>
-            <li><label class="texto-categorias"><input class="inputs-busqueda" id="chkCat8" type="checkbox" checked="checked" />STROKE</label></li>
+            <li><label><input id="chkCatTodas" type="checkbox" checked="checked" onclick="MYAPP.CheckAll()" />TODAS</label></li>
+            <li><label><input id="chkCat0" type="checkbox" checked="checked" /><div class="category-list-template">S&#205;NDROMES CORONARIOS AGUDOS CON Y SIN ELEVACI&#211;N DEL ST</div></label></li>
+            <li><label><input id="chkCat1" type="checkbox" checked="checked" /><div class="category-list-template">ANGINA ESTABLE                                                  </div></label></li>
+            <li><label><input id="chkCat2" type="checkbox" checked="checked" /><div class="category-list-template">DISLIPIDEMIA Y PREVENCI&#211;N                                  </div></label></li>
+            <li><label><input id="chkCat3" type="checkbox" checked="checked" /><div class="category-list-template">INSUFICIENCIA CARD&#205;ACA                                     </div></label></li>
+            <li><label><input id="chkCat4" type="checkbox" checked="checked" /><div class="category-list-template">ARRITMIAS                                                       </div></label></li>
+            <li><label><input id="chkCat5" type="checkbox" checked="checked" /><div class="category-list-template">INTERVENCIONISMO CARDIOVASCULAR                                 </div></label></li>
+            <li><label><input id="chkCat6" type="checkbox" checked="checked" /><div class="category-list-template">TEP- TVP                                                        </div></label></li>
+            <li><label><input id="chkCat7" type="checkbox" checked="checked" /><div class="category-list-template">HIPERTENSI&#211;N ARTERIAL                                      </div></label></li>
+            <li><label><input id="chkCat8" type="checkbox" checked="checked" /><div class="category-list-template">STROKE                                                          </div></label></li>
         </ul>   
     </div>
 
@@ -198,8 +199,6 @@
             <li><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
         </ul>
     </div>
-
-
 
     <!--LAYOUT PRINCIPAL-->
     <div data-role="layout" data-id="main-layout">        
