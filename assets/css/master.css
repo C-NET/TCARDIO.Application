@@ -109,12 +109,10 @@
         /*LISTA DE CATEGORIAS*/
         .category-list-template{
             margin-right:35px;
+            vertical-align:middle!important;
         }
 
-        .li-margen {
-            margin-top:10px;
-            margin-bottom:10px;
-        }
+       
 
         /*LISTA DE ARTÍCULOS */
         .header-categoria{
@@ -350,3 +348,19 @@
         li {
         background:inherit!important;
         }
+
+
+        .li-margen {
+            min-height:50px!important;
+        }
+
+        .km-detaildisclose {
+        shape-rendering:optimizeQuality!important;
+        image-rendering:optimizeQuality!important;
+        /*height:24px!important;
+        width:24px!important;*/
+        }
+
+.li-margen > li {
+    min-height:50px!important
+}
