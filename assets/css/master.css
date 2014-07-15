@@ -343,16 +343,16 @@
         }
 
         .km-home {
-            -webkit-mask-box-image: url("assets/css/icons/home.png")!important;
+            -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/home.png")!important;
         }
         .km-info {
-            -webkit-mask-box-image: url("/assets/css/icons/info.png")!important;
+            -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/info.png")!important;
         }
         .km-search {
-            -webkit-mask-box-image: url("/assets/css/icons/search.png")!important;
+            -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/search.png")!important;
         }
         .km-share {
-            -webkit-mask-box-image: url("\assets/css/icons/share.png")!important;
+            -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/share.png")!important;
         }
         .km-categorias {
             -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/categorias.png")!important;
@@ -372,11 +372,11 @@
 
  
 input[type=checkbox]:not(:checked) {
-  -webkit-mask-box-image: url("/assets/css/icons/checkbox_off.png")!important;
+  -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_off.png")!important;
   color:#e55b2b;
 } 
 input[type=checkbox]:checked {
-  -webkit-mask-box-image: url("/assets/css/icons/checkbox_on.png")!important;
+  -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_on.png")!important;
 }
 
 .left-align 
