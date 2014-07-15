@@ -343,7 +343,7 @@
         }
 
         .km-home {
-            -webkit-mask-box-image: url("/assets/css/icons/home.png")!important;
+            -webkit-mask-box-image: url("assets/css/icons/home.png")!important;
         }
         .km-info {
             -webkit-mask-box-image: url("/assets/css/icons/info.png")!important;
@@ -352,10 +352,10 @@
             -webkit-mask-box-image: url("/assets/css/icons/search.png")!important;
         }
         .km-share {
-            -webkit-mask-box-image: url("/assets/css/icons/share.png")!important;
+            -webkit-mask-box-image: url("\assets/css/icons/share.png")!important;
         }
         .km-categorias {
-            -webkit-mask-box-image: url("/assets/css/icons/categorias.png")!important;
+            -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/categorias.png")!important;
         }
 
         /*.km-indice-general:after,

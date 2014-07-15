@@ -557,6 +557,13 @@
     <Content Include="abstracts\Abstract-508.html" />
     <Content Include="abstracts\Abstract-509.html" />
     <Content Include="abstracts\Abstract-510.html" />
+    <Content Include="assets\css\icons\categorias.png" />
+    <Content Include="assets\css\icons\checkbox_off.png" />
+    <Content Include="assets\css\icons\checkbox_on.png" />
+    <Content Include="assets\css\icons\home.png" />
+    <Content Include="assets\css\icons\info.png" />
+    <Content Include="assets\css\icons\search.png" />
+    <Content Include="assets\css\icons\share.png" />
     <Content Include="assets\css\images\back.png" />
     <Content Include="assets\css\images\logo.gif" />
     <Content Include="assets\css\images\trials.png" />
