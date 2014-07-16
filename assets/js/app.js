@@ -9,7 +9,7 @@ MYAPP.run = (function() {
         initial: "#home",
         skin: "flat"
     });
-    window.plugins.emailComposer = new EmailComposer();  
+    window.plugins.emailComposer = new EmailComposer();   
 });
 
 
@@ -75,6 +75,7 @@ MYAPP.search = (function (e) {
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
+            spinnerplugin.show();
             var categoryCodes = 0;
             //Recorro los checkbox de categorías
             for (var k = 0; k < 9; k++)
@@ -85,6 +86,7 @@ MYAPP.abstracts = new kendo.data.DataSource({
             }
             // Retorna las páginas que coinciden.
             var data = MYAPP.find($(".search-text").val(), categoryCodes);
+            spinnerplugin.hide();
             options.success(data);
         } 
     }   
