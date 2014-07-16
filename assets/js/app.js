@@ -18,6 +18,7 @@ MYAPP.run = (function() {
 MYAPP.search = (function (e) {
 
     e.preventDefault();
+    window.spinnerplugin.show();
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
@@ -52,6 +53,7 @@ MYAPP.search = (function (e) {
         }
     }
     else {
+        window.spinnerplugin.hide();
         MYAPP.app.navigate("#NotFound");
     }
 });
@@ -77,8 +79,7 @@ MYAPP.search = (function (e) {
 //FILTRA LOS ARTICULOS POR BÚSQUEDA
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
-        read: function (options) {
-            window.spinnerplugin.show();
+        read: function (options) {            
             var categoryCodes = 0;
             //Recorro los checkbox de categorías
             for (var k = 0; k < 9; k++)
@@ -212,6 +213,7 @@ function seleccionarRadioButton() {
 
 /*Lista Indice Principal*/
 function indexListviewInit() {
+    window.spinnerplugin.show();
     $("#indexListview").kendoMobileListView({
         dataSource: new kendo.data.DataSource({
             data: MYAPP.src,
@@ -226,8 +228,10 @@ function indexListviewInit() {
 }
 
 function refrescarLista() {
+    window.spinnerplugin.show();
     var listview = $("#indexListview").data("kendoMobileListView");
     listview.dataSource.page(0); //request the first page
     listview.scroller().reset(); //reset the scroller
+    window.spinnerplugin.hide();
 }
 
