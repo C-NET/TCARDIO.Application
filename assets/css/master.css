@@ -52,6 +52,12 @@ input[type="radio"] {width:13px;height:13px}
     font-size:1.4em; 
 }
 
+.lista-secciones-busquqeda
+{
+    font:Helvetica Neue Light;
+    font-size:.9em; 
+}
+
 /*LISTA DE ARTÍCULOS */
 .header-categoria{
     color: #e55b2b!important;          

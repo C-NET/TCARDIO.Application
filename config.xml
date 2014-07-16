@@ -14,12 +14,14 @@
     C-NET S.R.L.
   </author>
 
-  <icon src="icon.png"/>
+  <gap:icon src="icon.png"/>
 
-  <icon src="icons/android/ic_app_ldpi.png" gap:platform="android" gap:density="ldpi" />
-  <icon src="icons/android/ic_app_mdpi.png" gap:platform="android" gap:density="mdpi" />
-  <icon src="icons/android/ic_app_hdpi.png" gap:platform="android" gap:density="hdpi" />
-  <icon src="icons/android/ic_app_xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="icon.png" gap:platform="android" gap:density="hdpi" />
+  <icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
+  <icon src="icon.png" gap:platform="android" gap:density="xxhdpi" />
+
 
   <!--  Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event. -->
