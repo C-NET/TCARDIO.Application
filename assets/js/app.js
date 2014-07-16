@@ -9,7 +9,8 @@ MYAPP.run = (function() {
         initial: "#home",
         skin: "flat"
     });
-    window.plugins.emailComposer = new EmailComposer();   
+    window.plugins.emailComposer = new EmailComposer();
+    spinnerplugin.show({}); 
 });
 
 
