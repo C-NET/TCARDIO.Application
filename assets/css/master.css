@@ -48,6 +48,12 @@ background-size: 100% 100%!important;
 background-color: currentcolor!important;
 }
 
+.km-root .km-pane .km-view .km-icon:after,
+.km-root .km-pane .km-view .km-icon:before
+{
+    visibility: hidden;
+}
+
 .km-principal {
     -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/home.png")!important;
 }
