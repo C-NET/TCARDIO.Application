@@ -560,6 +560,7 @@
     <Content Include="assets\css\icons\categorias.png" />
     <Content Include="assets\css\icons\checkbox_off.png" />
     <Content Include="assets\css\icons\checkbox_on.png" />
+    <Content Include="assets\css\icons\flecha.png" />
     <Content Include="assets\css\icons\home.png" />
     <Content Include="assets\css\icons\info.png" />
     <Content Include="assets\css\icons\search.png" />
