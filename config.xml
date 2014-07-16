@@ -14,7 +14,7 @@
     C-NET S.R.L.
   </author>
 
-  <icon src="icon.png" gap:role="default" />
+  <icon src="icon.png"/>
 
   <icon src="icons/android/ic_app_ldpi.png" gap:platform="android" gap:density="ldpi" />
   <icon src="icons/android/ic_app_mdpi.png" gap:platform="android" gap:density="mdpi" />
@@ -56,6 +56,9 @@
   <access origin="*"/>
 
 
+  <gap:config-file platform="android" parent="/manifest">
+    <application android:hardwareAccelerated="false" />
+  </gap:config-file>
 
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
