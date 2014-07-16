@@ -1,3 +1,85 @@
+.ui-body-a,
+.ui-bar-a,
+.ui-btn-up-a,
+.ui-btn-hover-a,
+.ui-btn-down-a,
+
+.ui-body-b,
+.ui-bar-b,
+.ui-btn-up-b,
+.ui-btn-hover-b,
+.ui-btn-down-b,
+
+.ui-body-c,
+.ui-bar-c,
+.ui-btn-up-c,
+.ui-btn-hover-c,
+.ui-btn-down-c,
+
+.ui-body-d,
+.ui-bar-d,
+.ui-btn-up-d,
+.ui-btn-hover-d,
+.ui-btn-down-d,
+
+.ui-body-e,
+.ui-bar-e,
+.ui-btn-up-e,
+.ui-btn-hover-e,
+.ui-btn-down-e,
+
+.ui-shadow-inset,
+.ui-icon-shadow,
+.ui-focus,
+.ui-overlay-shadow,
+.ui-shadow,
+.ui-btn-active,
+* {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/*ICONOS CUSTOMIZADOS*/
+.km-root .km-pane .km-view .km-icon {
+background-size: 100% 100%!important;
+-webkit-background-clip: border-box!important;
+background-color: currentcolor!important;
+}
+
+.km-principal {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/home.png")!important;
+}
+.km-info {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/info.png")!important;
+}
+.km-buscar {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/search.png")!important;
+}
+.km-compartir {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/share.png")!important;
+}
+.km-categorias {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/categorias.png")!important;
+}
+        
+.km-boton-atras 
+{
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/flecha.png")!important;
+}
+ 
+input[type=checkbox]:not(:checked)
+    {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_off.png")!important;
+    color:#e55b2b;
+} 
+
+input[type=checkbox]:checked {
+    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_on.png")!important;
+}
+
+
 /*GENERAL*/
 body 
 {   
@@ -63,7 +145,7 @@ input[type="radio"] {width:13px;height:13px}
 /*LISTA DE ARTÍCULOS */
 .header-categoria{
     color: #e55b2b!important;          
-    font-size: 1em;
+    font-size: 1em; 
     display: block;
     padding-left: 0.7em;
     text-indent: -.1em;
@@ -180,6 +262,43 @@ color:white!important;
     border:none!important;
 }
 
+
+
+li.km-state-active 
+{
+    color:white!important;
+}
+
+li {
+background:inherit!important;
+}
+
+
+.li-margen {
+    min-height:50px!important;
+}
+
+.li-margen > li {
+    min-height:50px!important;
+}
+
+.left-align 
+{
+    margin: 4px!important;
+}
+
+input[type="text"]
+{ 
+border:1px solid #c7c7c7;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+color: black !important;
+padding: 8px;
+margin-top:1rem;
+margin-left: 1.1rem!important;
+}
+
 /*Poner TABSTRIP en el footer para Android*/
 .km-root .km-android .km-view {
     -webkit-box-direction: normal;
@@ -260,127 +379,21 @@ color:white!important;
     border-color: #e55b2b!important;
 }
 
-    .radioGroup 
-    {
+.radioGroup 
+{
     background:white!important;   
     color:  #e55b2b!important;
     border-style:solid;
     border-color:#e55b2b!important;
 }
 
-li.km-state-active 
-{
-    color:white!important;
+.km-widget {
+    border:none!important;
+    border-style:none!important;
 }
 
-li {
+.km-flat .km-widget.km-detaildisclose.km-detail.km-state-active {
 background:inherit!important;
+color:inherit!important;
 }
 
-
-.li-margen {
-    min-height:50px!important;
-}
-
-.li-margen > li {
-    min-height:50px!important;
-}
-
-
-/*ICONOS CUSTOMIZADOS*/
-.km-root .km-pane .km-view .km-icon {
-background-size: 100% 100%!important;
--webkit-background-clip: border-box!important;
-background-color: currentcolor!important;
-}
-
-.km-home {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/home.png")!important;
-}
-.km-info {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/info.png")!important;
-}
-.km-search {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/search.png")!important;
-}
-.km-share {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/share.png")!important;
-}
-.km-categorias {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/categorias.png")!important;
-}
-        
-.km-boton-atras 
-{
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/flecha.png")!important;
-}
- 
-input[type=checkbox]:not(:checked)
-    {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_off.png")!important;
-    color:#e55b2b;
-} 
-
-input[type=checkbox]:checked {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/checkbox_on.png")!important;
-}
-
-.left-align 
-{
-    margin: 4px!important;
-}
-
-input[type="text"]
-{ 
-border:1px solid #c7c7c7;
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box;
-box-sizing:border-box;
-color: black !important;
-padding: 8px;
-margin-top:1rem;
-margin-left: 1.1rem!important;
-}
-
-.ui-body-a,
-.ui-bar-a,
-.ui-btn-up-a,
-.ui-btn-hover-a,
-.ui-btn-down-a,
-
-.ui-body-b,
-.ui-bar-b,
-.ui-btn-up-b,
-.ui-btn-hover-b,
-.ui-btn-down-b,
-
-.ui-body-c,
-.ui-bar-c,
-.ui-btn-up-c,
-.ui-btn-hover-c,
-.ui-btn-down-c,
-
-.ui-body-d,
-.ui-bar-d,
-.ui-btn-up-d,
-.ui-btn-hover-d,
-.ui-btn-down-d,
-
-.ui-body-e,
-.ui-bar-e,
-.ui-btn-up-e,
-.ui-btn-hover-e,
-.ui-btn-down-e,
-
-.ui-shadow-inset,
-.ui-icon-shadow,
-.ui-focus,
-.ui-overlay-shadow,
-.ui-shadow,
-.ui-btn-active,
-* {
-    text-shadow: none !important;
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-}

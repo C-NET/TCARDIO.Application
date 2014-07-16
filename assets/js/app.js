@@ -28,6 +28,7 @@ MYAPP.search = (function (e) {
         var indice = $("#buttongroup").data("kendoMobileButtonGroup").selectedIndex;
         //Si esta chequeada la categoria
         if (indice == 0) {
+            MYAPP.abstracts.sort({ field: "title", dir: "asc" });
             MYAPP.abstracts.group({ field: "category" });
             return true;
         }
