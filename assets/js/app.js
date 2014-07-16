@@ -10,7 +10,8 @@ MYAPP.run = (function() {
         skin: "flat"
     });
     window.plugins.emailComposer = new EmailComposer();
-    spinnerplugin.show({}); 
+    window.plugins.spinnerDialog.show();
+    
 });
 
 
@@ -19,6 +20,7 @@ MYAPP.run = (function() {
 MYAPP.search = (function (e) {
 
     e.preventDefault();
+    window.spinnerplugin.show({});
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
