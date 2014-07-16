@@ -56,9 +56,9 @@
   <access origin="*"/>
 
 
-  <gap:config-file platform="android" parent="/manifest">
+  <!--<gap:config-file platform="android" parent="/manifest">
     <application android:hardwareAccelerated="false" />
-  </gap:config-file>
+  </gap:config-file>-->
 
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
