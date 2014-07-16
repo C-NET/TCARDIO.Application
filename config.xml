@@ -65,7 +65,6 @@
 
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
-  <gap:plugin name="it.mobimentum.phonegapspinnerplugin" version="1.0.0" />
-  <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" version="0.2.1" />
+  <gap:plugin name="it.mobimentum.phonegapspinnerplugin" version="1.1.0" />
   
 </widget>

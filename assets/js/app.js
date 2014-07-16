@@ -9,9 +9,7 @@ MYAPP.run = (function() {
         initial: "#home",
         skin: "flat"
     });
-    window.plugins.emailComposer = new EmailComposer();
-    window.plugins.spinnerDialog.show();
-    
+    window.plugins.emailComposer = new EmailComposer();   
 });
 
 
@@ -20,7 +18,6 @@ MYAPP.run = (function() {
 MYAPP.search = (function (e) {
 
     e.preventDefault();
-    window.spinnerplugin.show({});
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
@@ -32,6 +29,7 @@ MYAPP.search = (function (e) {
         //Si esta chequeada la categoria
         if (indice == 0) {
             MYAPP.abstracts.group({ field: "category" });
+            window.spinnerplugin.hide();
             return true;
         }
         //Si esta chequeado el titulo
@@ -41,6 +39,7 @@ MYAPP.search = (function (e) {
             //CORRECION BUG DE KENDO 
             $('#result-list').removeClass("km-listgroup");
             $('#result-list').addClass("km-list");
+            window.spinnerplugin.hide();
             return true;
             /////////////////////////
         }       
@@ -48,6 +47,7 @@ MYAPP.search = (function (e) {
         if (indice == 2) {
             MYAPP.abstracts.group({ field: "subtitle" });
             MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
+            window.spinnerplugin.hide();
             return true;
         }
     }
@@ -78,7 +78,7 @@ MYAPP.search = (function (e) {
 MYAPP.abstracts = new kendo.data.DataSource({
     transport: {
         read: function (options) {
-            spinnerplugin.show();
+            window.spinnerplugin.show();
             var categoryCodes = 0;
             //Recorro los checkbox de categorías
             for (var k = 0; k < 9; k++)
@@ -89,8 +89,8 @@ MYAPP.abstracts = new kendo.data.DataSource({
             }
             // Retorna las páginas que coinciden.
             var data = MYAPP.find($(".search-text").val(), categoryCodes);
-            spinnerplugin.hide();
             options.success(data);
+            
         } 
     }   
 });
