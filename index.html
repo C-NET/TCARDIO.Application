@@ -24,6 +24,32 @@
 </head>
 <body>
 
+    <!-- VISTA PRINCIPAL, DEBE COPIARSE DEL CONTENIDO ListCategoriesView.html SI SE QUIERE CAMBIAR ALGO, YA QUE ES GENEREDA CON EL CONTENT GENERATOR -->
+    <div data-role="view" data-layout="main-layout" id="home" data-title="Trials T.C." >
+        <div data-role="header">
+            <div data-role="navbar">
+                <a data-role="backbutton" data-align="left" data-icon="boton-atras">Atrás</a>
+                <span data-role="view-title"></span>
+                <a data-role="button" data-align="right" data-icon="categorias" data-click="refrescarLista" href="#index"></a>
+            </div> 
+        </div>
+        <ul data-role="listview" class="lista-secciones">
+            <li class="li-margen"><div class="category-list-template">Comentadores invitados                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-000.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Prólogo                                                 </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-001.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Prefacio                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-002.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Dedicatoria                                             </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-003.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-004.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Angina Estable                                          </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-172.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Dislipidemia y prevención                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-211.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Insuficiencia cardíaca                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-263.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Arritmias                                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-304.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Intervensionismo cardiovascular                         </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-380.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">TEP. TVP                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-439.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Hipertensión Arterial                                   </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-458.html"></a></li>
+            <li class="li-margen"><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
+        </ul>
+    </div>
+
     <!-- VISTA DE BÚSQUEDA DE ARTÍCULOS -->
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda" data-init="seleccionarRadioButton">
         <div data-role="header">
@@ -168,31 +194,6 @@
         <h3>No se encontraron art&#237;culos.</h3>
     </div>
 
-    <!-- VISTA PRINCIPAL, DEBE COPIARSE DEL CONTENIDO ListCategoriesView.html SI SE QUIERE CAMBIAR ALGO, YA QUE ES GENEREDA CON EL CONTENT GENERATOR -->
-    <div data-role="view" data-layout="main-layout" id="home" data-title="Trials T.C." >
-        <div data-role="header">
-            <div data-role="navbar">
-                <a data-role="backbutton" data-align="left" data-icon="boton-atras">Atrás</a>
-                <span data-role="view-title"></span>
-                <a data-role="button" data-align="right" data-icon="categorias" href="#index"></a>
-            </div>
-        </div>
-        <ul data-role="listview" class="lista-secciones">
-            <li class="li-margen"><div class="category-list-template">Comentadores invitados                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-000.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Prólogo                                                 </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-001.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Prefacio                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-002.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Dedicatoria                                             </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-003.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-004.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Angina Estable                                          </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-172.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Dislipidemia y prevención                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-211.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Insuficiencia cardíaca                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-263.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Arritmias                                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-304.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Intervensionismo cardiovascular                         </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-380.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">TEP. TVP                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-439.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Hipertensión Arterial                                   </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-458.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
-        </ul>
-    </div>
 
     <!--LAYOUT PRINCIPAL-->
     <div data-role="layout" data-id="main-layout">        

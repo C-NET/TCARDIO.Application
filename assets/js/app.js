@@ -18,7 +18,8 @@ MYAPP.run = (function() {
 MYAPP.search = (function (e) {
 
     e.preventDefault();
-    window.spinnerplugin.show();
+    if(window.spinnerplugin != null)
+        window.spinnerplugin.show();
     MYAPP.abstracts.read();
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
@@ -30,32 +31,27 @@ MYAPP.search = (function (e) {
         //Si esta chequeada la categoria
         if (indice == 0) {
             MYAPP.abstracts.group({ field: "category" });
-            window.spinnerplugin.hide();
-            return true;
         }
         //Si esta chequeado el titulo
-        if (indice== 1) {
+        else if (indice== 1) {
             MYAPP.abstracts.sort({ field: "title", dir: "asc" });
             MYAPP.abstracts.group([]);
             //CORRECION BUG DE KENDO 
             $('#result-list').removeClass("km-listgroup");
             $('#result-list').addClass("km-list");
-            window.spinnerplugin.hide();
-            return true;
             /////////////////////////
         }       
         //Si esta chequeado el acronimo
-        if (indice == 2) {
+       else if (indice == 2) {
             MYAPP.abstracts.group({ field: "subtitle" });
             MYAPP.abstracts.filter({ field: "subtitle", operator: "neq", value: "" });
-            window.spinnerplugin.hide();
-            return true;
         }
     }
-    else {
-        window.spinnerplugin.hide();
+    else {        
         MYAPP.app.navigate("#NotFound");
     }
+    if (window.spinnerplugin != null)
+        window.spinnerplugin.hide();
 });
 
 // this function runs at startup and attaches to the 'deviceready' event
@@ -89,6 +85,7 @@ MYAPP.abstracts = new kendo.data.DataSource({
                     categoryCodes |= (1 << (4+k));
             }
             // Retorna las páginas que coinciden.
+
             var data = MYAPP.find($(".search-text").val(), categoryCodes);
             options.success(data);
             
@@ -149,6 +146,7 @@ MYAPP.find = function (key, categories) {
         if ((art.categoryCode & categories) != 0)
             data.push(art);
     }
+
     return data;
 };
 
@@ -165,7 +163,7 @@ MYAPP.getCategoryName = function (categoryCode) {
         if (cat[i].id == categoryCode)
             return cat[i].desc;
 
-    return "";
+    return ";"
 }
 
 MYAPP.CheckAll = function (e) {
@@ -213,7 +211,8 @@ function seleccionarRadioButton() {
 
 /*Lista Indice Principal*/
 function indexListviewInit() {
-    window.spinnerplugin.show();
+    if (window.spinnerplugin != null)
+        window.spinnerplugin.show();
     $("#indexListview").kendoMobileListView({
         dataSource: new kendo.data.DataSource({
             data: MYAPP.src,
@@ -228,10 +227,12 @@ function indexListviewInit() {
 }
 
 function refrescarLista() {
-    window.spinnerplugin.show();
+    if (window.spinnerplugin != null)
+        window.spinnerplugin.show();
     var listview = $("#indexListview").data("kendoMobileListView");
     listview.dataSource.page(0); //request the first page
     listview.scroller().reset(); //reset the scroller
-    window.spinnerplugin.hide();
+    if (window.spinnerplugin != null)
+        window.spinnerplugin.hide();
 }
 

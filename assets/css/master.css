@@ -117,7 +117,7 @@ input[type="radio"] {width:13px;height:13px}
        
 
 /*BÚSQUEDA DE ARTÍCULOS*/
-.boton-buscar {
+.boton-buscar { 
     margin: 1rem!important;
 }
 
@@ -294,15 +294,25 @@ background:inherit!important;
 
 input[type="text"]
 { 
-border:1px solid #c7c7c7;
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box;
-box-sizing:border-box;
-color: black !important;
-padding: 8px;
-margin-top:1rem;
-margin-left: 1.1rem!important;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    -moz-box-sizing:border-box!important;
+    -webkit-box-sizing:border-box!important;
+    border-radius:4px;
+    display: block;
+    margin: 0;
+    box-sizing:border-box;
+    color: #444 !important;
+    padding: 8px;
+    margin-top:1rem;
+    margin-left: 1.1rem!important;
+    width: 60%; 
+    height: 40px;
+    line-height: 40px!important; 
+    border: 1px solid #bbb;
+    font-size:1.1em!important;
 }
+
 
 /*Poner TABSTRIP en el footer para Android*/
 .km-root .km-android .km-view {
