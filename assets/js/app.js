@@ -155,7 +155,7 @@ MYAPP.find = function (key, categories) {
         var art = MYAPP.src[match[i]];
         if ((art.categoryCode & categories) != 0)
             data.push(art);
-        if (data.length > 250) { return data;}
+        if (data.length > 150) { return data;}
             
     }
     return data;
@@ -241,6 +241,8 @@ function indexListviewInit() {
        // virtualViewSize: 40, // needed setting, since local data virtualization does not use paging
         endlessScroll: true
     });
+    if (window.spinnerplugin != null)
+        window.spinnerplugin.hide();
 }
 
 //function refrescarLista() {
