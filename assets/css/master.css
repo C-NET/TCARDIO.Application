@@ -294,22 +294,17 @@ background:inherit!important;
 
 input[type="text"]
 { 
-    -webkit-appearance: none; 
-    -moz-appearance: none;
     -moz-box-sizing:border-box!important;
     -webkit-box-sizing:border-box!important;
     border-radius:4px;
-    display: block;
-    margin: 0;
     box-sizing:border-box;
     color: #444 !important;
     padding: 8px;
     margin-top:1rem;
     margin-left: 1.1rem!important;
     width: 60%; 
-    height: 40px;
-    line-height: 40px!important; 
     border: 1px solid #bbb;
+    font-size:1.1em!important;
 }
 
 
