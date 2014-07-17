@@ -6,7 +6,6 @@ var listView;
 MYAPP.run = (function() {
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        initial: "#home",
         skin: "flat"
     });
     window.plugins.emailComposer = new EmailComposer();   
@@ -16,7 +15,6 @@ MYAPP.run = (function() {
 // this is called when the initial view shows. it prevents the flash
 // of unstyled content (FOUC)
 MYAPP.search = (function (e) {
-
     e.preventDefault();
     if(window.spinnerplugin != null)
         window.spinnerplugin.show();
@@ -24,19 +22,21 @@ MYAPP.search = (function (e) {
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
         if (listView == null)
-            listView = $('#result-list').data("kendoMobileListView");
+            listView = $('#result-list').data("kendoMobileListView");        
         listView.refresh();
         //ORDENAMIENTO
         var indice = $("#buttongroup").data("kendoMobileButtonGroup").selectedIndex;
         //Si esta chequeada la categoria
         if (indice == 0) {
+            MYAPP.abstracts.sort({ field: "title", dir: "asc" });
             MYAPP.abstracts.group({ field: "category" });
         }
+
         //Si esta chequeado el titulo
         else if (indice== 1) {
             MYAPP.abstracts.sort({ field: "title", dir: "asc" });
             MYAPP.abstracts.group([]);
-            //CORRECION BUG DE KENDO 
+            //CORRECCION BUG DE KENDO 
             $('#result-list').removeClass("km-listgroup");
             $('#result-list').addClass("km-list");
             /////////////////////////
@@ -123,30 +123,41 @@ MYAPP.find = function (key, categories) {
     // Recorre el índice
     for (var i = 0; i < idx.length; i++)
     {
+        var idxi = idx[i];
+
         // Compara la categoria del grupo contra la categorías que se buscan
-        if ((idx[i].cat & categories) != 0 && idx[i].key.indexOf(key) >= 0)
+        if ((idxi.cat & categories) != 0)
         {
-            var count = idx[i].src.length;
+            var cmp = idxi.key.substring(0, key.length).localeCompare(key);
+            
+            if (cmp === 0) {
+                var count = idxi.src.length;
 
-            // Se agregan todos los subindices de los artículos sin repetir.
-            for (var j = 0; j < count; j++)
+                // Se agregan todos los subindices de los artículos sin repetir.
+                for (var j = 0; j < count; j++) {
+                    var e = idxi.src[j];
+
+                    // Si está repetido no se agrega
+                    if (match.indexOf(e) < 0)
+                        match.push(e);
+                }
+            }
+            else if (cmp > 0)
             {
-                var e = idx[i].src[j];
-
-                // Si está repetido no se agrega
-                if (match.indexOf(e) < 0)
-                    match.push(e);
+                break;
             }
         }
     }
+
     var data = [];
     //Filtra los artículos por categoría
-    for (var i = 0; i < match.length; i++) {
+    for (var i = 0; i < match.length;    i++) {
         var art = MYAPP.src[match[i]];
         if ((art.categoryCode & categories) != 0)
             data.push(art);
+        if (data.length > 250) { return data;}
+            
     }
-
     return data;
 };
 
@@ -163,7 +174,7 @@ MYAPP.getCategoryName = function (categoryCode) {
         if (cat[i].id == categoryCode)
             return cat[i].desc;
 
-    return ";"
+    return "";
 }
 
 MYAPP.CheckAll = function (e) {
@@ -209,30 +220,38 @@ function seleccionarRadioButton() {
 }
 
 
+MYAPP.indexList = new kendo.data.DataSource({
+    transport: {
+        read: function (options) {
+            options.success(MYAPP.src);
+        }
+    },
+    serverPaging: true,
+    serverSorting: true,
+    pageSize:50
+});
+
 /*Lista Indice Principal*/
 function indexListviewInit() {
     if (window.spinnerplugin != null)
         window.spinnerplugin.show();
     $("#indexListview").kendoMobileListView({
-        dataSource: new kendo.data.DataSource({
-            data: MYAPP.src,
-            serverPaging: true,
-            serverSorting: true,
-            pageSize:50
-        }),
+        dataSource: MYAPP.indexList,
         template: $("#item-template-index").text(),
        // virtualViewSize: 40, // needed setting, since local data virtualization does not use paging
         endlessScroll: true
     });
 }
 
-function refrescarLista() {
-    if (window.spinnerplugin != null)
-        window.spinnerplugin.show();
-    var listview = $("#indexListview").data("kendoMobileListView");
-    listview.dataSource.page(0); //request the first page
-    listview.scroller().reset(); //reset the scroller
-    if (window.spinnerplugin != null)
-        window.spinnerplugin.hide();
-}
+//function refrescarLista() {
+//    if (window.spinnerplugin != null)
+//        window.spinnerplugin.show();
+//    var indexListview = $("#indexListview").data("kendoMobileListView");
+//    if (indexListview != null) {
+//        MYAPP.indexList.page(0);
+//        kendo.mobile.application.scroller().reset();
+//    }
+//    if (window.spinnerplugin != null)
+//        window.spinnerplugin.hide();
+//}
 
