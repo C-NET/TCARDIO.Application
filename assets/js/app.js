@@ -19,6 +19,7 @@ MYAPP.search = (function (e) {
     if(window.spinnerplugin != null)
         window.spinnerplugin.show();
     MYAPP.abstracts.read();
+    loguear(MYAPP.abstracts.total());
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
         if (listView == null)
@@ -121,6 +122,8 @@ MYAPP.find = function (key, categories) {
     key = key.toLowerCase();
     var match = [];
     // Recorre el índice
+
+    var encontrado = 0;
     for (var i = 0; i < idx.length; i++)
     {
         var idxi = idx[i];
@@ -128,9 +131,29 @@ MYAPP.find = function (key, categories) {
         // Compara la categoria del grupo contra la categorías que se buscan
         if ((idxi.cat & categories) != 0)
         {
-            var cmp = idxi.key.substring(0, key.length).localeCompare(key);
+            //var cmp = idxi.key.substring(0, key.length).localeCompare(key);
             
-            if (cmp === 0) {
+            //if (cmp === 0) {
+            //    var count = idxi.src.length;
+
+            //    // Se agregan todos los subindices de los artículos sin repetir.
+            //    for (var j = 0; j < count; j++) {
+            //        var e = idxi.src[j];
+
+            //        // Si está repetido no se agrega
+            //        if (match.indexOf(e) < 0)
+            //            match.push(e);
+            //    }
+            //}
+            //else if (cmp > 0)
+            //{
+            //    break;
+            //}
+
+            var cmp = idxi.key.substring(0, key.length) === key;
+            
+            if (cmp) {
+                encontrado = 1;
                 var count = idxi.src.length;
 
                 // Se agregan todos los subindices de los artículos sin repetir.
@@ -142,11 +165,12 @@ MYAPP.find = function (key, categories) {
                         match.push(e);
                 }
             }
-            else if (cmp > 0)
+            else if (encontrado == 1)
             {
                 break;
             }
         }
+
     }
 
     var data = [];
@@ -155,7 +179,7 @@ MYAPP.find = function (key, categories) {
         var art = MYAPP.src[match[i]];
         if ((art.categoryCode & categories) != 0)
             data.push(art);
-        if (data.length > 150) { return data;}
+        if (data.length > 99) { return data;}
             
     }
     return data;
@@ -257,3 +281,6 @@ function indexListviewInit() {
 //        window.spinnerplugin.hide();
 //}
 
+function loguear(param) {
+    console.log(param);
+}
