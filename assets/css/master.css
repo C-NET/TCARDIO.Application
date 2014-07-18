@@ -213,9 +213,15 @@ font-size:12pt!important;
     margin-bottom:.5rem;
     margin-right:1rem;
 }
+
+.contenedor-articulo  {
+    font-size: 1.2em;
+
+}
         
 .contenedor-articulo > h3 {
     font-size: 1em;
+    color:black;
 }
 .contenedor-articulo > h2 {
     font-size: 1em;
@@ -224,6 +230,7 @@ font-size:12pt!important;
 .contenedor-articulo  h3 > .p {
     font-size: 1em;
 }
+
 
 .categoria-articulo {
     font-weight:500;
@@ -238,13 +245,16 @@ font-size:12pt!important;
 }
 
 .p,
-.s5 {
-        font-weight: 400; 
-        color: #444;         
+.s5,
+.s6 
+{
+    font-weight: 400; 
+    color: #444;         
 }
 
+
 .km-view-title {
-color:white!important;
+    color:white!important;
 }
 
 /*----------------------------------------*/
