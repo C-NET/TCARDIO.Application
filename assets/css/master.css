@@ -192,7 +192,7 @@ font-size:12pt!important;
 }
 
 .titulo-articulo {
-    font-size:1.2em;
+    font-size:1.4em;
     font-weight:600;
     line-height:1.1em;
     color:#000000;
@@ -220,15 +220,15 @@ font-size:12pt!important;
 }
         
 .contenedor-articulo > h3 {
-    font-size: 1em;
-    color:black;
+    font-size: .9em;
+    color:#222222;
 }
 .contenedor-articulo > h2 {
-    font-size: 1em;
+    font-size: .9em;
 }
 
 .contenedor-articulo  h3 > .p {
-    font-size: 1em;
+    font-size: 18px;
 }
 
 
