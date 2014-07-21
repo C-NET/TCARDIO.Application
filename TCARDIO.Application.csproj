@@ -557,6 +557,8 @@
     <Content Include="abstracts\Abstract-508.html" />
     <Content Include="abstracts\Abstract-509.html" />
     <Content Include="abstracts\Abstract-510.html" />
+    <Content Include="abstracts\Abstract-511.html" />
+    <Content Include="abstracts\Abstract-512.html" />
     <Content Include="assets\css\icons\categorias.png" />
     <Content Include="assets\css\icons\checkbox_off.png" />
     <Content Include="assets\css\icons\checkbox_on.png" />
