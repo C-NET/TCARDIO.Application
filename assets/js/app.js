@@ -131,25 +131,6 @@ MYAPP.find = function (key, categories) {
         // Compara la categoria del grupo contra la categorías que se buscan
         if ((idxi.cat & categories) != 0)
         {
-            //var cmp = idxi.key.substring(0, key.length).localeCompare(key);
-            
-            //if (cmp === 0) {
-            //    var count = idxi.src.length;
-
-            //    // Se agregan todos los subindices de los artículos sin repetir.
-            //    for (var j = 0; j < count; j++) {
-            //        var e = idxi.src[j];
-
-            //        // Si está repetido no se agrega
-            //        if (match.indexOf(e) < 0)
-            //            match.push(e);
-            //    }
-            //}
-            //else if (cmp > 0)
-            //{
-            //    break;
-            //}
-
             var cmp = idxi.key.substring(0, key.length) === key;
             
             if (cmp) {
@@ -186,7 +167,7 @@ MYAPP.find = function (key, categories) {
 };
 
 MYAPP.cambiarArticulo = function (indice, direccion) {
-    if (indice < 0 || indice > 510) return false;
+    if (indice < 0 || indice > 512) return false;
     MYAPP.app.navigate("\#abstracts/" + MYAPP.src[indice].article, 'slide:'+direccion);
 };
 
