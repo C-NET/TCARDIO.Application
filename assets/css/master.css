@@ -380,7 +380,6 @@ input[type="text"]
 .km-flat .km-popup .k-state-selected,
 .km-flat .km-actionsheet > li > a:active,
 .km-flat .km-actionsheet > li > a:hover,
-.km-flat li.km-state-active .km-listview-link,
 .km-flat li.km-state-active .km-listview-label               
 {
     background: #e55b2b!important;
@@ -414,5 +413,8 @@ input[type="text"]
 .km-flat .km-widget.km-detaildisclose.km-detail.km-state-active {
 background:inherit!important;
 color:inherit!important;
-} 
+}
 
+.km-flat li.km-state-active .km-listview-link {
+background:inherit!important;
+}

@@ -25,30 +25,31 @@
 <body>
 
     <!-- VISTA PRINCIPAL, DEBE COPIARSE DEL CONTENIDO ListCategoriesView.html SI SE QUIERE CAMBIAR ALGO, YA QUE ES GENEREDA CON EL CONTENT GENERATOR -->
-    <div data-role="view" data-layout="main-layout" id="home" data-title="Trials T.C." >
+    <div data-role="view" data-layout="main-layout" id="home" data-title="Categorías">
         <div data-role="header">
             <div data-role="navbar">
                 <a data-role="backbutton" data-align="left" data-icon="boton-atras">Atrás</a>
                 <span data-role="view-title"></span>
-                <a data-role="button" data-align="right" data-icon="categorias" href="#index"></a>
-            </div> 
+                <a data-role="button" data-align="right" data-icon="indice-general" href="#index">Índice</a>
+            </div>
         </div>
         <ul data-role="listview" class="lista-secciones">
-            <li class="li-margen"><div class="category-list-template">Comentadores invitados                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-000.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Prólogo                                                 </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-001.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Prefacio                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-002.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Dedicatoria                                             </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-003.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-004.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Angina Estable                                          </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-172.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Dislipidemia y prevención                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-211.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Insuficiencia cardíaca                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-263.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Arritmias                                               </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-304.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Intervensionismo cardiovascular                         </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-380.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">TEP. TVP                                                </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-439.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Hipertensión Arterial                                   </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-458.html"></a></li>
-            <li class="li-margen"><div class="category-list-template">Stroke                                                  </div><a data-role="detailbutton" data-style="detaildisclose" href="abstracts/Abstract-492.html"></a></li>
+            <li><a href="abstracts/Abstract-000.html"> <div class="category-list-template">Comentadores invitados                                  </div></a></li>
+            <li><a href="abstracts/Abstract-001.html"> <div class="category-list-template">Prólogo                                                 </div></a></li>
+            <li><a href="abstracts/Abstract-002.html"> <div class="category-list-template">Prefacio                                                </div></a></li>
+            <li><a href="abstracts/Abstract-003.html"> <div class="category-list-template">Dedicatoria                                             </div></a></li>
+            <li><a href="abstracts/Abstract-004.html"> <div class="category-list-template">Síndromes coronarios agudos con y sin elevación del ST  </div></a></li>
+            <li><a href="abstracts/Abstract-172.html"> <div class="category-list-template">Angina Estable                                          </div></a></li>
+            <li><a href="abstracts/Abstract-211.html"> <div class="category-list-template">Dislipidemia y prevención                               </div></a></li>
+            <li><a href="abstracts/Abstract-263.html"> <div class="category-list-template">Insuficiencia cardíaca                                  </div></a></li>
+            <li><a href="abstracts/Abstract-304.html"> <div class="category-list-template">Arritmias                                               </div></a></li>
+            <li><a href="abstracts/Abstract-380.html"><div class="category-list-template">Intervensionismo cardiovascular                         </div></a></li>
+            <li><a href="abstracts/Abstract-439.html"><div class="category-list-template">TEP. TVP                                                </div></a></li>
+            <li><a href="abstracts/Abstract-458.html"><div class="category-list-template">Hipertensión Arterial                                   </div></a></li>
+            <li><a href="abstracts/Abstract-492.html"><div class="category-list-template">Stroke                                                  </div></a></li>
         </ul>
     </div>
+
 
     <!-- VISTA DE BÚSQUEDA DE ARTÍCULOS -->
     <div data-role="view" data-layout="main-layout" id="search" data-title="B&#250;squeda" data-init="seleccionarRadioButton">
@@ -94,16 +95,17 @@
         </div>  
           <ul id="indexListview" class="li-margen"></ul>
     </div>
-    <script type="text/x-kendo-template" id="header-template-index">
+<!--    <script type="text/x-kendo-template" id="header-template-index">
         <div class="header-categoria"> 
         # var val = MYAPP.getCategoryName(value); #
             #= val #
        </div>
-    </script>
+    </script>-->
     <script type="text/x-kendo-template" id="item-template-index">      
-        <div class="item-template-titulo">#: title #</div>
-        <div class="item-template-subtitulo">#: subtitle #</div>
-        <a  data-role="detailbutton" data-style="detaildisclose" href='\#abstracts/#: article #'></a>                  
+       <a href='\#abstracts/#: article #'>
+                <div class="item-template-titulo">#: title #</div>
+                <div class="item-template-subtitulo">#: subtitle #</div>
+       </a>                 
     </script>   
 
     <!-- VISTA DE LOS ARTICULOS ENCONTRADOS DE LA BÚSQUEDA -->
@@ -128,10 +130,11 @@
     <script type="text/x-kendo-template" id="header-template">
             <div class="header-categoria"> #:value#</div>
     </script>
-    <script type="text/x-kendo-template" id="item-template">                 
-        <div class="item-template-titulo">#: title #</div> 
-        <div class="item-template-subtitulo">#: subtitle #</div>
-        <a data-role="detailbutton" data-style="detaildisclose" data-align:"left" href='\#abstracts/#: article #'>  </a>                    
+    <script type="text/x-kendo-template" id="item-template">   
+        <a  href='\#abstracts/#: article #'>              
+            <div class="item-template-titulo">#: title #</div> 
+            <div class="item-template-subtitulo">#: subtitle #</div>
+        </a>                    
     </script>
 
     <!-- VISTA DE INFORMACIÓN - ACERCA DE -->
@@ -140,7 +143,6 @@
             <div data-role="navbar">
                  <a data-role="backbutton" data-align="left" data-icon="boton-atras">Atrás</a>
                 <span data-role="view-title"></span>
-                 <a data-role="button" data-icon="compartir" data-click="MYAPP.compartirAplicacion" data-align="right"></a>
             </div>
         </div>           
         <p>
@@ -181,6 +183,7 @@
          <div style="margin:1rem"><a href="http://www.novartis.com.ar" data-rel="external">www.novartis.com.ar</a> y <a href="http://www.novartis.com" data-rel="external">www.novartis.com</a></div>
        
         </div>
+        <a style="margin:1rem" data-role="button" data-icon="compartir" data-click="MYAPP.compartirAplicacion">Compartir Aplicación</a>
     </div>
 
     <!-- VISTA "NO SE ENCONTRARON ARTICULOS QUE COINCIDAN CON LOS ARGUEMTNO DE BUSQUEDA -->
