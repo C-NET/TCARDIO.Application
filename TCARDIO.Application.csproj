@@ -568,7 +568,7 @@
     <Content Include="assets\css\icons\search.png" />
     <Content Include="assets\css\icons\share.png" />
     <Content Include="assets\css\images\back.png" />
-    <Content Include="assets\css\images\logo.gif" />
+    <Content Include="assets\css\images\logo.png" />
     <Content Include="assets\css\images\trials.png" />
     <Content Include="assets\css\images\wp8_icons.png" />
     <Content Include="assets\css\images\wp8_inverseicons.png" />
@@ -593,7 +593,13 @@
     <Content Include="config.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="icon.png" />
+    <Content Include="assets\icons\android\hdpi.png" />
+    <Content Include="assets\icons\android\ldpi.png" />
+    <Content Include="assets\icons\android\mdpi.png" />
+    <Content Include="assets\icons\android\xhdpi.png" />
+    <Content Include="assets\icons\android\xxhdpi.png" />
+    <Content Include="assets\icons\android\xxxhdpi.png" />
+    <Content Include="hdpi.png" />
     <Content Include="index.html" />
     <Content Include="ListCategoriesView.html" />
     <Content Include="splash.png" />
@@ -603,7 +609,6 @@
     <Content Include="assets\css\images\kendoui.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\icons\android\" />
     <Folder Include="assets\icons\ios\" />
     <Folder Include="Properties\" />
   </ItemGroup>

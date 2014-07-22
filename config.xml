@@ -15,11 +15,14 @@
     C-NET S.R.L.
   </author>
 
-  <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
-  <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
-  <icon src="icon.png" gap:platform="android" gap:density="hdpi" />
-  <icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
-  <icon src="icon.png" gap:platform="android" gap:density="xxhdpi" />
+   
+  <icon src="/icons/android/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+  <icon src="/icons/android/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+  <icon src="/icons/android/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+  <icon src="/icons/android/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+  <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
+
+
 
 
   <!--  Enable individual API permissions here.
@@ -59,6 +62,6 @@
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
   <gap:plugin name="it.mobimentum.phonegapspinnerplugin" version="1.1.0" />
-  <gap:icon src="icon.png"/>
+  <!--<gap:icon src="icon.png"/>-->
   
 </widget>
