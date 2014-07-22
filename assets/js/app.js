@@ -115,6 +115,12 @@ function AddZero(num) {
 }
 
 
+MYAPP.openUrl = function (url)
+{
+    window.open(url);
+}
+
+
 //BUSCA EL INDICE DEL ARTICULO DE LA PALABRA ENCONTRADA
 MYAPP.find = function (key, categories) {
     var idx = MYAPP.idx; 
