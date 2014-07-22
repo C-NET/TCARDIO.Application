@@ -4,7 +4,7 @@
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
   xmlns:android   = "http://schemas.android.com/apk/res/android"
  	id = "com.you.www" version = "1.0.0">
-
+  
   <name>TCARDIO</name>
 
   <description>
@@ -14,8 +14,6 @@
   <author href="www.c-net.com.ar" email="info@c-net.com.ar">
     C-NET S.R.L.
   </author>
-
-  <gap:icon src="icon.png"/>
 
   <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
   <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
@@ -28,15 +26,12 @@
         The "device" permission is required for the 'deviceready' event. -->
   <feature name="http://api.phonegap.com/1.0/device" />
 
-
   <content src="index.html" />
 
   <!--  If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires. -->
   <preference name="permissions"                value="none"/>
-
-
 
   <!-- Customize your app and platform with the preference element. -->
   <preference name="phonegap-version"           value="3.4.0" />
@@ -47,7 +42,6 @@
   <!-- all: possible values handset, tablet, or universal -->
   <preference name="fullscreen"                 value="true" />
   <!-- all: hides the status bar at the top of the screen -->
-
   <preference name="android-minSdkVersion"      value="8" />
   <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
   <preference name="android-installLocation"    value="auto" />
@@ -62,9 +56,9 @@
   <gap:config-file platform="android" parent="/manifest">
     <application android:hardwareAccelerated="false" />
   </gap:config-file>
-
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
   <gap:plugin name="it.mobimentum.phonegapspinnerplugin" version="1.1.0" />
+  <gap:icon src="icon.png"/>
   
 </widget>

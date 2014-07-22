@@ -19,7 +19,6 @@ MYAPP.search = (function (e) {
     if(window.spinnerplugin != null)
         window.spinnerplugin.show();
     MYAPP.abstracts.read();
-    loguear(MYAPP.abstracts.total());
     if (MYAPP.abstracts.total() > 0) {
         MYAPP.app.navigate("#articulos");
         if (listView == null)
@@ -233,7 +232,7 @@ MYAPP.indexList = new kendo.data.DataSource({
     },
     serverPaging: true,
     serverSorting: true,
-    pageSize:50
+    pageSize:60
 });
 
 /*Lista Indice Principal*/
@@ -243,7 +242,6 @@ function indexListviewInit() {
     $("#indexListview").kendoMobileListView({
         dataSource: MYAPP.indexList,
         template: $("#item-template-index").text(),
-       // virtualViewSize: 40, // needed setting, since local data virtualization does not use paging
         endlessScroll: true
     });
     if (window.spinnerplugin != null)
@@ -262,6 +260,6 @@ function indexListviewInit() {
 //        window.spinnerplugin.hide();
 //}
 
-function loguear(param) {
-    console.log(param);
-}
+//function loguear(param) {
+//    console.log(param);
+//}
