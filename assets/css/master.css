@@ -113,7 +113,11 @@ input[type="radio"] {width:13px;height:13px}
     background: rgb(255, 255, 255)!important;
     background-color: rgb(255, 255, 255)!important;
     color: rgb(255, 255, 255);
-} 
+}
+.image-banner {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
        
 
 /*BÚSQUEDA DE ARTÍCULOS*/
