@@ -599,7 +599,7 @@
     <Content Include="assets\icons\android\xhdpi.png" />
     <Content Include="assets\icons\android\xxhdpi.png" />
     <Content Include="assets\icons\android\xxxhdpi.png" />
-    <Content Include="hdpi.png" />
+    <Content Include="icon.png" />
     <Content Include="index.html" />
     <Content Include="ListCategoriesView.html" />
     <Content Include="splash.png" />

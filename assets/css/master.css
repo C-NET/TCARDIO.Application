@@ -131,8 +131,8 @@ input[type="radio"] {width:13px;height:13px}
 
 .header-busqueda {
     color: #e44c16!important;
-    font:Helvetica Neue Regular;
-    margin: 1rem!important;
+    font-size:1.2em;
+    margin: 1.1rem!important;
 }
 
 /*LISTA DE CATEGORIAS*/
@@ -294,6 +294,7 @@ background:inherit!important;
 
 .li-margen {
     min-height:50px!important;
+    font-size:1.2em;
 }
 
 .li-margen > li {
