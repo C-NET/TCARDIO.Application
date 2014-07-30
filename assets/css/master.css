@@ -80,9 +80,10 @@ background-color: currentcolor!important;
     -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/search.png")!important;
 }
 .km-compartir {
-    -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/share.png")!important;
-    width: 1.3em!important;
-    height: 1.3em!important;
+    /*-webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/share.png")!important;*/
+    -webkit-mask-box-image: url("/assets/css/icons/share.png")!important;
+    width: 1.6em!important;
+    height: 1.6em!important;
 }
 .km-categorias {
     -webkit-mask-box-image: url("file:///android_asset/www/assets/css/icons/categorias.png")!important;
