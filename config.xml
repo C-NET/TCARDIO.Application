@@ -16,7 +16,7 @@
   </author>
 
 
-
+  <gap:icon src="icon.png"/>
   
   <!-- ldpi -->
   <icon src="icons/android/ldpi.png"  gap:platform="android" width="36" height="36" />
