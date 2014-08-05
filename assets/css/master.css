@@ -181,13 +181,13 @@ input[type="radio"] {width:13px;height:13px}
 }
 
 .item-template-titulo{
-    font-size:1.2em;    
+    font-size:1em;    
     margin-right:40px;
 }
 
 .item-template-subtitulo {
     color: #9b9b9b;
-    font-size:1em; 
+    font-size:.8em; 
     margin-right:40px;         
 }
 
