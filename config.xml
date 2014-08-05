@@ -15,12 +15,25 @@
     C-NET S.R.L.
   </author>
 
-  <icon src="icon.png" gap:role="default"/>
-  <icon src="/icons/android/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-  <icon src="/icons/android/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-  <icon src="/icons/android/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-  <icon src="/icons/android/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
-  <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
+  <!--<icon src="icon.png" gap:role="default"/>
+  <icon src="" gap:platform="android" gap:qualifier="ldpi" />
+  <icon src="" gap:platform="android" gap:qualifier="mdpi" />
+  <icon src="" gap:platform="android" gap:qualifier="hdpi" />
+  <icon src="" gap:platform="android" gap:qualifier="xhdpi" />
+  <icon src="" gap:platform="android" gap:qualifier="xxhdpi" />-->
+
+  <!-- ldpi -->
+  <icon src="/icons/android/ldpi.png"  gap:platform="android" width="36" height="36" />
+  <icon src="/icons/android/mdpi.png"  gap:platform="android" gap:density="ldpi" />
+  <!-- mdpi -->
+  <icon src="/icons/android/mdpi.png"  gap:platform="android" width="48" height="48" />
+  <icon src="/icons/android/hdpi.png"  gap:platform="android" gap:density="mdpi" />
+  <!-- hdpi -->
+  <icon src="/icons/android/hdpi.png"  gap:platform="android" width="72" height="72" />
+  <icon src="/icons/android/xhdpi.png"  gap:platform="android" gap:density="hdpi" />
+  <!-- xhdpi -->
+  <icon src="/icons/android/xhdpi.png"  gap:platform="android" width="96" height="96" />
+  <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:density="xhdpi" />
   
   
 
