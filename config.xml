@@ -16,20 +16,20 @@
   </author>
 
 
-  <gap:icon src="icon.png"/>
   
+  <icon src="icon.png"/>
   <!-- ldpi -->
-  <icon src="icons/android/ldpi.png"  gap:platform="android" width="36" height="36" />
-  <icon src="icons/android/mdpi.png"  gap:platform="android" gap:density="ldpi" />
+  <icon src="/icons/android/ldpi.png"  gap:platform="android" width="36" height="36" />
+  <icon src="/icons/android/mdpi.png"  gap:platform="android" gap:density="ldpi" />
   <!-- mdpi -->
-  <icon src="icons/android/mdpi.png"  gap:platform="android" width="48" height="48" />
-  <icon src="icons/android/hdpi.png"  gap:platform="android" gap:density="mdpi" />
+  <icon src="/icons/android/mdpi.png"  gap:platform="android" width="48" height="48" />
+  <icon src="/icons/android/hdpi.png"  gap:platform="android" gap:density="mdpi" />
   <!-- hdpi -->
-  <icon src="icons/android/hdpi.png"  gap:platform="android" width="72" height="72" />
-  <icon src="icons/android/xhdpi.png"  gap:platform="android" gap:density="hdpi" />
+  <icon src="/icons/android/hdpi.png"  gap:platform="android" width="72" height="72" />
+  <icon src="/icons/android/xhdpi.png"  gap:platform="android" gap:density="hdpi" />
   <!-- xhdpi -->
-  <icon src="icons/android/xhdpi.png"  gap:platform="android" width="96" height="96" />
-  <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  <icon src="/icons/android/xhdpi.png"  gap:platform="android" width="96" height="96" />
+  <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:density="xhdpi" />
   
   
 
@@ -62,7 +62,7 @@
 
   <access origin="*"/>
 
-
+  <icon src="icon.png" gap:role="default" />
   <gap:config-file platform="android" parent="/manifest">
     <application android:hardwareAccelerated="false" />
   </gap:config-file>
