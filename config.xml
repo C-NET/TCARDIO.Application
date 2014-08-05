@@ -15,7 +15,7 @@
     C-NET S.R.L.
   </author>
 
-
+  <icon src="icon.png"/>
   <icon src="/icons/android/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
   <icon src="/icons/android/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
   <icon src="/icons/android/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
