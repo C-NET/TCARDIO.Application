@@ -21,6 +21,8 @@
   <icon src="/icons/android/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
   <icon src="/icons/android/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
   <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
+  
+  
 
   <!--  Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event. -->
@@ -58,6 +60,5 @@
   <gap:splash src="splash.png" />
   <gap:plugin name="com.jcjee.plugins.emailcomposer" version="1.4.6" />
   <gap:plugin name="it.mobimentum.phonegapspinnerplugin" version="1.1.0" />
-  <gap:icon src="icon.png"/>
   
 </widget>
