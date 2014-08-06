@@ -16,12 +16,6 @@
   </author>
 
   <gap:icon src="icon.png"/>
-  <!--<icon src="/icons/android/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-  <icon src="/icons/android/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-  <icon src="/icons/android/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-  <icon src="/icons/android/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
-  <icon src="/icons/android/xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />-->
-
   <!-- ldpi -->
   <icon src="assets/icons/android/ldpi.png"  gap:platform="android" width="36" height="36" />
   <icon src="assets/icons/android/mdpi.png"  gap:platform="android" gap:qualifier="ldpi" />
