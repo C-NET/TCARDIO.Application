@@ -93,27 +93,24 @@ MYAPP.abstracts = new kendo.data.DataSource({
     }   
 });
 
+
 //FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (e) {
     var data = e.button.data();
     var now = new Date();
+    var linkAndroid = 'https://play.google.com/store/search?q=Cardio%20Trials&c=apps';
+    var linkiOS = 'https://ssl.apple.com/search/?q=cardio%20trials';
     //Concatena día, fecha, hora, segundos
     var strDateTime = [[AddZero(now.getDate()), AddZero(now.getMonth() + 1), now.getFullYear()].join("-"), [AddZero(now.getHours()), AddZero(now.getMinutes())].join(""), AddZero(now.getSeconds())].join("");   
     var asunto = 'Abstract de terape\u00fatica cardiovascular';
-    var appAndroid = 'Android (Google Play)';
-    var appiOS = 'iOS (App Store)';
-    var linkAndroid = appAndroid.link('https://play.google.com/store/search?q=Cardio%20Trials&c=apps');
-    var linkiOS = appiOS.link('https://ssl.apple.com/search/?q=cardio trials');
-    var cuerpo = 'Adjunto el siguiente abstract del libro \"Trials de la Terap\u00e9utica Cardiovascular\" que puede resultar de tu inter\u00e9s: ' + data.title + '\n\n Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na. edici\u00f3n del libro \"Trials de la Terap\u00e9utica Cardiovascular\". \n\n Podr\u00e1s descargar Cardio Trials en forma gratuita hasta el 10/02/2015 desde las Tiendas de Aplicaciones de ' + linkiOS + ' y ' + linkAndroid + '.';
+    var cuerpo = 'Adjunto el siguiente abstract del libro \"Trials de la Terap\u00e9utica Cardiovascular\" que puede resultar de tu inter\u00e9s: ' + data.title + '\n\n Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na. edici\u00f3n del libro \"Trials de la Terap\u00e9utica Cardiovascular\".\n\n Podr\u00e1s descargar Cardio Trials en forma gratuita hasta el 10/02/2015 desde las Tiendas de Aplicaciones de:\n iOS (App Store) ' + linkiOS + '\n\n Android (Google Play) ' + linkAndroid;
     window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null, [['Articulo_' + strDateTime + '.html', data.base64]]);
 };
 MYAPP.compartirAplicacion = function () {
-    var appAndroid = 'Android (Google Play)';
-    var appiOS = 'iOS (App Store)';
-    var linkAndroid = appAndroid.link('https://play.google.com/store/search?q=Cardio%20Trials&c=apps');
-    var linkiOS = appiOS.link('https://ssl.apple.com/search/?q=cardio trials');
+    var linkAndroid = 'https://play.google.com/store/search?q=Cardio%20Trials&c=apps';
+    var linkiOS = 'https://ssl.apple.com/search/?q=cardio%20trials';
     var asunto = 'Te recomiendo esta aplicaci\u00f3n!';
-    var cuerpo = 'Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na. edici\u00f3n del libro \"Trials de la Terap\u00e9utica Cardiovascular\". \n\n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta  el 10/02/2015 desde las Tiendas de Aplicaciones de ' + linkiOS + ' y ' + linkAndroid + '.';
+    var cuerpo = 'Te recomiendo Cardio Trials, una aplicaci\u00f3n de Novartis Argentina que permite buscar y compartir todos los abstracts de la 9na. edici\u00f3n del libro \"Trials de la Terap\u00e9utica Cardiovascular\". \n\n Podr\u00e1s descargar esta aplicaci\u00f3n en forma gratuita hasta  el 10/02/2015 desde las Tiendas de Aplicaciones de:\n iOS (App Store) ' + linkiOS + '\n\n Android (Google Play) ' + linkAndroid;
     window.plugins.emailComposer.showEmailComposer(asunto, cuerpo, null, null, null, false, null,null);
 };
 
