@@ -30,7 +30,7 @@ MYAPP.run = (function () {
         window.localStorage.setItem("counter", shareCounterMax);
     }
 
-    shareCounter = Number(window.localStorage.getItem("counter"));
+    shareCounter = parseInt(window.localStorage.getItem("counter"), 10); // Base 10
 });
 
 
