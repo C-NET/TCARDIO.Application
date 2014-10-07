@@ -8,6 +8,7 @@ var shareCounterMax = 5;
 MYAPP.run = (function () {
 
     //debugger;
+    alert("Begin MYAPP.run");
 
     var initialView = "home";
     var now = new Date();
@@ -22,8 +23,6 @@ MYAPP.run = (function () {
         initial: initialView
     });
 
-    window.plugins.emailComposer = new EmailComposer();
-
     $("#shareCounterMax").html(shareCounterMax);
 
     if (!window.localStorage.getItem("counter")) {
@@ -35,6 +34,11 @@ MYAPP.run = (function () {
     shareCounter = parseInt(window.localStorage.getItem("counter"), 10); // Base 10
 
     alert("shareCounter: " + shareCounter);
+
+    window.plugins.emailComposer = new EmailComposer();
+
+    alert("End MYAPP.run");
+
 });
 
 
