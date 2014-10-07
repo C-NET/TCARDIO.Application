@@ -3,7 +3,7 @@
 var MYAPP = MYAPP || {};
 var listView;
 var shareCounter;
-var shareCounterMax = 30;
+var shareCounterMax = 5;
 
 MYAPP.run = (function () {
 
@@ -119,7 +119,7 @@ MYAPP.abstracts = new kendo.data.DataSource({
 //FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (e) {
 
-    //alert(shareCounter);
+    alert(shareCounter);
 
     if (shareCounter < 1) {
         openShareLimitModal();
