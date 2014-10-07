@@ -3,11 +3,9 @@
 var MYAPP = MYAPP || {};
 var listView;
 var shareCounter;
-var shareCounterMax = 5;
+var shareCounterMax = 30;
 
 MYAPP.run = (function () {
-
-    alert("Begin MYAPP.run");
 
     var initialView = "home";
     var now = new Date();
@@ -22,8 +20,6 @@ MYAPP.run = (function () {
         initial: initialView
     });
 
-    //debugger;
-
     //window.plugins.emailComposer = new EmailComposer();
 
     $("#shareCounterMax").html(shareCounterMax);
@@ -32,13 +28,7 @@ MYAPP.run = (function () {
         window.localStorage.setItem("counter", shareCounterMax);
     }
 
-    alert("localStorage: " + window.localStorage.getItem("counter"));
-
     shareCounter = parseInt(window.localStorage.getItem("counter"), 10); // Base 10
-
-    alert("shareCounter: " + shareCounter);
-    
-    alert("End MYAPP.run");
 
 });
 
@@ -127,8 +117,6 @@ MYAPP.abstracts = new kendo.data.DataSource({
 
 //FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (e) {
-
-    alert(shareCounter);
 
     if (shareCounter < 1) {
         openShareLimitModal();
