@@ -2,13 +2,35 @@
 // it doesn't polute the global namespace
 var MYAPP = MYAPP || {};
 var listView;
+var shareCounter;
+var shareCounterMax = 30;
 
-MYAPP.run = (function() {
+MYAPP.run = (function () {
+
+    debugger;
+
+    var initialView = "home";
+    var now = new Date();
+    var expireDate = new Date(2015, 1, 11); // Fecha de caducidad: 10/02/2015
+
+    if (now >= expireDate)
+        initialView = "appexpired";
+
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
-        skin: "flat"
+        skin: "flat",
+        initial: initialView
     });
-    window.plugins.emailComposer = new EmailComposer();   
+
+    window.plugins.emailComposer = new EmailComposer();
+
+    $("#shareCounterMax").html(shareCounterMax);
+
+    if (!window.localStorage.getItem("counter")) {
+        window.localStorage.setItem("counter", shareCounterMax);
+    }
+
+    shareCounter = Number(window.localStorage.getItem("counter"));
 });
 
 
@@ -96,6 +118,17 @@ MYAPP.abstracts = new kendo.data.DataSource({
 
 //FUNCIONALIDAD BOTÓN COMPARTIR
 MYAPP.sendMail = function (e) {
+
+    //alert(shareCounter);
+
+    if (shareCounter < 1) {
+        openShareLimitModal();
+        return;
+    }
+    else {
+        window.localStorage.setItem("counter", --shareCounter);
+    }
+
     var data = e.button.data();
     var now = new Date();
     var linkAndroid = 'https://play.google.com/store/search?q=Cardio%20Trials&c=apps';
@@ -257,6 +290,15 @@ function indexListviewInit() {
     });
     if (window.spinnerplugin != null)
         window.spinnerplugin.hide();
+}
+
+
+function openShareLimitModal() {
+    $("#sharelimit").data("kendoMobileModalView").open();
+}
+
+function closeShareLimitModal() {
+    $("#sharelimit").data("kendoMobileModalView").close();
 }
 
 //function refrescarLista() {

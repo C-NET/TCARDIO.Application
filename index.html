@@ -195,6 +195,27 @@
         <h3>No se encontraron art&#237;culos.</h3>
     </div>
 
+    <!-- VISTA MODAL "SE LLEGÓ AL LIMITE EN LA CANTIDAD DE ABSTRACTS COMPARTIDOS" -->
+     <div data-role="modalview" id="sharelimit" style="width: 90%; height: 150px;">
+         <div data-role="header">
+             <div data-role="navbar">
+                 <span>Aviso</span>
+                 <a data-click="closeShareLimitModal" data-role="button" data-align="right">Cerrar</a>
+             </div>
+         </div>
+         <div id="shareLimitMsg" style="text-align: center; margin-top: 30px;">No es posible compartir m&#225;s de <br /> <span id="shareCounterMax" style="font-weight: bold;"></span> art&#237;culos.</div>
+     </div>
+     
+    <!-- VISTA "FECHA LIMITE PARA DIFUSION DE CONTENIDO SUPERADA." -->
+     <div data-role="view" id="appexpired" data-title="Aviso">
+         <div data-role="header">
+             <div data-role="navbar">
+                 <span data-role="view-title"></span>
+             </div>
+         </div>
+         <p>Novartis Argentina S.A. cuenta con los derechos para difundir el contenido del compendio &#34;Trials de la Terap&#233;utica Cardiovascular 9na edici&#243;n 2014&#34; hasta el 10/02/2015. Muchas gracias.</p>
+     </div>
+
     <!--LAYOUT PRINCIPAL-->
     <div data-role="layout" data-id="main-layout">        
         <div data-role="footer">
