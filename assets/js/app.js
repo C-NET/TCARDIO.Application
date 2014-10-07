@@ -7,7 +7,7 @@ var shareCounterMax = 5;
 
 MYAPP.run = (function () {
 
-    debugger;
+    //debugger;
 
     var initialView = "home";
     var now = new Date();
@@ -30,7 +30,11 @@ MYAPP.run = (function () {
         window.localStorage.setItem("counter", shareCounterMax);
     }
 
+    alert("localStorage: " + window.localStorage.getItem("counter"));
+
     shareCounter = parseInt(window.localStorage.getItem("counter"), 10); // Base 10
+
+    alert("shareCounter: " + shareCounter);
 });
 
 
