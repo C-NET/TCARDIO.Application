@@ -11,8 +11,8 @@ MYAPP.run = (function () {
     var now = new Date();
     var expireDate = new Date(2015, 1, 11); // Fecha de caducidad: 10/02/2015
 
-    if (now >= expireDate)
-        initialView = "appexpired";
+    //if (now >= expireDate)
+    //    initialView = "appexpired";
 
     // create the Kendo UI Mobile application
     MYAPP.app = new kendo.mobile.Application(document.body, {
