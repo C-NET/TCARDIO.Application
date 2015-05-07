@@ -584,19 +584,19 @@
     <Content Include="assets\css\kendo.mobile.meego.min.css" />
     <Content Include="assets\css\kendo.mobile.wp8.min.css" />
     <Content Include="assets\css\master.css" />
-    <Content Include="abstracts\img\303b_fig1.png">
+    <Content Include="303b_fig1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="abstracts\img\303b_fig2.png">
+    <Content Include="303b_fig2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="abstracts\img\303b_fig3.png">
+    <Content Include="303b_fig3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="abstracts\img\303b_tab1.png">
+    <Content Include="303b_tab1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="abstracts\img\303b_tab2.png">
+    <Content Include="303b_tab2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\js\app.js" />
